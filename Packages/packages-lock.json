@@ -1,14 +1,5 @@
 {
   "dependencies": {
-    "cn.unity.uos.launcher": {
-      "version": "https://e.coding.net/unitychina/uos/UOSLauncher.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "3.2.1"
-      },
-      "hash": "8c2fbff99a700398b1f790703986e8eb4ebb6e98"
-    },
     "com.unity.ai.navigation": {
       "version": "2.0.8",
       "depth": 0,
@@ -124,13 +115,6 @@
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.4",
       "depth": 2,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.nuget.newtonsoft-json": {
-      "version": "3.2.1",
-      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
