@@ -1,0 +1,11 @@
+Hi and thank you for supporting me. ;)
+
+About normal maps..
+
+If models look weird in your rendering application just flip the green channel of the Normal maps in photoshop.
+
+You go to channels in Photoshop(next to layers)click on green channel and then "Invert" (under Image-Adjustments-Invert in PS)
+
+
+A tip. You can sharpen your normal maps if you want crispier renders, just remember to normalize after sharpening ;)
+
