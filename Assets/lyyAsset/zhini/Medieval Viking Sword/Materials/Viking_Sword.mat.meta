@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fc45bac10b291b74a8c85dd9c035b40b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 316765
+  packageName: Medieval Viking Sword
+  packageVersion: 1.0
+  assetPath: Assets/Medieval Viking Sword/Materials/Viking_Sword.mat
+  uploadId: 747686
