@@ -2,91 +2,90 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float movementSpeed = 3f;
-    public CameraController cam;
+    public float MovementSpeed = 3f;
+    public CameraController1 Cam;
 
-    Quaternion requiredRotation;
-    public float rotSpeed = 450f;
+    Quaternion RequiredRotation;
+    public float RotSpeed = 450f;
 
-    Animator anim;
-    CharacterController CC;
+    Animator Anim;
+    CharacterController Cc;
 
     [Header("SurfaceCheck")]
-    public float surfaceCheckRadius = 0.1f;
-    public Vector3 surfaceCheckOffset;
-    public LayerMask surfaceLayer;
-    bool onSurface;
+    public float SurfaceCheckRadius = 0.1f;
+    public Vector3 SurfaceCheckOffset;
+    public LayerMask SurfaceLayer;
+    bool ontheSurface;
 
     [Header("Falling Gravity")]
-    [SerializeField] float fallingSpeed;
-    [SerializeField] Vector3 moveDir;
+    [SerializeField] float FallingSpeed;
+    [SerializeField] Vector3 MoveDir;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        anim = GetComponent<Animator>();
-        CC = GetComponent<CharacterController>();
-
+        Anim = GetComponent<Animator>();
+        Cc = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        PlayerMovement();
-        SurfaceCHeck();
-        Debug.Log("Player on Surface" + onSurface);
+        PlayersMovement();
+        SurfacetoCheck();
+        Debug.Log("Player on Surface" + ontheSurface);
     }
 
-    void PlayerMovement()
+    void PlayersMovement()
     {
+
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        float movementAmount = Mathf.Clamp01(Mathf.Abs(horizontal) + Mathf.Abs(vertical)); 
+        float movementAmount = Mathf.Clamp01(Mathf.Abs(horizontal) + Mathf.Abs(vertical));
         //to detect movement based on movement keys, Clamp01 convert value from 0 to 1 from Movement Tree Animation
 
         var movementInput = (new Vector3(horizontal, 0, vertical)).normalized;
 
-        var MovementDirection = cam.flatRotation * movementInput; 
+        var MovementDirection = cam.flatRotation * movementInput;
         //movement based on camera rotation (has flat rotation) and movement input
 
         //check if the player is on the surface to apply gravity
-        if(onSurface)
+        if (onSurface)
         {
-            fallingSpeed = 0f; //reset falling speed
+            FallingSpeed = 0f; //reset falling speed
         }
         else
         {
             //we are falling
-            fallingSpeed += Physics.gravity.y * Time.deltaTime/2; //devide by 2 will make player lighter
+            FallingSpeed += Physics.gravity.y * Time.deltaTime / 2; //devide by 2 will make player lighter
         }
 
-        moveDir = new Vector3(MovementDirection.x, fallingSpeed, MovementDirection.z);
+        MoveDir = new Vector3(MovementDirection.x, FallingSpeed, MovementDirection.z);
 
         if (movementAmount > 0)
         {
-            CC.Move(moveDir * movementSpeed * Time.deltaTime);
+            Cc.Move(MoveDir * MovementSpeed * Time.deltaTime);
 
-            requiredRotation = Quaternion.LookRotation(MovementDirection); //rotate based on input, capture the second rotation state 
+            RequiredRotation = Quaternion.LookRotation(MovementDirection); //rotate based on input, capture the second rotation state 
         }
 
         moveDir = MovementDirection; //when we are on the ground already
 
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, requiredRotation, rotSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, RequiredRotation, RotSpeed * Time.deltaTime);
         //will make smooth rotation from one state to another based on speed
 
-        anim.SetFloat("Speed", movementAmount, 0.2f, Time.deltaTime);
+        Anim.SetFloat("Speed", movementAmount, 0.2f, Time.deltaTime);
     }
 
-    void SurfaceCHeck()
+    void SurfacetoCheck()
     {
-        onSurface = Physics.CheckSphere(transform.TransformPoint(surfaceCheckOffset), surfaceCheckRadius, surfaceLayer);
+        ontheSurface = Physics.CheckSphere(transform.TransformPoint(SurfaceCheckOffset), SurfaceCheckRadius, SurfaceLayer);
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(transform.TransformPoint(surfaceCheckOffset), surfaceCheckRadius);
+        Gizmos.DrawSphere(transform.TransformPoint(SurfaceCheckOffset), surfaceCheckRadius);
     }
+
 }
+

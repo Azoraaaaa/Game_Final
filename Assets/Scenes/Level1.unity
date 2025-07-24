@@ -32466,7 +32466,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1004548287435876283}
   - component: {fileID: 6562012443410333121}
-  - component: {fileID: 6562012443410333122}
   - component: {fileID: 6562012443410333123}
   m_Layer: 3
   m_Name: Player
@@ -34676,28 +34675,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6562012443410333122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484998928788880641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e89a8a5c0890bcc44a75ab280e78274c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 5
-  cam: {fileID: 330585549}
-  rotSpeed: 450
-  surfaceCheckRadius: 0.16
-  surfaceCheckOffset: {x: 0, y: 0.06, z: 0.06}
-  surfaceLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  fallingSpeed: 0
-  moveDir: {x: 0, y: 0, z: 0}
 --- !u!143 &6562012443410333123
 CharacterController:
   m_ObjectHideFlags: 0
