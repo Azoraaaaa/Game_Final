@@ -2,61 +2,47 @@ using UnityEngine;
 
 public class MiniMapIcon : MonoBehaviour
 {
-    [HideInInspector]
     public Transform target;
-
-    // Static variables to avoid finding them for every icon instance
-    private static Camera miniMapCamera;
-    private static RectTransform mapContainer;
-
+    
     private RectTransform myRectTransform;
+    private RectTransform mapContainer;
 
     void Start()
     {
         myRectTransform = GetComponent<RectTransform>();
-
-        if (miniMapCamera == null)
-        {
-            GameObject camObj = GameObject.FindWithTag("MiniMapCamera");
-            if (camObj != null)
-            {
-                miniMapCamera = camObj.GetComponent<Camera>();
-            }
-        }
         
-        if (mapContainer == null)
+        GameObject contObj = GameObject.FindWithTag("MiniMapIconsContainer");
+        if(contObj != null)
         {
-             GameObject contObj = GameObject.FindWithTag("MiniMapIconsContainer");
-             if(contObj != null)
-             {
-                mapContainer = contObj.GetComponent<RectTransform>();
-             }
+           mapContainer = contObj.GetComponent<RectTransform>();
         }
-        
-        if (miniMapCamera == null || mapContainer == null)
+        else
         {
-            Debug.LogError("MiniMap setup error: Could not find a Camera with 'MiniMapCamera' tag, or a UI object with 'MiniMapIconsContainer' tag. Please check your setup.", this);
-            enabled = false;
+             Debug.LogError("--- MiniMap FATAL: Could not find a GameObject with tag 'MiniMapIconsContainer'. Please check your tags!", gameObject);
+             enabled = false;
         }
     }
 
     void LateUpdate()
     {
-        if (target == null || !target.gameObject.activeInHierarchy)
+        if (target == null || mapContainer == null || MiniMapController.Instance == null)
         {
-            gameObject.SetActive(false);
+            myRectTransform.anchoredPosition = new Vector2(float.MaxValue, float.MaxValue);
             return;
         }
 
-        gameObject.SetActive(true);
+        // Calculate the position difference in the world, relative to the player
+        Vector3 positionDifference = target.position - MiniMapController.Instance.player.position;
 
-        // Convert the target's world position to a screen position relative to the minimap camera
-        Vector2 screenPos = miniMapCamera.WorldToScreenPoint(target.position);
+        // Rotate the difference vector to match the minimap's rotation
+        positionDifference = Quaternion.Euler(0, 0, -MiniMapController.Instance.player.eulerAngles.y) * positionDifference;
+        
+        // Scale the position based on the map's size and zoom level
+        float mapSize = mapContainer.rect.width; // Assumes a square map
+        float mapScale = mapSize / (MiniMapController.Instance.miniMapSize * 2);
+        
+        Vector2 finalPosition = new Vector2(positionDifference.x, positionDifference.z) * mapScale;
 
-        // Convert the screen position to a local position within the map's UI container
-        Vector2 localPosition;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(mapContainer, screenPos, null, out localPosition);
-
-        myRectTransform.localPosition = localPosition;
+        myRectTransform.anchoredPosition = finalPosition;
     }
 } 
