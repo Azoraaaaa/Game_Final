@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54ae0fadf75ef74e8d76de0ebd7f2db, type: 3}
   m_Name: NPC1
   m_EditorClassIdentifier: 
-  speakerName: 
-  sentences: []
+  speakerName: NPC1
+  sentences:
+  - Hi, Aurora. I'm NPC1.
+  - Nice to meet you.
