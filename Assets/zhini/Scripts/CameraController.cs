@@ -28,7 +28,7 @@ public class CameraController : MonoBehaviour
         invertXValue = (invertX) ? -1 : 1; //invert rotation of the camera, true(-1) or false(1) value
         invertYValue = (invertX) ? -1 : 1;
 
-        Debug.Log("CameraController is updating...");
+
 
 
         rotX += Input.GetAxis("Mouse Y") * invertYValue * rotSpeed;
