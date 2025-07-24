@@ -1,25 +1,28 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LedgeCheck : MonoBehaviour
 {
     public Vector3 rayOffset = new Vector3();
-    public float rayLength = 10f, jumpPower = 5f;
+    public float rayLength = 10f, jumpPower = 10f;
     public LayerMask BarrierLayer;
 
     private Animator anim;
     private bool hardLanding, frontFlip;
-    private PlayerController PlayerCon;
+    public PlayerController PlayerCon;
     private CharacterController CC;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
         anim = GetComponent<Animator>();
         hardLanding = false;
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
         CC = GetComponent<CharacterController>();
-        PlayerCon = GetComponent<PlayerController>();
-        
     }
 
     // Update is called once per frame
@@ -30,110 +33,79 @@ public class LedgeCheck : MonoBehaviour
 
     private void PerformRayCast()
     {
-        Vector3 rayDirection = -transform.up; //down position relative to player position
+        Vector3 rayDirection = -transform.up;
 
         //rotate the rayOffset vector based on player's rotation
-        Vector3 rotateOffset = Quaternion.Euler(transform.rotation.eulerAngles) * rayOffset;
+        Vector3 rotatedOffset = Quaternion.Euler(transform.rotation.eulerAngles) * rayOffset;
 
-        var rayOrigin = transform.position + rotateOffset;
+        var rayOrigin = transform.position + rotatedOffset;
         RaycastHit hit;
 
-        //Perform the rayCast
-
-        if(Physics.Raycast(rayOrigin, rayDirection, out hit, rayLength, BarrierLayer))
+        //perform the raycast
+        if (Physics.Raycast(rayOrigin, rayDirection, out hit, rayLength, BarrierLayer))
         {
             float distanceToHit = Vector3.Distance(transform.position, hit.point);
-            if(distanceToHit > 1f && distanceToHit < 8f)
+            if (distanceToHit > 1f && distanceToHit < 8f)
             {
                 Debug.DrawRay(rayOrigin, rayDirection * rayLength, Color.black);
+                //check Ledge
                 CheckLedge(hit.point, distanceToHit);
             }
+
         }
     }
 
     void CheckLedge(Vector3 hitPoint, float distanceToHit)
     {
         var currentStateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        Debug.Log(distanceToHit);
 
-        if(currentStateInfo.IsTag("FrontFlip"))
+        if (currentStateInfo.IsTag("FrontFlip"))
         {
-            goto hello;
+            goto hallo;
         }
-        if(!currentStateInfo.IsTag("MovementTree"))
+
+        if (!currentStateInfo.IsTag("MovementTree"))
         {
             return;
         }
 
-    hello:
-        if(distanceToHit > 3f)
+    hallo:
+
+        if (distanceToHit > 3f)
         {
             hardLanding = true;
         }
 
-        if(!PlayerCon.onSurface || frontFlip) //in the air or falling oR frontFlip
+        if (!PlayerCon.onSurface || frontFlip)//in the air of falling
         {
-            if(hardLanding)
+            if (hardLanding)
             {
-                //do hardLanding
+                //do hardlanding
                 StartCoroutine(PerformHardLanding());
             }
             else
             {
-                if(distanceToHit > 1f && distanceToHit < 3f)
+                if (distanceToHit > 1f && distanceToHit < 3f)
                 {
-                    //do softLanding
+                    //do softlanding
                     StartCoroutine(PerformSoftLanding());
                 }
             }
         }
 
-        if(PlayerCon.onSurface)
+        if (PlayerCon.onSurface)
         {
-            if((distanceToHit > 1f && distanceToHit < 10f) && Input.GetButtonDown("Jump"))
-                    {
-                        frontFlip = true;
-                    }
+            if ((distanceToHit > 1f && distanceToHit < 10f) && Input.GetButtonDown("Jump"))
+            {
+                frontFlip = true;
+            }
         }
     }
 
     IEnumerator PerformHardLanding()
     {
-        yield return null; //refresh animation
-
-        if(frontFlip)
-        {
-            anim.Play("FrontFlip");
-
-            if(CC != null)
-            {
-                if(CC.enabled)
-                {
-                    CC.Move(Vector3.up * jumpPower * Time.deltaTime); //jumping
-                }
-            }
-
-            yield return new WaitForSeconds(0.5f);
-            hardLanding = true;
-            frontFlip = false;
-        }
-        else
-        {
-            anim.CrossFade("HardLanding", 0.2f); //transition to hard landing animation
-            yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
-            //wait until animation above completed
-
-            PlayerCon.SetControl(false); //disable the movement of the player
-            yield return new WaitForSeconds(0.3f); //disable the movement within this time
-
-            PlayerCon.SetControl(true); //we can move again here
-            hardLanding = false;
-        }
-    }
-
-    IEnumerator PerformSoftLanding()
-    {
-        yield return null; //refresh animation
-
+        yield return null;
         if (frontFlip)
         {
             anim.Play("FrontFlip");
@@ -142,25 +114,56 @@ public class LedgeCheck : MonoBehaviour
             {
                 if (CC.enabled)
                 {
-                    CC.Move(Vector3.up * jumpPower * Time.deltaTime); //jumping
+                    CC.Move(Vector3.up * jumpPower * Time.deltaTime);//jumping
                 }
             }
 
             yield return new WaitForSeconds(0.5f);
-            hardLanding = false;
+            hardLanding = true;
             frontFlip = false;
         }
         else
         {
-            anim.CrossFade("SoftLanding", 0.2f); //transition to hard landing animation
+            anim.CrossFade("HardLanding", 0.2f);//transition to hardLanding animation
             yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
-            //wait until animation above completed
 
-            PlayerCon.SetControl(false); //disable the movement of the player
-            yield return new WaitForSeconds(0.3f); //disable the movement within this time
+            PlayerCon.SetControl(false);//disable the movement of the player
+            yield return new WaitForSeconds(0.3f);//disable within this time
 
-            PlayerCon.SetControl(true); //we can move again here
-            hardLanding = false;
+            PlayerCon.SetControl(true);//make him able to move again
+            hardLanding = false;//switch off hardlanding
+        }
+    }
+
+    IEnumerator PerformSoftLanding()
+    {
+        yield return null;
+        if (frontFlip)
+        {
+            anim.Play("FrontFlip");
+
+            if (CC != null)
+            {
+                if (CC.enabled)
+                {
+                    CC.Move(Vector3.up * jumpPower * Time.deltaTime);//jumping
+                }
+            }
+
+            yield return new WaitForSeconds(0.5f);
+            hardLanding = true;
+            frontFlip = false;
+        }
+        else
+        {
+            anim.CrossFade("SoftLanding", 0.2f);//transition to hardLanding animation
+            yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+
+            PlayerCon.SetControl(false);//disable the movement of the player
+            yield return new WaitForSeconds(0.3f);//disable within this time
+
+            PlayerCon.SetControl(true);//make him able to move again
+            hardLanding = false;//switch off hardlanding
         }
     }
 }

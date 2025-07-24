@@ -4975,7 +4975,6 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
-  - component: {fileID: 330585550}
   - component: {fileID: 330585551}
   m_Layer: 0
   m_Name: Main Camera
@@ -5102,26 +5101,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &330585550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f123b34abb39ad44ab4c533e111224c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1004548287435876283}
-  gap: 4
-  minVerAngle: -14
-  maxVerAngle: 45
-  framingBalance: {x: 0, y: 1}
-  rotSpeed: 2
-  invertX: 0
-  invertY: 1
 --- !u!114 &330585551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32329,11 +32308,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4752662876082006, guid: 1fdfc37f91a411548a5f4dcd69f7ecae, type: 3}
   m_PrefabInstance: {fileID: 163554131}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1004548287435876283 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4877510752092881413, guid: 81a452e2a3c88374ab98a086fc401a47, type: 3}
-  m_PrefabInstance: {fileID: 8312404661917543600}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5684760194858424786
 PrefabInstance:
