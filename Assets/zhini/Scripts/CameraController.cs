@@ -25,26 +25,25 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        invertXValue = (invertX) ? -1 : 1;//invert rotation of the camera , true(-1) or false(1) value
-        invertYValue = (invertY) ? -1 : 1;
+        invertXValue = (invertX) ? -1 : 1; //invert rotation of the camera, true(-1) or false(1) value
+        invertYValue = (invertX) ? -1 : 1;
+
+        Debug.Log("CameraController is updating...");
+
 
         rotX += Input.GetAxis("Mouse Y") * invertYValue * rotSpeed;
-        rotX = Mathf.Clamp(rotX, minVerAngle, maxVerAngle);//limiting rotation angle of rotX (moving mouse up n down)
+        rotX = Mathf.Clamp(rotX, minVerAngle, maxVerAngle); //limiting rotation angle of rotX (moving mouse up n down)
         rotY += Input.GetAxis("Mouse X") * invertXValue * rotSpeed;
+
+
 
         var targetRotation = Quaternion.Euler(rotX, rotY, 0);
 
         var focusPos = target.position + new Vector3(framingBalance.x, framingBalance.y);//focus to player
 
-        transform.position = focusPos - targetRotation * new Vector3(0, -1, gap);
+        transform.position = focusPos - targetRotation * new Vector3(0, 0, gap);
         transform.rotation = targetRotation;
     }
 
-    public Quaternion flatRotation => Quaternion.Euler(0, rotY, 0);//x and z will not rotate
-    /*
-    public Quaternion flatRotation()
-    {
-        return Quaternion.Euler(0, rotY, 0);
-    }
-    */
+    public Quaternion flatRotation => Quaternion.Euler(0, rotY, 0); //x and z will not rotate
 }

@@ -2,41 +2,44 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float MovementSpeed = 3f;
-    public CameraController1 Cam;
+    public float movementSpeed = 3f;
+    public CameraController cam;
 
-    Quaternion RequiredRotation;
-    public float RotSpeed = 450f;
+    Quaternion requiredRotation;
+    public float rotSpeed = 450f;
 
-    Animator Anim;
-    CharacterController Cc;
+    Animator anim;
+    CharacterController CC;
 
     [Header("SurfaceCheck")]
-    public float SurfaceCheckRadius = 0.1f;
-    public Vector3 SurfaceCheckOffset;
-    public LayerMask SurfaceLayer;
-    bool ontheSurface;
+    public float surfaceCheckRadius = 0.1f;
+    public Vector3 surfaceCheckOffset;
+    public LayerMask surfaceLayer;
+    bool onSurface;
 
     [Header("Falling Gravity")]
-    [SerializeField] float FallingSpeed;
-    [SerializeField] Vector3 MoveDir;
+    [SerializeField] float fallingSpeed;
+    [SerializeField] Vector3 moveDir;
 
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Anim = GetComponent<Animator>();
-        Cc = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
+        CC = GetComponent<CharacterController>();
+
     }
 
+    // Update is called once per frame
     void Update()
     {
-        PlayersMovement();
-        SurfacetoCheck();
-        Debug.Log("Player on Surface" + ontheSurface);
+        PlayerMovement();
+        SurfaceCHeck();
+        Debug.Log("Player on Surface" + onSurface);
     }
 
-    void PlayersMovement()
+    void PlayerMovement()
     {
-
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -51,40 +54,40 @@ public class PlayerController : MonoBehaviour
         //check if the player is on the surface to apply gravity
         if (onSurface)
         {
-            FallingSpeed = 0f; //reset falling speed
+            fallingSpeed = 0f; //reset falling speed
         }
         else
         {
             //we are falling
-            FallingSpeed += Physics.gravity.y * Time.deltaTime / 2; //devide by 2 will make player lighter
+            fallingSpeed += Physics.gravity.y * Time.deltaTime / 2; //devide by 2 will make player lighter
         }
 
-        MoveDir = new Vector3(MovementDirection.x, FallingSpeed, MovementDirection.z);
+        moveDir = new Vector3(MovementDirection.x, fallingSpeed, MovementDirection.z);
 
         if (movementAmount > 0)
         {
-            Cc.Move(MoveDir * MovementSpeed * Time.deltaTime);
+            CC.Move(moveDir * movementSpeed * Time.deltaTime);
 
-            RequiredRotation = Quaternion.LookRotation(MovementDirection); //rotate based on input, capture the second rotation state 
+            requiredRotation = Quaternion.LookRotation(MovementDirection); //rotate based on input, capture the second rotation state 
         }
 
         moveDir = MovementDirection; //when we are on the ground already
 
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, RequiredRotation, RotSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, requiredRotation, rotSpeed * Time.deltaTime);
         //will make smooth rotation from one state to another based on speed
 
-        Anim.SetFloat("Speed", movementAmount, 0.2f, Time.deltaTime);
+        anim.SetFloat("Speed", movementAmount, 0.2f, Time.deltaTime);
     }
 
-    void SurfacetoCheck()
+    void SurfaceCHeck()
     {
-        ontheSurface = Physics.CheckSphere(transform.TransformPoint(SurfaceCheckOffset), SurfaceCheckRadius, SurfaceLayer);
+        onSurface = Physics.CheckSphere(transform.TransformPoint(surfaceCheckOffset), surfaceCheckRadius, surfaceLayer);
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(transform.TransformPoint(SurfaceCheckOffset), surfaceCheckRadius);
+        Gizmos.DrawSphere(transform.TransformPoint(surfaceCheckOffset), surfaceCheckRadius);
     }
 
 }
