@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -14,6 +15,17 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(gameObject);
+    }
+    void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            InventoryController.instance.ToggleBagScreen();
+
+            //PlaySound(openSound);
+        }
+
     }
 
     public void LoadScene0()
