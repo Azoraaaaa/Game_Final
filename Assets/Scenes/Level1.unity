@@ -12779,6 +12779,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d278e5a775df80147a4b3fdc06308dfb, type: 3}
   m_PrefabInstance: {fileID: 1068417419}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &842986368 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8736825264303527270, guid: 81a452e2a3c88374ab98a086fc401a47, type: 3}
+  m_PrefabInstance: {fileID: 8312404661917543600}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e89a8a5c0890bcc44a75ab280e78274c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &845681780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3751e89b3d716604c8a314af900f88a7, type: 3}
@@ -32383,6 +32394,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4045994450615184780, guid: 81a452e2a3c88374ab98a086fc401a47, type: 3}
+      propertyPath: PlayerCon
+      value: 
+      objectReference: {fileID: 842986368}
+    - target: {fileID: 4045994450615184780, guid: 81a452e2a3c88374ab98a086fc401a47, type: 3}
+      propertyPath: BarrierLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 4877510752092881413, guid: 81a452e2a3c88374ab98a086fc401a47, type: 3}
       propertyPath: m_LocalPosition.x
       value: 80.342
