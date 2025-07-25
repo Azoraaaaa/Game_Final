@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueBox;
 
     private Queue<string> sentences;
+    private bool isTyping = false;
 
     void Awake()
     {
@@ -29,6 +30,12 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueData data)
     {
+        // 通知TimelineManager开始对话
+        if (TimelineManager.Instance != null)
+        {
+            TimelineManager.Instance.StartDialogue();
+        }
+
         dialogueBox.SetActive(true);
         speakerNameText.text = data.speakerName;
 
@@ -44,6 +51,18 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        // 如果正在打字，直接显示完整句子
+        if (isTyping)
+        {
+            StopAllCoroutines();
+            if (sentences.Count > 0)
+            {
+                dialogueText.text = sentences.Peek();
+            }
+            isTyping = false;
+            return;
+        }
+
         if (sentences.Count == 0)
         {
             EndDialogue();
@@ -57,16 +76,32 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence(string sentence)
     {
+        isTyping = true;
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
+            yield return new WaitForSeconds(0.02f); // 添加一个小延迟使打字效果更明显
         }
+        isTyping = false;
     }
 
     void EndDialogue()
     {
         dialogueBox.SetActive(false);
+
+        // 通知TimelineManager对话结束
+        if (TimelineManager.Instance != null)
+        {
+            TimelineManager.Instance.EndDialogue();
+        }
+    }
+
+    // 用于Timeline或其他系统强制结束对话
+    public void ForceEndDialogue()
+    {
+        StopAllCoroutines();
+        sentences.Clear();
+        EndDialogue();
     }
 } 
