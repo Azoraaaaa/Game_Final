@@ -422,6 +422,7 @@ MonoBehaviour:
   spline: {fileID: 321500124}
   duration: 5
   lookForward: 1
+  randomStart: 0
   mode: 1
 --- !u!23 &1020182017
 MeshRenderer:
