@@ -1,11 +1,19 @@
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 
 {
     public static GameManager instance;
+
+    public GameObject player;
+
+    public bool isTalking = false;
+
+    public HashSet<string> discoveredLocations = new HashSet<string>();
+    public bool isNearTeleporter = false; // 玩家是否在传送点附近
 
     private void Awake()
     {
