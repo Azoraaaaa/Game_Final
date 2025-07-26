@@ -782,10 +782,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: '-  OPTION  -'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
-  m_sharedMaterial: {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials:
-  - {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1630,10 +1630,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: '-  QUIT  -'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
-  m_sharedMaterial: {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials:
-  - {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1979,6 +1979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   isTalking: 0
+  isNearTeleporter: 0
 --- !u!1 &1217382450
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,10 +2221,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Tide '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
-  m_sharedMaterial: {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials:
-  - {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -2523,10 +2524,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: Whisperer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
-  m_sharedMaterial: {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials:
-  - {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -2739,10 +2740,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: '-  PLAY  -'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
-  m_sharedMaterial: {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials:
-  - {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
