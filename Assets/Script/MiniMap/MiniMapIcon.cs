@@ -35,7 +35,7 @@ public class MiniMapIcon : MonoBehaviour
         Vector3 positionDifference = target.position - MiniMapController.Instance.player.position;
 
         // Rotate the difference vector to match the minimap's rotation
-        positionDifference = Quaternion.Euler(0, 0, -MiniMapController.Instance.player.eulerAngles.y) * positionDifference;
+        positionDifference = Quaternion.Euler(0, -MiniMapController.Instance.player.eulerAngles.y, 0) * positionDifference;
         
         // Scale the position based on the map's size and zoom level
         float mapSize = mapContainer.rect.width; // Assumes a square map

@@ -8,15 +8,16 @@ public class TimelineManager : MonoBehaviour
 
     [Header("Dependencies")]
     [Tooltip("Reference to the player's control script. It will be disabled during cutscenes.")]
-    public MonoBehaviour[] playerControlScripts; // 改为数组以支持多个控制脚本
+    public MonoBehaviour playerController;
     
     [Tooltip("Reference to the main game UI canvas group. It will be hidden during cutscenes.")]
     public CanvasGroup mainUIGroup;
 
     private PlayableDirector activeDirector;
     private bool wasInGameMode;
-    private bool isWaitingForInput;
-    private double pausedTime;
+    private bool isInDialogue = false;
+
+    public bool IsInCutscene => activeDirector != null || isInDialogue;
 
     void Awake()
     {
@@ -30,16 +31,79 @@ public class TimelineManager : MonoBehaviour
         }
     }
 
+    void OnEnable()
+    {
+        // 确保在启用时清理任何可能的残留状态
+        CleanupTimelineResources();
+    }
+
+    void OnDisable()
+    {
+        // 确保在禁用时清理资源
+        CleanupTimelineResources();
+    }
+
+    private void CleanupTimelineResources()
+    {
+        if (activeDirector != null)
+        {
+            activeDirector.stopped -= OnTimelineFinished;
+            if (activeDirector.playableGraph.IsValid())
+            {
+                activeDirector.playableGraph.Destroy();
+            }
+            activeDirector = null;
+        }
+
+        // 强制进行垃圾回收以清理任何残留的Timeline资源
+        System.GC.Collect();
+    }
+
     public void Play(PlayableDirector director)
     {
+        // 在播放新的Timeline之前清理旧的
+        CleanupTimelineResources();
+
         // 记住之前的模式
         wasInGameMode = !InputManager.Instance.IsUIMode;
         
         // 切换到UI模式
         InputManager.Instance.SetUIMode();
 
-        // 禁用所有玩家控制脚本
-        DisablePlayerControl();
+        DisablePlayerAndUI();
+
+        activeDirector = director;
+
+        // 确保Timeline资源正确初始化
+        if (!activeDirector.playableGraph.IsValid())
+        {
+            activeDirector.RebuildGraph();
+        }
+
+        activeDirector.stopped += OnTimelineFinished;
+        activeDirector.Play();
+    }
+
+    public void StartDialogue()
+    {
+        isInDialogue = true;
+        wasInGameMode = !InputManager.Instance.IsUIMode;
+        InputManager.Instance.SetUIMode();
+        DisablePlayerAndUI();
+    }
+
+    public void EndDialogue()
+    {
+        isInDialogue = false;
+        RestorePlayerAndUI();
+    }
+
+    private void DisablePlayerAndUI()
+    {
+        if (playerController != null)
+        {
+            playerController.enabled = false;
+        }
 
         if (mainUIGroup != null)
         {
@@ -47,76 +111,17 @@ public class TimelineManager : MonoBehaviour
             mainUIGroup.interactable = false;
             mainUIGroup.blocksRaycasts = false;
         }
-
-        activeDirector = director;
-        
-        // 订阅Timeline事件
-        activeDirector.played += OnTimelineStarted;
-        activeDirector.stopped += OnTimelineFinished;
-        activeDirector.paused += OnTimelinePaused;
-
-        // 开始播放
-        activeDirector.Play();
     }
 
-    private void DisablePlayerControl()
+    private void RestorePlayerAndUI()
     {
-        if (playerControlScripts != null)
+        // 只有在不处于任何cutscene或对话时才恢复
+        if (!IsInCutscene)
         {
-            foreach (var script in playerControlScripts)
+            if (playerController != null)
             {
-                if (script != null)
-                {
-                    script.enabled = false;
-                }
+                playerController.enabled = true;
             }
-        }
-    }
-
-    private void EnablePlayerControl()
-    {
-        if (playerControlScripts != null)
-        {
-            foreach (var script in playerControlScripts)
-            {
-                if (script != null)
-                {
-                    script.enabled = true;
-                }
-            }
-        }
-    }
-
-    private void OnTimelineStarted(PlayableDirector director)
-    {
-        isWaitingForInput = false;
-    }
-
-    private void OnTimelinePaused(PlayableDirector director)
-    {
-        if (director == activeDirector)
-        {
-            isWaitingForInput = true;
-            pausedTime = director.time;
-        }
-    }
-
-    public void ContinueTimeline()
-    {
-        if (isWaitingForInput && activeDirector != null)
-        {
-            isWaitingForInput = false;
-            activeDirector.time = pausedTime;
-            activeDirector.Resume();
-        }
-    }
-
-    private void OnTimelineFinished(PlayableDirector director)
-    {
-        if (director == activeDirector)
-        {
-            // 恢复玩家控制
-            EnablePlayerControl();
 
             if (mainUIGroup != null)
             {
@@ -130,20 +135,33 @@ public class TimelineManager : MonoBehaviour
             {
                 InputManager.Instance.SetGameMode();
             }
-            
-            // 取消订阅所有事件
-            director.played -= OnTimelineStarted;
-            director.stopped -= OnTimelineFinished;
-            director.paused -= OnTimelinePaused;
-            
-            activeDirector = null;
-            isWaitingForInput = false;
         }
     }
 
-    // 用于检查Timeline是否正在等待玩家输入
-    public bool IsWaitingForInput()
+    private void OnTimelineFinished(PlayableDirector director)
     {
-        return isWaitingForInput;
+        if (director == activeDirector)
+        {
+            activeDirector.stopped -= OnTimelineFinished;
+            
+            // 确保清理Timeline资源
+            if (activeDirector.playableGraph.IsValid())
+            {
+                activeDirector.playableGraph.Destroy();
+            }
+            
+            activeDirector = null;
+            
+            // 只有在不在对话状态时才恢复
+            if (!isInDialogue)
+            {
+                RestorePlayerAndUI();
+            }
+        }
+    }
+
+    void OnApplicationQuit()
+    {
+        CleanupTimelineResources();
     }
 } 
