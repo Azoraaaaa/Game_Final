@@ -24,6 +24,7 @@ public class UIController : MonoBehaviour
     public GameObject pauseScreen;
     */
     public GameObject BagScreen;
+    public GameObject ShopScreen;
     //public Text HealthTextInBag;
 
     //public Text speedBoostText;
@@ -37,6 +38,8 @@ public class UIController : MonoBehaviour
     void Start()
     {
         //SetHUDVisibility(true);
+        BagScreen.SetActive(false);
+        ShopScreen.SetActive(false);
     }
 
     // Update is called once per frame
