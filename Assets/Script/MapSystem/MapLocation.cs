@@ -44,7 +44,10 @@ public class MapLocation : MonoBehaviour
 
     void TeleportPlayer()
     {
-        if (isDiscovered)
+        if (!isDiscovered) return;
+
+        // 检查玩家是否在传送点附近
+        if (GameManager.instance.isNearTeleporter)
         {
             if (teleportDestination == null)
             {
@@ -74,6 +77,11 @@ public class MapLocation : MonoBehaviour
             {
                 controller.enabled = true;
             }
+        }
+        else
+        {
+            // 如果玩家不在传送点附近，则显示提示信息
+            UIManager.instance.ShowNotification("需要先靠近一个传送点才能传送", 2f);
         }
     }
 } 
