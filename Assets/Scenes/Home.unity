@@ -785,7 +785,7 @@ MonoBehaviour:
   m_fontAsset: {fileID: 11400000, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_sharedMaterial: {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_fontSharedMaterials:
-  - {fileID: 0}
+  - {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1633,7 +1633,7 @@ MonoBehaviour:
   m_fontAsset: {fileID: 11400000, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_sharedMaterial: {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_fontSharedMaterials:
-  - {fileID: 0}
+  - {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -2223,7 +2223,7 @@ MonoBehaviour:
   m_fontAsset: {fileID: 11400000, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_sharedMaterial: {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_fontSharedMaterials:
-  - {fileID: 0}
+  - {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -2526,7 +2526,7 @@ MonoBehaviour:
   m_fontAsset: {fileID: 11400000, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_sharedMaterial: {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_fontSharedMaterials:
-  - {fileID: 0}
+  - {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -2742,7 +2742,7 @@ MonoBehaviour:
   m_fontAsset: {fileID: 11400000, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_sharedMaterial: {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_fontSharedMaterials:
-  - {fileID: 0}
+  - {fileID: -587887180317754945, guid: 81df0f674d11eda4884d1ad7ec16d4ad, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:

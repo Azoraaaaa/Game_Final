@@ -494,6 +494,7 @@ MonoBehaviour:
   spline: {fileID: 1814351988}
   duration: 100
   lookForward: 1
+  randomStart: 0
   mode: 1
 --- !u!1 &1627491119
 GameObject:
