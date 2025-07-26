@@ -219,7 +219,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: CinemachineCamera
+    m_DisplayName: FreeLook Camera
   m_Markers:
     m_Objects: []
   TrackPriority: 0
@@ -235,4 +235,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b3fab871fe4b648b00c77ef6129487, type: 3}
   m_Name: DialogueClip
   m_EditorClassIdentifier: 
-  dialogueData: {fileID: 11400000, guid: dd1d09473dc61ae49842058ba3cc8260, type: 2}
+  startingNode: {fileID: 11400000, guid: dd1d09473dc61ae49842058ba3cc8260, type: 2}
