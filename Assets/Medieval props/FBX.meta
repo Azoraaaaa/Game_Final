@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Medieval props/FBX.meta
 guid: b54baf6d1f9fa164c8487d32ac50bfb1
+========
+guid: 290558dd035b3174c8fb34ea5b8f6a91
+>>>>>>>> Stashed changes:Assets/Medieval props/FBX/Materials.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
