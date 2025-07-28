@@ -33,7 +33,12 @@ public class GameManager : MonoBehaviour
 
             //PlaySound(openSound);
         }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            ShopController.instance.ToggleShopScreen();
 
+            //PlaySound(openSound);
+        }
     }
 
     public void LoadScene0()
