@@ -14,13 +14,10 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueBox;
     public Transform choiceButtonsContainer;
     public GameObject choiceButtonPrefab;
-    
-    [Header("Linear Dialogue")]
-    public Button continueButton; // 用于线性对话的继续按钮
+    public Button continueButton; // 新增：自定义继续按钮
 
     private DialogueNode currentNode;
     private List<GameObject> activeChoiceButtons = new List<GameObject>();
-    private bool isTyping = false;
 
     void Awake()
     {
@@ -33,11 +30,7 @@ public class DialogueManager : MonoBehaviour
             Instance = this;
             dialogueBox.SetActive(false);
             choiceButtonsContainer.gameObject.SetActive(false);
-            if (continueButton != null)
-            {
-                continueButton.gameObject.SetActive(false);
-                continueButton.onClick.AddListener(OnContinueButtonClicked);
-            }
+            if (continueButton != null) continueButton.gameObject.SetActive(false);
         }
     }
 
@@ -47,7 +40,6 @@ public class DialogueManager : MonoBehaviour
         {
             TimelineManager.Instance.StartDialogue();
         }
-        
         dialogueBox.SetActive(true);
         ShowNode(startNode);
     }
@@ -56,53 +48,44 @@ public class DialogueManager : MonoBehaviour
     {
         currentNode = node;
 
-        // Clear previous choices
+        // 清理旧按钮
         foreach (GameObject button in activeChoiceButtons)
-        {
             Destroy(button);
-        }
         activeChoiceButtons.Clear();
         choiceButtonsContainer.gameObject.SetActive(false);
-        
-        if (continueButton != null)
-        {
-            continueButton.gameObject.SetActive(false);
-        }
-        
+        if (continueButton != null) continueButton.gameObject.SetActive(false);
+
         StopAllCoroutines();
         StartCoroutine(TypeSentence(node.sentence));
-
         speakerNameText.text = node.speakerName;
     }
 
     private IEnumerator TypeSentence(string sentence)
     {
-        isTyping = true;
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
             yield return null;
         }
-        isTyping = false;
-
-        // Finished typing, show choices or continue button
-        DisplayChoices();
+        DisplayChoicesOrContinue();
     }
 
-    private void DisplayChoices()
+    private void DisplayChoicesOrContinue()
     {
         if (currentNode.choices == null || currentNode.choices.Count == 0)
         {
-            // 线性对话：显示继续按钮
+            // 没有分支，显示“继续”按钮
             if (continueButton != null)
             {
                 continueButton.gameObject.SetActive(true);
+                continueButton.onClick.RemoveAllListeners();
+                continueButton.onClick.AddListener(EndDialogue);
             }
         }
         else
         {
-            // 分支对话：创建选项按钮
+            // 有分支，显示选项按钮
             foreach (PlayerChoice choice in currentNode.choices)
             {
                 GameObject buttonGO = Instantiate(choiceButtonPrefab, choiceButtonsContainer);
@@ -118,64 +101,50 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void OnContinueButtonClicked()
-    {
-        // 线性对话结束
-        EndDialogue();
-    }
-
     private void OnChoiceSelected(PlayerChoice choice)
     {
-        // Trigger any events attached to the choice
-        choice.onChoiceSelected?.Invoke();
+        // 事件分发
+        switch (choice.eventType)
+        {
+            case DialogueChoiceEventType.OpenShop:
+                UIManager.instance.OpenShopPanel();
+                break;
+            case DialogueChoiceEventType.OpenBag:
+                UIManager.instance.OpenBagPanel();
+                break;
+            case DialogueChoiceEventType.CloseShop:
+                UIManager.instance.CloseShopPanel();
+                break;
+            case DialogueChoiceEventType.CloseBag:
+                UIManager.instance.CloseBagPanel();
+                break;
+            // 可扩展更多事件
+            // case DialogueChoiceEventType.CloseShopAndEnd:
+            //     UIManager.instance.CloseShopPanelAndEndDialogue();
+            //     break;
+            // case DialogueChoiceEventType.CloseBagAndEnd:
+            //     UIManager.instance.CloseBagPanelAndEndDialogue();
+            //     break;
+        }
 
-        // If there's a next node, go to it. Otherwise, end the dialogue.
+        // 跳转下一个节点或结束
         if (choice.nextNode != null)
-        {
             ShowNode(choice.nextNode);
-        }
         else
-        {
             EndDialogue();
-        }
     }
 
     public void EndDialogue()
     {
         dialogueBox.SetActive(false);
         choiceButtonsContainer.gameObject.SetActive(false);
-        if (continueButton != null)
-        {
-            continueButton.gameObject.SetActive(false);
-        }
-
+        if (continueButton != null) continueButton.gameObject.SetActive(false);
         foreach (GameObject button in activeChoiceButtons)
-        {
             Destroy(button);
-        }
         activeChoiceButtons.Clear();
-
         if (TimelineManager.Instance != null)
         {
             TimelineManager.Instance.EndDialogue();
-        }
-    }
-
-    // 用于外部调用的继续对话方法（比如点击屏幕继续）
-    public void ContinueDialogue()
-    {
-        if (isTyping)
-        {
-            // 如果正在打字，直接显示完整句子
-            StopAllCoroutines();
-            dialogueText.text = currentNode.sentence;
-            isTyping = false;
-            DisplayChoices();
-        }
-        else if (continueButton != null && continueButton.gameObject.activeInHierarchy)
-        {
-            // 如果继续按钮可见，点击它
-            OnContinueButtonClicked();
         }
     }
 } 

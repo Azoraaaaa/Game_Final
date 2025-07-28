@@ -17,11 +17,7 @@ MonoBehaviour:
   choices:
   - choiceText: Back
     nextNode: {fileID: 11400000, guid: dd1d09473dc61ae49842058ba3cc8260, type: 2}
-    onChoiceSelected:
-      m_PersistentCalls:
-        m_Calls: []
+    eventType: 4
   - choiceText: Test
     nextNode: {fileID: 11400000, guid: 861388b067cf19b42bc720bc0fa932ab, type: 2}
-    onChoiceSelected:
-      m_PersistentCalls:
-        m_Calls: []
+    eventType: 4

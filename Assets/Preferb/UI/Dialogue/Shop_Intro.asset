@@ -17,40 +17,10 @@ MonoBehaviour:
   choices:
   - choiceText: BUY
     nextNode: {fileID: 11400000, guid: faeee6ef0cbb98b4fb04dee1c1c3969c, type: 2}
-    onChoiceSelected:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 6394731131084078108, guid: baf17fb8c2f20654985a63913148464c, type: 3}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-          m_MethodName: OpenShopPanel
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+    eventType: 1
   - choiceText: Seeling
     nextNode: {fileID: 11400000, guid: 35a8bf934c461644e8c0e670ce8c0ccc, type: 2}
-    onChoiceSelected:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 6394731131084078108, guid: baf17fb8c2f20654985a63913148464c, type: 3}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-          m_MethodName: OpenBagPanel
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+    eventType: 2
   - choiceText: Nothing
     nextNode: {fileID: 0}
-    onChoiceSelected:
-      m_PersistentCalls:
-        m_Calls: []
+    eventType: 0
