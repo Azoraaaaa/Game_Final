@@ -5,7 +5,7 @@ using UnityEngine.Playables;
 [Serializable]
 public class DialogueBehaviour : PlayableBehaviour
 {
-    public DialogueData dialogueData;
+    public DialogueNode startingNode;
     private bool isClipPlayed = false;
 
     public override void OnPlayableCreate(Playable playable)
@@ -15,9 +15,13 @@ public class DialogueBehaviour : PlayableBehaviour
 
     public override void ProcessFrame(Playable playable, FrameData info, object playerData)
     {
-        if (dialogueData != null && !isClipPlayed && info.weight > 0)
+        if (startingNode != null && !isClipPlayed && info.weight > 0)
         {
-            DialogueManager.instance.StartDialogue(dialogueData);
+            // Use the new Singleton property 'Instance' and start dialogue with a node
+            if(DialogueManager.Instance != null)
+            {
+                DialogueManager.Instance.StartDialogue(startingNode);
+            }
             isClipPlayed = true;
         }
     }

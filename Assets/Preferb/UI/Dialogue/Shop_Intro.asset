@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdedd314c3c8ccb43833f9f854252f45, type: 3}
+  m_Name: Shop_Intro
+  m_EditorClassIdentifier: 
+  speakerName: Shoper
+  sentence: Hello, what do you want?
+  choices:
+  - choiceText: BUY
+    nextNode: {fileID: 11400000, guid: faeee6ef0cbb98b4fb04dee1c1c3969c, type: 2}
+    onChoiceSelected:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6394731131084078108, guid: baf17fb8c2f20654985a63913148464c, type: 3}
+          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_MethodName: OpenShopPanel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - choiceText: Seeling
+    nextNode: {fileID: 11400000, guid: 35a8bf934c461644e8c0e670ce8c0ccc, type: 2}
+    onChoiceSelected:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6394731131084078108, guid: baf17fb8c2f20654985a63913148464c, type: 3}
+          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_MethodName: OpenBagPanel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - choiceText: Nothing
+    nextNode: {fileID: 0}
+    onChoiceSelected:
+      m_PersistentCalls:
+        m_Calls: []
