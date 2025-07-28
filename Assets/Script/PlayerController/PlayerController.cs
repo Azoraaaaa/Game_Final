@@ -1,3 +1,4 @@
+﻿using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
@@ -23,6 +24,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float fallingSpeed;
     [SerializeField] Vector3 moveDir;
 
+    [Header("Weapon Switch")]
+    public Weapon activeWeapon;
+    public List<Weapon> allWeapons = new List<Weapon>();
+    public int currentWeapon;
+
     private void Awake()
     {
         instance = this;
@@ -41,6 +47,21 @@ public class PlayerController : MonoBehaviour
         PlayerMovement();
         SurfaceCheck();
         //Debug.Log("Player on Surface" + onSurface);
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SwitchWeaponTo(0);
+        }
+        /*
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SwitchGunTo(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SwitchGunTo(2);
+        }
+        */
     }
 
     void PlayerMovement()
@@ -101,5 +122,29 @@ public class PlayerController : MonoBehaviour
     public void SetControl(bool hasControl)
     {
         CC.enabled = hasControl;
+    }
+    public void SwitchWeaponTo(int weaponIndex)
+    {
+        if (weaponIndex >= 0 && weaponIndex < allWeapons.Count)
+        {
+            if (!allWeapons[weaponIndex].isUnlocked)
+            {
+                Debug.Log($"Weapon {weaponIndex} is not unlocked and cannot be switched to.");
+                return;
+            }
+
+            if (activeWeapon != null)
+            {
+                activeWeapon.gameObject.SetActive(false);
+            }
+
+            currentWeapon = weaponIndex;
+            activeWeapon = allWeapons[currentWeapon];
+            activeWeapon.gameObject.SetActive(true);
+
+            WeaponManager.instance.changeWeaponUI(currentWeapon);
+
+            //UIController.instance.AmmoText.text = "Ammo: " + activeGun.currentAmmo;
+        }
     }
 }
