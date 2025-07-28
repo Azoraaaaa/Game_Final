@@ -36485,17 +36485,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 196227407}
-  - {fileID: 864302206}
-  - {fileID: 214177196}
-  - {fileID: 975556984}
-<<<<<<< Updated upstream
-  - {fileID: 1843988408}
-=======
   - {fileID: 3655825158036297681}
   - {fileID: 6825092328123713864}
   - {fileID: 4102394859795485790}
->>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1463549707
@@ -54548,8 +54540,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4253111942763836064}
   m_Mesh: {fileID: 8900960910541383429, guid: 2fec609d44100f24a9c5b4d2cb3dd9e9, type: 3}
-<<<<<<< Updated upstream
-=======
 --- !u!224 &627859273752460804
 RectTransform:
   m_ObjectHideFlags: 0
@@ -54620,35 +54610,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
-=======
---- !u!114 &722755771503308806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7160210512593379895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
-  m_Spacing: 30
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
->>>>>>> Stashed changes
 --- !u!4 &747379848448231923
 Transform:
   m_ObjectHideFlags: 0
@@ -54774,8 +54735,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &884638519915722221
 GameObject:
   m_ObjectHideFlags: 0
@@ -54810,7 +54769,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3882159001698738452}
   m_CullTransparentMesh: 1
->>>>>>> Stashed changes
 --- !u!1 &990275202764675056
 GameObject:
   m_ObjectHideFlags: 0
@@ -56817,8 +56775,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4482473599910277234, guid: 465d4264dc9394d42a3b737517de4f26, type: 3}
-<<<<<<< Updated upstream
-=======
 --- !u!224 &2723876954393914842
 RectTransform:
   m_ObjectHideFlags: 0
@@ -56923,52 +56879,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
-=======
---- !u!223 &2902767165670107685
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7249982934627677801}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!1 &2931969769412225101
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8498243466047046610}
-  - component: {fileID: 1569084759450098707}
-  - component: {fileID: 7543991816798617889}
-  - component: {fileID: 6019054909025920459}
-  - component: {fileID: 8498243466047046611}
-  m_Layer: 5
-  m_Name: Button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
->>>>>>> Stashed changes
 --- !u!1 &2955382703004476823
 GameObject:
   m_ObjectHideFlags: 0
@@ -57088,8 +56998,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 389747676948683953, guid: 3d012b62629656f4c8a31455e0bc2dd3, type: 3}
-<<<<<<< Updated upstream
-=======
 --- !u!114 &3098545045762499185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57475,8 +57383,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6957554495415715310, guid: 1fbd0e600d7361949ab58927677327eb, type: 3}
-<<<<<<< Updated upstream
-=======
 --- !u!224 &3655825158036297681
 RectTransform:
   m_ObjectHideFlags: 0
@@ -57565,8 +57471,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &3882159001698738452
 GameObject:
   m_ObjectHideFlags: 0
@@ -58186,8 +58090,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
-=======
 --- !u!224 &4956238120447830656
 RectTransform:
   m_ObjectHideFlags: 0
@@ -58226,7 +58128,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
->>>>>>> Stashed changes
 --- !u!33 &5012035360410694909
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -59761,22 +59662,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6957554495415715310, guid: 3593584340341cc4b87bf90969381b0e, type: 3}
-<<<<<<< Updated upstream
---- !u!222 &6837052851320175620
-CanvasRenderer:
-=======
---- !u!224 &6825092328123713864
-RectTransform:
->>>>>>> Stashed changes
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
-  m_GameObject: {fileID: 6837052851320175623}
-  m_CullTransparentMesh: 0
 --- !u!114 &6837052851320175621
-=======
   m_GameObject: {fileID: 8621748898864635695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -60410,28 +60296,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6641043589558850502}
   m_Mesh: {fileID: -6957554495415715310, guid: 3593584340341cc4b87bf90969381b0e, type: 3}
-<<<<<<< Updated upstream
-=======
---- !u!224 &6980484956882030851
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7160210512593379895}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4102394859795485790}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1320, y: -415}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
->>>>>>> Stashed changes
 --- !u!33 &6980747027675658724
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -60678,8 +60542,6 @@ GameObject:
   - component: {fileID: 2570134980019738960}
   m_Layer: 0
   m_Name: Text
-<<<<<<< Updated upstream
-=======
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60697,7 +60559,6 @@ GameObject:
   - component: {fileID: 5124010064146857388}
   m_Layer: 0
   m_Name: UIManager
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61387,9 +61248,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< Updated upstream
-=======
-
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61527,7 +61385,6 @@ Animator:
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
 
->>>>>>> Stashed changes
 --- !u!64 &8504704967315214639
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61801,28 +61658,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
---- !u!224 &8860094653628320397
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4288962974883271487}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7114436741724775614}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 28}
-  m_SizeDelta: {x: 700, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+
 --- !u!114 &8920716357324705961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61847,7 +61683,6 @@ MonoBehaviour:
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
 
->>>>>>> Stashed changes
 --- !u!33 &8935007457967091236
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -61950,9 +61785,4 @@ SceneRoots:
   - {fileID: 26565754}
   - {fileID: 367746018}
   - {fileID: 1718319099}
-<<<<<<< Updated upstream
-  - {fileID: 589014873}
-=======
-  - {fileID: 91616719651924642}
->>>>>>> Stashed changes
   - {fileID: 1750947891}
