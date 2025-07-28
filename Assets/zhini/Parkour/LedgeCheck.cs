@@ -58,7 +58,7 @@ public class LedgeCheck : MonoBehaviour
     void CheckLedge(Vector3 hitPoint, float distanceToHit)
     {
         var currentStateInfo = anim.GetCurrentAnimatorStateInfo(0);
-        Debug.Log(distanceToHit);
+        //Debug.Log(distanceToHit);
 
         if (currentStateInfo.IsTag("FrontFlip"))
         {
