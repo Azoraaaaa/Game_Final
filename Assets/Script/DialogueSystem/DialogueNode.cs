@@ -17,7 +17,7 @@ public enum DialogueChoiceEventType
     OpenBag,
     CloseShop,
     CloseBag,
-    // 可扩展更多事件
+    StartQuest // 添加一个新的事件类型
 }
 
 [System.Serializable]
@@ -26,4 +26,7 @@ public class PlayerChoice
     public string choiceText;
     public DialogueNode nextNode;
     public DialogueChoiceEventType eventType;
+    
+    [Tooltip("A string parameter used by the event. For StartQuest, this is the Quest ID.")]
+    public string stringParameter; // 新增的字符串参数字段
 } 

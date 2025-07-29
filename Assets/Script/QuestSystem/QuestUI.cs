@@ -12,13 +12,6 @@ public class QuestUI : MonoBehaviour
     public Transform sideQuestContainer;
     public GameObject questItemPrefab;
     
-    [Header("Quest Item References")]
-    public TMP_Text questTitleText;
-    public TMP_Text questDescriptionText;
-    public TMP_Text questProgressText;
-    public Image questTypeIcon;
-    public Image questStatusIcon;
-    
     private List<GameObject> activeQuestItems = new List<GameObject>();
     
     void Start()
@@ -65,18 +58,10 @@ public class QuestUI : MonoBehaviour
         }
     }
     
-    // 更新特定任务的进度
+    // (因为我们不再显示详细进度，这个方法可以暂时留空或移除)
     public void UpdateQuestProgress(string questID)
     {
-        foreach (var questItem in activeQuestItems)
-        {
-            var questItemUI = questItem.GetComponent<QuestItemUI>();
-            if (questItemUI != null && questItemUI.QuestID == questID)
-            {
-                questItemUI.UpdateProgress();
-                break;
-            }
-        }
+        // No visual progress update needed for the simplified version.
     }
     
     // 清除任务项
@@ -118,69 +103,6 @@ public class QuestUI : MonoBehaviour
         if (questPanel != null)
         {
             questPanel.SetActive(false);
-        }
-    }
-}
-
-// 任务项UI组件
-public class QuestItemUI : MonoBehaviour
-{
-    [Header("UI Elements")]
-    public TMP_Text titleText;
-    public TMP_Text descriptionText;
-    public TMP_Text progressText;
-    public Image typeIcon;
-    public Image statusIcon;
-    
-    [Header("Icons")]
-    public Sprite mainQuestIcon;
-    public Sprite sideQuestIcon;
-    public Sprite inProgressIcon;
-    public Sprite completedIcon;
-    
-    private QuestData questData;
-    public string QuestID => questData?.questID;
-    
-    public void SetupQuest(QuestData quest)
-    {
-        questData = quest;
-        UpdateDisplay();
-    }
-    
-    public void UpdateProgress()
-    {
-        UpdateDisplay();
-    }
-    
-    private void UpdateDisplay()
-    {
-        if (questData == null) return;
-        
-        // 设置标题和描述
-        if (titleText != null)
-            titleText.text = questData.questTitle;
-        
-        if (descriptionText != null)
-            descriptionText.text = questData.questDescription;
-        
-        // 设置进度
-        if (progressText != null)
-        {
-            int completedObjectives = questData.objectives.Count(o => o.isCompleted);
-            int totalObjectives = questData.objectives.Count;
-            progressText.text = $"{completedObjectives}/{totalObjectives}";
-        }
-        
-        // 设置图标
-        if (typeIcon != null)
-        {
-            typeIcon.sprite = questData.questType == QuestType.Main ? mainQuestIcon : sideQuestIcon;
-        }
-        
-        if (statusIcon != null)
-        {
-            QuestStatus status = QuestManager.Instance.GetQuestStatus(questData.questID);
-            statusIcon.sprite = status == QuestStatus.Completed ? completedIcon : inProgressIcon;
         }
     }
 } 

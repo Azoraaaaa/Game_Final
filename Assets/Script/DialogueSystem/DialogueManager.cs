@@ -118,6 +118,13 @@ public class DialogueManager : MonoBehaviour
             case DialogueChoiceEventType.CloseBag:
                 UIManager.instance.CloseBagPanel();
                 break;
+            
+            case DialogueChoiceEventType.StartQuest:
+                if (!string.IsNullOrEmpty(choice.stringParameter))
+                {
+                    QuestManager.Instance.StartQuest(choice.stringParameter);
+                }
+                break;
             // 可扩展更多事件
             // case DialogueChoiceEventType.CloseShopAndEnd:
             //     UIManager.instance.CloseShopPanelAndEndDialogue();
