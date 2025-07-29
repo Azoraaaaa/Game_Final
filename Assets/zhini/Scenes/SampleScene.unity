@@ -34691,6 +34691,9 @@ MonoBehaviour:
   onSurface: 0
   fallingSpeed: 0
   moveDir: {x: 0, y: 0, z: 0}
+  activeWeapon: {fileID: 0}
+  allWeapons: []
+  currentWeapon: 0
 --- !u!143 &6562012443410333123
 CharacterController:
   m_ObjectHideFlags: 0
