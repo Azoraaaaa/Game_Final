@@ -39,6 +39,12 @@ public class GameManager : MonoBehaviour
 
             //PlaySound(openSound);
         }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            StoryManager.instance.ToggleStoryScreen();
+
+            //PlaySound(openSound);
+        }
     }
 
     public void LoadScene0()
