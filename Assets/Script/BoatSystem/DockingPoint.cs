@@ -9,8 +9,9 @@ public class DockingPoint : MonoBehaviour
     [SerializeField] private Transform exitPoint; // 下船点
     
     [Header("任务检查")]
-    [SerializeField] private string requiredQuestId = "L2-S03";
+    [SerializeField] private string requiredQuestId = "M01";
     [SerializeField] private bool requireQuestCompletion = true;
+    [SerializeField] private bool debugBypassQuestCheck = false; // 调试选项：跳过任务检查
     
     [Header("UI设置")]
     [SerializeField] private TextMeshProUGUI promptText;
@@ -40,6 +41,29 @@ public class DockingPoint : MonoBehaviour
             if (exitPoint == null)
             {
                 Debug.LogWarning($"[{gameObject.name}] 未设置下船点，将使用码头点位置作为下船点", this);
+            }
+            
+            // 验证任务ID
+            if (requireQuestCompletion && !debugBypassQuestCheck)
+            {
+                if (QuestManager.Instance == null)
+                {
+                    Debug.LogWarning($"[{gameObject.name}] 未找到任务管理器！", this);
+                }
+                else
+                {
+                    try
+                    {
+                        QuestManager.Instance.GetQuestStatus(requiredQuestId);
+                    }
+                    catch (System.Exception e)
+                    {
+                        Debug.LogError($"[{gameObject.name}] 任务ID '{requiredQuestId}' 无效！请检查任务ID是否正确。错误: {e.Message}", this);
+                        // 自动启用调试模式跳过任务检查
+                        debugBypassQuestCheck = true;
+                        Debug.LogWarning($"[{gameObject.name}] 已自动启用调试模式跳过任务检查", this);
+                    }
+                }
             }
         }
     }
@@ -159,8 +183,13 @@ public class DockingPoint : MonoBehaviour
     
     private bool CanUseBoat()
     {
-        if (!requireQuestCompletion) return true;
+        // 如果不需要检查任务或者在调试模式下
+        if (!requireQuestCompletion || debugBypassQuestCheck)
+        {
+            return true;
+        }
         
+        // 如果找不到任务系统
         if (QuestManager.Instance == null)
         {
             if (showDebugLogs)
@@ -170,12 +199,24 @@ public class DockingPoint : MonoBehaviour
             return true;
         }
         
-        bool questCompleted = QuestManager.Instance.GetQuestStatus(requiredQuestId) == QuestStatus.Completed;
-        if (showDebugLogs && !questCompleted)
+        try
         {
-            Debug.Log($"[{gameObject.name}] 任务 {requiredQuestId} 未完成", this);
+            bool questCompleted = QuestManager.Instance.GetQuestStatus(requiredQuestId) == QuestStatus.Completed;
+            if (showDebugLogs && !questCompleted)
+            {
+                Debug.Log($"[{gameObject.name}] 任务 {requiredQuestId} 未完成", this);
+            }
+            return questCompleted;
         }
-        return questCompleted;
+        catch (System.Exception e)
+        {
+            if (showDebugLogs)
+            {
+                Debug.LogError($"[{gameObject.name}] 检查任务状态时出错: {e.Message}", this);
+            }
+            // 如果出错，允许使用船只以避免卡住
+            return true;
+        }
     }
     
     private void UpdatePromptText()
