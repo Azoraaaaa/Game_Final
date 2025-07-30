@@ -637,71 +637,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5416124263009024888, guid: c96c5ae7a895d5c4188210551553a068, type: 3}
   m_PrefabInstance: {fileID: 14009014}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &16724021
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 16724024}
-  - component: {fileID: 16724023}
-  - component: {fileID: 16724022}
-  m_Layer: 0
-  m_Name: RifleManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &16724022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 16724021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4084288517901cf4da0a044bace4e491, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootingArea: {fileID: 695670175}
-  shootingRange: 100
-  anim: {fileID: 3886210340151451709}
-  gun: {fileID: 714512372}
-  currentAmmunition: 0
-  mag: 0
-  reloadingTime: 0
---- !u!114 &16724023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 16724021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c07ec87ea6b8e648b805296d875a48d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isUnlocked: 1
---- !u!4 &16724024
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 16724021}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.34489, y: 113.02853, z: 251.98264}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &20973485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5561,13 +5496,14 @@ GameObject:
   m_Component:
   - component: {fileID: 247107756}
   - component: {fileID: 247107755}
+  - component: {fileID: 247107757}
   m_Layer: 0
   m_Name: BowArrowManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &247107755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5584,7 +5520,7 @@ MonoBehaviour:
   bow: {fileID: 698909695936728758}
   firePoint: {fileID: 101749722}
   anim: {fileID: 3886210340151451709}
-  shootForce: 25
+  shootForce: 20
   minChargeTime: 0.3
 --- !u!4 &247107756
 Transform:
@@ -5601,6 +5537,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &247107757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247107754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c07ec87ea6b8e648b805296d875a48d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isUnlocked: 1
 --- !u!1001 &247425349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12816,7 +12765,7 @@ RectTransform:
   m_GameObject: {fileID: 487849844}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.288128, y: 1.2452073, z: 1.288128}
+  m_LocalScale: {x: 1.2046187, y: 1.1644806, z: 1.2046187}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1443623894}
@@ -12846,7 +12795,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c5632919c7eedf34ea3fce4ddb103880, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb470b048a1d23446992ae59c3edee83, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18550,11 +18499,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6e5f3919d975a6141839accd05902d1c, type: 3}
   m_PrefabInstance: {fileID: 714436908}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &714512372 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: aefc8f25feab4414698e41be897d840a, type: 3}
-  m_PrefabInstance: {fileID: 23966661}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &732178840
 PrefabInstance:
@@ -34825,7 +34769,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c5632919c7eedf34ea3fce4ddb103880, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 313c940257ccc404a82da79cddf49b6f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -47209,7 +47153,7 @@ RectTransform:
   m_GameObject: {fileID: 2079794975}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.288128, y: 1.2452072, z: 1.288128}
+  m_LocalScale: {x: 1.228064, y: 1.1871444, z: 1.228064}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 232455819}
@@ -47239,7 +47183,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c5632919c7eedf34ea3fce4ddb103880, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb470b048a1d23446992ae59c3edee83, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -48530,7 +48474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &793712534035726915
 Transform:
   m_ObjectHideFlags: 0
@@ -66983,7 +66927,7 @@ MonoBehaviour:
   allWeapons:
   - {fileID: 1706796938}
   - {fileID: 508829258}
-  - {fileID: 16724023}
+  - {fileID: 247107757}
   currentWeapon: 0
   isSwitching: 0
 --- !u!1 &8801656237336367456
@@ -67149,5 +67093,4 @@ SceneRoots:
   - {fileID: 871222174}
   - {fileID: 1706796940}
   - {fileID: 508829257}
-  - {fileID: 16724024}
   - {fileID: 247107756}
