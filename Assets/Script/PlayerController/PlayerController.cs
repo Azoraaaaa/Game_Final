@@ -48,20 +48,21 @@ public class PlayerController : MonoBehaviour
         SurfaceCheck();
         //Debug.Log("Player on Surface" + onSurface);
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Keypad1))
         {
+            Debug.Log("Key1");
             SwitchWeaponTo(0);
         }
-        /*
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(KeyCode.Keypad2))
         {
-            SwitchGunTo(1);
+            Debug.Log("Key2");
+            SwitchWeaponTo(1);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        else if (Input.GetKeyDown(KeyCode.Keypad3))
         {
-            SwitchGunTo(2);
+            Debug.Log("Key3");
+            SwitchWeaponTo(2);
         }
-        */
     }
 
     void PlayerMovement()
