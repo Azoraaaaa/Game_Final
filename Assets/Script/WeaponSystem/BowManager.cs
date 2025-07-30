@@ -7,12 +7,13 @@ public class BowManager : MonoBehaviour, PlayerController.IWeaponHandler
     public Transform firePoint;
     public Animator anim;
 
-    public float shootForce = 25f;
-    public float minChargeTime = 0.2f;
+    public float shootForce;
+    public float minChargeTime;
 
     private bool isAiming = false;
     private float holdStartTime;
     private float originalSpeed;
+    private GameObject currentArrow;
 
     private void OnEnable()
     {
@@ -38,40 +39,53 @@ public class BowManager : MonoBehaviour, PlayerController.IWeaponHandler
         originalSpeed = PlayerController.instance.movementSpeed;
         PlayerController.instance.movementSpeed = PlayerController.instance.movementSpeed * 0.3f;
 
+        currentArrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
+        currentArrow.transform.SetParent(firePoint);
+        Rigidbody rb = currentArrow.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true; // 不受物理影响，防止提前掉落
+        }
+
         isAiming = true;
         holdStartTime = Time.time;
-        anim.SetBool("IsAiming", true); // 播放瞄准动画
+        anim.SetBool("IsAiming", true);
     }
 
     void ReleaseArrow()
     {
         PlayerController.instance.movementSpeed = originalSpeed;
-
-        float heldTime = Time.time - holdStartTime;
         isAiming = false;
 
-        if (heldTime >= minChargeTime)
+        float heldTime = Time.time - holdStartTime;
+
+        if (heldTime >= minChargeTime && currentArrow != null)
         {
             anim.SetTrigger("Shoot");
-            ShootArrow();
+
+            // 发射箭
+            currentArrow.transform.SetParent(null);
+            Rigidbody rb = currentArrow.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.isKinematic = false;
+                rb.linearVelocity = firePoint.forward * shootForce;
+            }
+
+            currentArrow = null; // 清空引用
             Debug.Log("Shoot!!");
+            anim.SetBool("IsAiming", false);
         }
         else
         {
+            // 射击太短，销毁箭
+            if (currentArrow != null)
+                Destroy(currentArrow);
+
+            currentArrow = null;
             Debug.Log("Charge too short, no arrow released.");
             anim.SetBool("IsAiming", false);
         }
-    }
-
-    void ShootArrow()
-    {
-        GameObject arrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
-        Rigidbody rb = arrow.GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.linearVelocity = firePoint.forward * shootForce;
-        }
-        anim.SetBool("IsAiming", false);
     }
 
     public void QuitWeapon()
@@ -80,5 +94,11 @@ public class BowManager : MonoBehaviour, PlayerController.IWeaponHandler
         anim.SetBool("IsAiming", false);
         anim.SetBool("BowAttackActive", false);
         bow.SetActive(false);
+
+        if (currentArrow != null)
+        {
+            Destroy(currentArrow); // 换武器时清除未发射箭
+            currentArrow = null;
+        }
     }
 }

@@ -5580,7 +5580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2610738acce9f1d47b3b376ebeb12877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 6166117509423841980}
+  arrowPrefab: {fileID: 416424444069002780, guid: ec2d33b53488a734580b0547f71558df, type: 3}
   bow: {fileID: 698909695936728758}
   firePoint: {fileID: 101749722}
   anim: {fileID: 3886210340151451709}
@@ -65569,12 +65569,12 @@ GameObject:
   - component: {fileID: 4006196959751947104}
   - component: {fileID: 2415174701625158893}
   m_Layer: 3
-  m_Name: Arrow
+  m_Name: nouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6203329982869117894
 GameObject:
   m_ObjectHideFlags: 0
