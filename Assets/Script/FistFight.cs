@@ -7,6 +7,10 @@ public class FistFight : MonoBehaviour, IWeaponHandler
     public float timer = 0f;
     public int FistFightVal;
     public Animator anim;
+    private void OnEnable()
+    {
+        anim.SetBool("FistFightActive", true);
+    }
 
     // Update is called once per frame
     void Update()
@@ -19,7 +23,6 @@ public class FistFight : MonoBehaviour, IWeaponHandler
         {
             timer = 0f;
             //Debug.Log("FistFight Mode On");
-            anim.SetBool("FistFightActive", true);
         }
 
         if(timer > 5f)

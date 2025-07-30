@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     CharacterController CC;
 
+    public bool canMove;
+
     [Header("SurfaceCheck")]
     public float surfaceCheckRadius = 0.1f;
     public Vector3 surfaceCheckOffset;
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         anim = GetComponent<Animator>();
         CC = GetComponent<CharacterController>();
+        canMove = true; // 默认允许移动
     }
 
     // Update is called once per frame
@@ -55,6 +58,14 @@ public class PlayerController : MonoBehaviour
 
     void PlayerMovement()
     {
+        // 检查是否允许移动
+        if (!canMove)
+        {
+            // 如果不能移动，设置动画速度为0并返回
+            anim.SetFloat("Speed", 0, 0.2f, Time.deltaTime);
+            return;
+        }
+
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
