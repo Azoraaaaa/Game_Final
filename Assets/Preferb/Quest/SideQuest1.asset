@@ -22,5 +22,5 @@ MonoBehaviour:
   experienceReward: 0
   goldReward: 0
   itemRewards: []
-  questLocation: {x: 0, y: 0, z: 0}
+  questLocation: {x: -300, y: 0, z: 300}
   showOnMap: 1
