@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6ce76b337388704da188157828ad8b0, type: 3}
-  m_Name: SideQuest1
+  m_Name: SideQuest2
   m_EditorClassIdentifier: 
-  questID: S01
-  questTitle: sidle quest1
-  questDescription: all babys like eatting meal,yummy!
+  questID: S02
+  questTitle: Side Quest 02
+  questDescription: eeeee hum~
   questType: 1
   prerequisiteQuests: []
   requiredLevel: 0
@@ -22,5 +22,5 @@ MonoBehaviour:
   experienceReward: 0
   goldReward: 0
   itemRewards: []
-  questLocation: {x: -300, y: 0, z: 300}
+  questLocation: {x: 300, y: 0, z: -300}
   showOnMap: 1
