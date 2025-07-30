@@ -34694,6 +34694,7 @@ MonoBehaviour:
   activeWeapon: {fileID: 0}
   allWeapons: []
   currentWeapon: 0
+  isSwitching: 0
 --- !u!143 &6562012443410333123
 CharacterController:
   m_ObjectHideFlags: 0
