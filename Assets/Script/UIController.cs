@@ -23,8 +23,11 @@ public class UIController : MonoBehaviour
 
     public GameObject pauseScreen;
     */
+
     public GameObject BagScreen;
     public GameObject ShopScreen;
+    public GameObject StoryScreen;
+
     //public Text HealthTextInBag;
 
     //public Text speedBoostText;
