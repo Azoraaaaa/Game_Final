@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -6,6 +8,9 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private float interactRange = 2f;
     [SerializeField] private LayerMask interactLayer;
     [SerializeField] private KeyCode interactKey = KeyCode.E;
+    
+    [Header("UI设置")]
+    [SerializeField] private TextMeshProUGUI promptText; // 直接引用UI文本
     
     [Header("射线检测")]
     [SerializeField] private Transform raycastOrigin; // 通常是玩家的相机或眼睛位置
@@ -56,13 +61,14 @@ public class PlayerInteraction : MonoBehaviour
                     currentInteractable = interactable;
                     
                     // 显示交互提示
-                    if (NotificationCanvas.instance != null)
+                    if (promptText != null)
                     {
                         // 如果是宝箱，检查是否已经打开
                         TreasureChest chest = hit.collider.GetComponent<TreasureChest>();
                         if (chest != null && !chest.IsOpened())
                         {
-                            NotificationCanvas.instance.ShowInteractPrompt("按 E 打开宝箱");
+                            promptText.text = "按 E 打开宝箱";
+                            promptText.gameObject.SetActive(true);
                         }
                     }
                 }
@@ -99,10 +105,10 @@ public class PlayerInteraction : MonoBehaviour
         {
             currentInteractable = null;
             
-            // 清除交互提示
-            if (NotificationCanvas.instance != null)
+            // 隐藏交互提示
+            if (promptText != null)
             {
-                NotificationCanvas.instance.HideInteractPrompt();
+                promptText.gameObject.SetActive(false);
             }
         }
     }
