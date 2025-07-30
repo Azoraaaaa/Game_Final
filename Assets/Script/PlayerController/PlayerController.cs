@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     CharacterController CC;
 
+    public bool canMove;
+
     [Header("SurfaceCheck")]
     public float surfaceCheckRadius = 0.1f;
     public Vector3 surfaceCheckOffset;
