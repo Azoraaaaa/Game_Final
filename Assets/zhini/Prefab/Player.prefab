@@ -2202,6 +2202,7 @@ MonoBehaviour:
   movementSpeed: 5
   cam: {fileID: 0}
   rotSpeed: 450
+  canMove: 0
   surfaceCheckRadius: 0.25
   surfaceCheckOffset: {x: 0, y: 0.06, z: 0.06}
   surfaceLayer:
@@ -2210,6 +2211,10 @@ MonoBehaviour:
   onSurface: 0
   fallingSpeed: 0
   moveDir: {x: 0, y: 0, z: 0}
+  activeWeapon: {fileID: 0}
+  allWeapons: []
+  currentWeapon: 0
+  isSwitching: 0
 --- !u!114 &3877034969405497548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2265,6 +2270,7 @@ MonoBehaviour:
   BarrierLayer:
     serializedVersion: 2
     m_Bits: 0
+  PlayerCon: {fileID: 0}
 --- !u!1 &6209272756913687044
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,16 +12,12 @@ public class SwordManager : MonoBehaviour, PlayerController.IWeaponHandler
     private void OnEnable()
     {
         sword.SetActive(true);
+        anim.SetBool("SwordAttackActive", true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            anim.SetBool("SwordAttackActive", true);
-        }
-
         SwordAttackModes();
     }
     void SwordAttackModes()
