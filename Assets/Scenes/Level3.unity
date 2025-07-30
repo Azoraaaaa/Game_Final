@@ -25729,7 +25729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &975556981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43321,7 +43321,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704340707}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 897960cb001d40647a3d205a70f60633, type: 3}
   m_Name: 
@@ -62338,10 +62338,10 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 1614147106}
   - {fileID: 1194932654}
-  - {fileID: 1792451692}
   - {fileID: 853118053}
   - {fileID: 245136952}
   - {fileID: 26565754}
+  - {fileID: 1792451692}
   - {fileID: 367746018}
   - {fileID: 589014873}
   - {fileID: 1750947891}
