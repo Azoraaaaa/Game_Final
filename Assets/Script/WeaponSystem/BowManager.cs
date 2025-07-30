@@ -44,7 +44,7 @@ public class BowManager : MonoBehaviour, PlayerController.IWeaponHandler
         Rigidbody rb = currentArrow.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.isKinematic = true; // ²»ÊÜÎïÀíÓ°Ïì£¬·ÀÖ¹ÌáÇ°µôÂä
+            rb.isKinematic = true; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ì£¬ï¿½ï¿½Ö¹ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½
         }
 
         isAiming = true;
@@ -63,7 +63,7 @@ public class BowManager : MonoBehaviour, PlayerController.IWeaponHandler
         {
             anim.SetTrigger("Shoot");
 
-            // ·¢Éä¼ý
+            // ï¿½ï¿½ï¿½ï¿½ï¿½
             currentArrow.transform.SetParent(null);
             Rigidbody rb = currentArrow.GetComponent<Rigidbody>();
             if (rb != null)
@@ -72,13 +72,13 @@ public class BowManager : MonoBehaviour, PlayerController.IWeaponHandler
                 rb.linearVelocity = firePoint.forward * shootForce;
             }
 
-            currentArrow = null; // Çå¿ÕÒýÓÃ
+            currentArrow = null; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Debug.Log("Shoot!!");
             anim.SetBool("IsAiming", false);
         }
         else
         {
-            // Éä»÷Ì«¶Ì£¬Ïú»Ù¼ý
+            // ï¿½ï¿½ï¿½Ì«ï¿½Ì£ï¿½ï¿½ï¿½ï¿½Ù¼ï¿½
             if (currentArrow != null)
                 Destroy(currentArrow);
 
@@ -97,7 +97,7 @@ public class BowManager : MonoBehaviour, PlayerController.IWeaponHandler
 
         if (currentArrow != null)
         {
-            Destroy(currentArrow); // »»ÎäÆ÷Ê±Çå³ýÎ´·¢Éä¼ý
+            Destroy(currentArrow); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½
             currentArrow = null;
         }
     }
