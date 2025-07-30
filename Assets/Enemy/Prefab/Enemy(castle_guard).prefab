@@ -1180,7 +1180,7 @@ MonoBehaviour:
   moveSpeed: 8
   distanceToChase: 10
   distanceToLose: 15
-  distanceToStop: 1
+  distanceToStop: 1.5
   keepChasingTime: 5
   anim: {fileID: 8333241769373472586}
 --- !u!195 &2872896595791818410
@@ -1534,7 +1534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5139545568532607358}
   m_Layer: 0
-  m_Name: 'Enemy(castle_guard '
+  m_Name: Enemy(castle_guard)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -445,7 +445,7 @@ MonoBehaviour:
   moveSpeed: 8
   distanceToChase: 10
   distanceToLose: 15
-  distanceToStop: 1
+  distanceToStop: 1.5
   keepChasingTime: 5
   anim: {fileID: 410899600129725912}
 --- !u!195 &9124217431172188742
