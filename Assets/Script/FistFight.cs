@@ -1,7 +1,8 @@
 using System.Collections;
 using UnityEngine;
+using static PlayerController;
 
-public class FistFight : MonoBehaviour
+public class FistFight : MonoBehaviour, IWeaponHandler
 {
     public float timer = 0f;
     public int FistFightVal;
@@ -92,5 +93,10 @@ public class FistFight : MonoBehaviour
                 StartCoroutine(LeftKick());
             }
         }
+    }
+    public void QuitWeapon()
+    {
+        anim.SetBool("FistFightActive", false);
+        return;
     }
 }

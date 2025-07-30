@@ -37,6 +37,15 @@ public class WeaponManager : MonoBehaviour
         {
             bool isActive = (i == weaponIndex);
 
+            if (weaponIndex == -1)
+            {
+                if (selectedUI[i] != null)
+                    selectedUI[i].SetActive(isActive);
+
+                if (unselectedUI[i] != null)
+                    unselectedUI[i].SetActive(!isActive);
+            }
+
             if (selectedUI[i] != null)
                 selectedUI[i].SetActive(isActive);  // 橙色框：仅当前激活的显示
 

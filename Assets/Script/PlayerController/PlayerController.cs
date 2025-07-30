@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     public Weapon activeWeapon;
     public List<Weapon> allWeapons = new List<Weapon>();
     public int currentWeapon;
+    public bool isSwitching = false;
 
     private void Awake()
     {
@@ -48,21 +49,8 @@ public class PlayerController : MonoBehaviour
         SurfaceCheck();
         //Debug.Log("Player on Surface" + onSurface);
 
-        if (Input.GetKeyDown(KeyCode.Keypad1))
-        {
-            Debug.Log("Key1");
-            SwitchWeaponTo(0);
-        }
-        else if (Input.GetKeyDown(KeyCode.Keypad2))
-        {
-            Debug.Log("Key2");
-            SwitchWeaponTo(1);
-        }
-        else if (Input.GetKeyDown(KeyCode.Keypad3))
-        {
-            Debug.Log("Key3");
-            SwitchWeaponTo(2);
-        }
+        DoAttack();
+        
     }
 
     void PlayerMovement()
@@ -126,6 +114,22 @@ public class PlayerController : MonoBehaviour
     }
     public void SwitchWeaponTo(int weaponIndex)
     {
+        if (weaponIndex == currentWeapon && activeWeapon != null)
+        {
+            var handler = activeWeapon.GetComponent<IWeaponHandler>();
+            if (handler != null)
+            {
+                handler.QuitWeapon();
+            }
+
+            activeWeapon.gameObject.SetActive(false);
+            activeWeapon = null;
+            currentWeapon = -1;
+
+            WeaponManager.instance.changeWeaponUI(-1);
+            return;
+        }
+
         if (weaponIndex >= 0 && weaponIndex < allWeapons.Count)
         {
             if (!allWeapons[weaponIndex].isUnlocked)
@@ -136,6 +140,12 @@ public class PlayerController : MonoBehaviour
 
             if (activeWeapon != null)
             {
+                var handler = activeWeapon.GetComponent<IWeaponHandler>();
+                if (handler != null)
+                {
+                    handler.QuitWeapon();
+                }
+
                 activeWeapon.gameObject.SetActive(false);
             }
 
@@ -145,7 +155,31 @@ public class PlayerController : MonoBehaviour
 
             WeaponManager.instance.changeWeaponUI(currentWeapon);
 
+
             //UIController.instance.AmmoText.text = "Ammo: " + activeGun.currentAmmo;
         }
     }
+    public void DoAttack()
+    {
+        if (Input.GetKeyDown(KeyCode.Keypad1))
+        {
+            Debug.Log("Key1");
+            SwitchWeaponTo(0);
+        }
+        else if (Input.GetKeyDown(KeyCode.Keypad2))
+        {
+            Debug.Log("Key2");
+            SwitchWeaponTo(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.Keypad3))
+        {
+            Debug.Log("Key3");
+            SwitchWeaponTo(2);
+        }
+    }
+    public interface IWeaponHandler
+    {
+        void QuitWeapon();
+    }
+
 }
