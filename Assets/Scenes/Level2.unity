@@ -7129,7 +7129,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.25340134, y: -0.00000019518448, z: 0.00000005112879, w: 0.9673613}
-  m_LocalPosition: {x: 240.89201, y: 124.540276, z: 241.93123}
+  m_LocalPosition: {x: 240.89201, y: 124.78728, z: 241.93123}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33208,7 +33208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6432850072873897597, guid: b76b29e1aa3528a4e8244a20aea11efe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 124.540276
+      value: 124.78728
       objectReference: {fileID: 0}
     - target: {fileID: 6432850072873897597, guid: b76b29e1aa3528a4e8244a20aea11efe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -62325,6 +62325,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 330585545}
     - target: {fileID: 5940431933215896817, guid: 40d09a57587adf240ad682175985a04c, type: 3}
+      propertyPath: dashSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940431933215896817, guid: 40d09a57587adf240ad682175985a04c, type: 3}
+      propertyPath: dashDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940431933215896817, guid: 40d09a57587adf240ad682175985a04c, type: 3}
       propertyPath: 'allWeapons.Array.data[0]'
       value: 
       objectReference: {fileID: 186815484}
@@ -62346,7 +62354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7970469900635434692, guid: 40d09a57587adf240ad682175985a04c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 120.7
+      value: 120.947
       objectReference: {fileID: 0}
     - target: {fileID: 7970469900635434692, guid: 40d09a57587adf240ad682175985a04c, type: 3}
       propertyPath: m_LocalPosition.z

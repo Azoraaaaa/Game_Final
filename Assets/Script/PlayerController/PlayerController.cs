@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
@@ -32,6 +33,19 @@ public class PlayerController : MonoBehaviour
     public int currentWeapon;
     public bool isSwitching = false;
 
+
+    [Header("Jump / Dash / Roll Settings")]
+    public float jumpForce = 5f;
+    public float dashSpeed = 15f;
+    public float dashDuration = 0.5f;
+    public float rollSpeed = 7f;
+    public float rollDuration = 0.5f;
+
+    private bool isJumping = false;
+    private bool isDashing = false;
+    private bool isRolling = false;
+
+
     private void Awake()
     {
         instance = this;
@@ -53,7 +67,25 @@ public class PlayerController : MonoBehaviour
         //Debug.Log("Player on Surface" + onSurface);
 
         DoAttack();
-        
+
+
+        // Jump
+        if (Input.GetKeyDown(KeyCode.Space) && onSurface && !isJumping && !isDashing && !isRolling)
+        {
+            StartCoroutine(Jump());
+        }
+
+        // Dash
+        if (Input.GetKeyDown(KeyCode.LeftShift) && onSurface && !isDashing && !isJumping && !isRolling)
+        {
+            StartCoroutine(Dash());
+        }
+
+        // Roll
+        if (Input.GetKeyDown(KeyCode.LeftControl) && onSurface && !isRolling && !isJumping && !isDashing)
+        {
+            StartCoroutine(Roll());
+        }
     }
 
     void PlayerMovement()
@@ -81,7 +113,7 @@ public class PlayerController : MonoBehaviour
         float movementAmount = Mathf.Clamp01(MovementDirection.magnitude);
 
         // Gravity Handling
-        if (onSurface)
+        if (onSurface && !isJumping)
         {
             fallingSpeed = 0f;
         }
@@ -93,7 +125,7 @@ public class PlayerController : MonoBehaviour
         Vector3 finalMove = MovementDirection.normalized * movementSpeed;
         finalMove.y = fallingSpeed;
 
-        if (CC.enabled)
+        if (CC.enabled && !isDashing && !isRolling)
         {
             CC.Move(finalMove * Time.deltaTime);
         }
@@ -191,6 +223,61 @@ public class PlayerController : MonoBehaviour
     public interface IWeaponHandler
     {
         void QuitWeapon();
+    }
+
+
+    IEnumerator Jump()
+    {
+        isJumping = true;
+        anim.SetBool("isJumping", true);
+
+        fallingSpeed = jumpForce;
+
+        yield return new WaitForSeconds(0.8f); // 根据你的跳跃动画长度调整
+
+        anim.SetBool("isJumping", false);
+        isJumping = false;
+    }
+
+    IEnumerator Dash()
+    {
+        isDashing = true;
+        anim.SetBool("isDashing", true);
+
+        float timer = 0f;
+        //Vector3 dashDirection = transform.forward;
+        Vector3 inputDir = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+        Vector3 dashDirection = (cam.transform.TransformDirection(inputDir)).normalized;
+        if (dashDirection == Vector3.zero) dashDirection = transform.forward; 
+
+        while (timer < dashDuration)
+        {
+            CC.Move(dashDirection * dashSpeed * Time.deltaTime);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        anim.SetBool("isDashing", false);
+        isDashing = false;
+    }
+
+    IEnumerator Roll()
+    {
+        isRolling = true;
+        anim.SetBool("isRolling", true);
+
+        Vector3 rollDirection = transform.forward;
+
+        float timer = 0f;
+        while (timer < rollDuration)
+        {
+            CC.Move(rollDirection * rollSpeed * Time.deltaTime);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        anim.SetBool("isRolling", false);
+        isRolling = false;
     }
 
 }
