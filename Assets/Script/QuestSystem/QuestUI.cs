@@ -18,7 +18,10 @@ public class QuestUI : MonoBehaviour
     {
         if (questPanel != null)
         {
-            questPanel.SetActive(false);
+            // 默认显示任务面板，而不是隐藏
+            questPanel.SetActive(true);
+            // 初始化任务列表
+            UpdateQuestList();
         }
     }
     
