@@ -37,10 +37,12 @@ public class PlayerHealthSystem : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject); // 确保不被销毁
         }
         else
         {
-            Destroy(gameObject);
+            // 只销毁这个组件，而不是整个游戏对象
+            Destroy(this);
             return;
         }
     }

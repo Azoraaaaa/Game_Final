@@ -232,7 +232,7 @@ public class DockingPoint : MonoBehaviour
         
         if (!CanUseBoat())
         {
-            promptText.text = "需要完成指定任务才能使用船只";
+            promptText.text = "You must complete the specified tasks before you can use the ship";
             promptText.gameObject.SetActive(true);
             return;
         }
@@ -240,7 +240,7 @@ public class DockingPoint : MonoBehaviour
         if (nearbyBoat != null)
         {
             bool isOnBoat = nearbyBoat.IsOccupied();
-            promptText.text = isOnBoat ? "按 E 下船" : "按 E 上船";
+            promptText.text = isOnBoat ?  "Press <b>E</b> to Disembark": "Press <b>E</b> to Board the Ship";
             promptText.gameObject.SetActive(true);
         }
         else

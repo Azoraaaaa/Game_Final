@@ -16,7 +16,7 @@ public class LocationTrigger : MonoBehaviour
             // 检查地点是否已被发现
             if (!GameManager.instance.discoveredLocations.Contains(locationID))
             {
-                UIManager.instance.ShowPersistentNotification("按 'E' 开启传送点");
+                UIManager.instance.ShowPersistentNotification("Press <b>E</b> Activate the Teleportation Point");
             }
         }
     }
@@ -40,7 +40,7 @@ public class LocationTrigger : MonoBehaviour
             if (GameManager.instance.discoveredLocations.Add(locationID))
             {
                 Debug.Log("Location discovered: " + locationID);
-                UIManager.instance.ShowNotification("传送点已开启", 2f); // 显示一个短暂的成功提示
+                UIManager.instance.ShowNotification("Teleportation Point Activated", 2f); // 显示一个短暂的成功提示
             }
         }
     }
