@@ -1,92 +1,183 @@
 using UnityEngine;
-using UnityEngine.PlayerLoop;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
-
 {
-    public static GameManager instance;
-
+    [Header("UI引用")]
+    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject victoryPanel;
+    [SerializeField] private Text bossHealthText;
+    [SerializeField] private Slider bossHealthBar;
+    
+    [Header("游戏设置")]
+    [SerializeField] private BossController bossController;
+    [SerializeField] private PlayerHealth playerHealth;
+    
+    // 单例模式
+    public static GameManager Instance { get; private set; }
+    
+    // 公共属性，供其他脚本访问
     public GameObject player;
-
-    public bool isTalking = false;
-
+    public bool isNearTeleporter = false;
     public HashSet<string> discoveredLocations = new HashSet<string>();
-    public bool isNearTeleporter = false; // 玩家是否在传送点附近
-
-    private void Awake()
+    
+    // 私有变量
+    private bool isGameOver = false;
+    private bool isVictory = false;
+    
+    void Awake()
     {
-        if (instance == null)
+        // 单例模式设置
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
+        {
             Destroy(gameObject);
+        }
     }
+    
+    void Start()
+    {
+        InitializeGame();
+    }
+    
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            InventoryController.instance.ToggleBagScreen();
-
-            //PlaySound(openSound);
-        }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            //ShopController.instance.ToggleShopScreen();
-
-            //PlaySound(openSound);
-        }
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            StoryManager.instance.ToggleStoryScreen();
-
-            //PlaySound(openSound);
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            LoadScene1();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            LoadScene2();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            LoadScene3();
-        }
+        UpdateBossHealthUI();
+        CheckGameState();
     }
-
-    public void LoadScene0()
+    
+    private void InitializeGame()
     {
-        SceneManager.LoadScene(0);
+        isGameOver = false;
+        isVictory = false;
+        
+        // 隐藏UI面板
+        if (gameOverPanel != null) gameOverPanel.SetActive(false);
+        if (victoryPanel != null) victoryPanel.SetActive(false);
+        
+        // 查找Boss和玩家
+        if (bossController == null)
+        {
+            bossController = FindFirstObjectByType<BossController>();
+        }
+        
+        if (playerHealth == null)
+        {
+            playerHealth = FindFirstObjectByType<PlayerHealth>();
+        }
+        
+        // 初始化Boss血条
+        UpdateBossHealthUI();
     }
-
-    public void LoadScene1()
+    
+    private void UpdateBossHealthUI()
     {
-        SceneManager.LoadScene(1);
+        if (bossController != null && bossHealthBar != null)
+        {
+            float currentHP = bossController.CurrentHP;
+            float maxHP = bossController.MaxHP;
+            
+            bossHealthBar.value = currentHP / maxHP;
+            
+            if (bossHealthText != null)
+            {
+                bossHealthText.text = $"Boss HP: {currentHP:F0}/{maxHP:F0}";
+            }
+        }
     }
-
-    public void LoadScene2()
+    
+    private void CheckGameState()
     {
-        SceneManager.LoadScene(2);
+        // 检查玩家是否死亡
+        if (playerHealth != null && playerHealth.IsDead() && !isGameOver)
+        {
+            GameOver();
+        }
+        
+        // 检查Boss是否死亡
+        if (bossController != null && !isVictory && bossController.IsDead)
+        {
+            Victory();
+        }
     }
-
-    public void LoadScene3()
+    
+    public void GameOver()
     {
-        SceneManager.LoadScene(3);
+        if (isGameOver) return;
+        
+        isGameOver = true;
+        
+        // 显示游戏结束UI
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+        }
+        
+        // 暂停游戏
+        Time.timeScale = 0f;
+        
+        // TODO: 播放游戏结束音效
+        // AudioManager.Instance.PlaySound("game_over");
     }
-
+    
+    public void Victory()
+    {
+        if (isVictory) return;
+        
+        isVictory = true;
+        
+        // 显示胜利UI
+        if (victoryPanel != null)
+        {
+            victoryPanel.SetActive(true);
+        }
+        
+        // 暂停游戏
+        Time.timeScale = 0f;
+        
+        // TODO: 播放胜利音效
+        // AudioManager.Instance.PlaySound("victory");
+    }
+    
+    public void RestartGame()
+    {
+        // 恢复时间缩放
+        Time.timeScale = 1f;
+        
+        // 重新加载当前场景
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
     public void QuitGame()
     {
-        Application.Quit();
-
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+    }
+    
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        
+        if (gameOverPanel != null) gameOverPanel.SetActive(false);
+        if (victoryPanel != null) victoryPanel.SetActive(false);
+    }
+    
+    public bool IsGameOver()
+    {
+        return isGameOver;
+    }
+    
+    public bool IsVictory()
+    {
+        return isVictory;
     }
 }

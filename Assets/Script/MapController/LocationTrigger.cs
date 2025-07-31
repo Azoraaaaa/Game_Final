@@ -11,10 +11,10 @@ public class LocationTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsInZone = true;
-            GameManager.instance.isNearTeleporter = true;
+            GameManager.Instance.isNearTeleporter = true;
 
             // 检查地点是否已被发现
-            if (!GameManager.instance.discoveredLocations.Contains(locationID))
+            if (!GameManager.Instance.discoveredLocations.Contains(locationID))
             {
                 UIManager.instance.ShowPersistentNotification("Press <b>E</b> Activate the Teleportation Point");
             }
@@ -26,7 +26,7 @@ public class LocationTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsInZone = false;
-            GameManager.instance.isNearTeleporter = false;
+            GameManager.Instance.isNearTeleporter = false;
             UIManager.instance.HideNotification();
         }
     }
@@ -37,7 +37,7 @@ public class LocationTrigger : MonoBehaviour
         if (playerIsInZone && Input.GetKeyDown(KeyCode.E))
         {
             // 检查地点是否是第一次被激活
-            if (GameManager.instance.discoveredLocations.Add(locationID))
+            if (GameManager.Instance.discoveredLocations.Add(locationID))
             {
                 Debug.Log("Location discovered: " + locationID);
                 UIManager.instance.ShowNotification("Teleportation Point Activated", 2f); // 显示一个短暂的成功提示

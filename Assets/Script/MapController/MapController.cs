@@ -45,7 +45,7 @@ public class MapController : MonoBehaviour
             MapLocation mapLocation = location.GetComponent<MapLocation>();
             if (mapLocation != null)
             {
-                bool isDiscovered = GameManager.instance.discoveredLocations.Contains(mapLocation.locationID);
+                bool isDiscovered = GameManager.Instance.discoveredLocations.Contains(mapLocation.locationID);
                 mapLocation.SetDiscovered(isDiscovered);
             }
         }

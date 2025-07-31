@@ -2372,7 +2372,7 @@ GameObject:
   - component: {fileID: 1739395358114996949}
   - component: {fileID: 6180263745998038701}
   - component: {fileID: 7656678802758583706}
-  - component: {fileID: 1944392874672976475}
+  - component: {fileID: 1787307488325506727}
   - component: {fileID: 5843798197178797626}
   m_Layer: 3
   m_Name: Player 1
@@ -2567,7 +2567,7 @@ MonoBehaviour:
   fireBallSkillCost: 30
   healSkillCost: 40
   shieldSkillCost: 50
---- !u!114 &1944392874672976475
+--- !u!114 &1787307488325506727
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2576,16 +2576,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6874186146485214178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81dba7d000b3bc444b13c2ac11e4516e, type: 3}
+  m_Script: {fileID: 11500000, guid: e60f0e2015826164b8e53040061e5ff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testDamageAmount: 10
-  testHealAmount: 15
-  testSkillCost: 20
-  testSkillRestore: 25
-  fireBallSkillCost: 30
-  healSkillCost: 40
-  shieldSkillCost: 50
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  healthText: {fileID: 0}
+  invincibilityTime: 1
+  normalMaterial: {fileID: 0}
+  hitMaterial: {fileID: 0}
 --- !u!114 &5843798197178797626
 MonoBehaviour:
   m_ObjectHideFlags: 0

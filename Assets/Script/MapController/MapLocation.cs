@@ -20,9 +20,9 @@ public class MapLocation : MonoBehaviour
         }
 
         // 初始化时，根据GameManager的数据设置状态
-        if (GameManager.instance != null)
+        if (GameManager.Instance != null)
         {
-            SetDiscovered(GameManager.instance.discoveredLocations.Contains(locationID));
+            SetDiscovered(GameManager.Instance.discoveredLocations.Contains(locationID));
         }
 
         if (teleportButton != null)
@@ -38,7 +38,7 @@ public class MapLocation : MonoBehaviour
         discoveredVisual.SetActive(isDiscovered);
 
         // 传送按钮的可用性现在取决于地点是否被发现以及玩家是否在传送点附近
-        bool canTeleport = isDiscovered && GameManager.instance.isNearTeleporter;
+        bool canTeleport = isDiscovered && GameManager.Instance.isNearTeleporter;
         teleportButton.interactable = canTeleport;
     }
 
@@ -47,7 +47,7 @@ public class MapLocation : MonoBehaviour
         if (!isDiscovered) return;
 
         // 检查玩家是否在传送点附近
-        if (GameManager.instance.isNearTeleporter)
+        if (GameManager.Instance.isNearTeleporter)
         {
             if (teleportDestination == null)
             {
@@ -55,7 +55,7 @@ public class MapLocation : MonoBehaviour
                 return;
             }
 
-            if (GameManager.instance == null || GameManager.instance.player == null)
+            if (GameManager.Instance == null || GameManager.Instance.player == null)
             {
                 Debug.LogError("GameManager or Player not found!");
                 return;
@@ -64,13 +64,13 @@ public class MapLocation : MonoBehaviour
             Debug.Log("Teleporting player to " + locationID);
 
             // 如果玩家对象上有CharacterController，传送前需要先禁用它
-            CharacterController controller = GameManager.instance.player.GetComponent<CharacterController>();
+            CharacterController controller = GameManager.Instance.player.GetComponent<CharacterController>();
             if (controller != null)
             {
                 controller.enabled = false;
             }
 
-            GameManager.instance.player.transform.position = teleportDestination.position;
+            GameManager.Instance.player.transform.position = teleportDestination.position;
 
             // 传送后再启用CharacterController
             if (controller != null)
