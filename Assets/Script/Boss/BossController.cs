@@ -90,7 +90,12 @@ public class BossController : MonoBehaviour
     
     void Update()
     {
-        if (isDead) return;
+        if (isDead) 
+        {
+            // 死亡时只更新动画状态，确保死亡动画正确播放
+            UpdateDeathAnimations();
+            return;
+        }
         
         UpdatePhase();
         UpdateState();
@@ -186,6 +191,14 @@ public class BossController : MonoBehaviour
     {
         animator.SetBool(IS_MOVING, isMoving);
         animator.SetBool(IS_ATTACKING, isAttacking);
+    }
+    
+    private void UpdateDeathAnimations()
+    {
+        // 死亡时停止所有移动和攻击动画
+        animator.SetBool(IS_MOVING, false);
+        animator.SetBool(IS_ATTACKING, false);
+        animator.SetBool(IS_DEAD, true);
     }
     
     private void Patrol()
@@ -587,8 +600,21 @@ public class BossController : MonoBehaviour
             bossCollider.enabled = false;
         }
         
-        // 延迟销毁
-        Destroy(gameObject, 5f);
+        // 停止所有正在运行的协程
+        StopAllCoroutines();
+        
+        // 停止所有移动和攻击状态
+        isMoving = false;
+        isAttacking = false;
+        isInSpecialAttack = false;
+        
+        // 禁用所有攻击触发器
+        DisableAllAttackTriggers();
+        
+        // 立即销毁Boss
+        Destroy(gameObject, 2f);
+        
+        Debug.Log("Boss已死亡，将在2秒后销毁");
     }
     
     private IEnumerator BossStateMachine()
@@ -596,6 +622,19 @@ public class BossController : MonoBehaviour
         while (!isDead)
         {
             yield return new WaitForSeconds(0.1f);
+        }
+    }
+    
+    private void DisableAllAttackTriggers()
+    {
+        // 禁用所有攻击触发器
+        BossAttackTrigger[] attackTriggers = GetComponentsInChildren<BossAttackTrigger>();
+        foreach (BossAttackTrigger trigger in attackTriggers)
+        {
+            if (trigger != null)
+            {
+                trigger.DisableDamage();
+            }
         }
     }
     

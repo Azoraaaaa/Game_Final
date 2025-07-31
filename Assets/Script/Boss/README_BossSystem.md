@@ -44,13 +44,26 @@
 - **功能**: 验证所有组件引用是否正确
 - **测试内容**: ProjectileType枚举、BossController、GameManager
 
-### 7. PlayerHealth.cs - 玩家健康系统
+### 7. BossDeathTest.cs - 死亡测试脚本
+- **功能**: 专门测试Boss死亡功能
+- **测试按键**:
+  - F1: 对Boss造成100点伤害
+  - F2: 对Boss造成500点伤害（快速死亡）
+  - F3: 检查Boss状态
+  - F4: 重置Boss（如果可能）
+
+### 8. BossHealthBarSimple.cs - Boss血条UI（简化版）
+- **功能**: 实时显示Boss血量、阶段和状态
+- **特性**: 血条颜色渐变、阶段自动检测、死亡状态显示
+- **依赖**: 无外部依赖，简单易用
+
+### 10. PlayerHealth.cs - 玩家健康系统
 - **功能**: 接收Boss攻击的伤害，处理受击效果
 
-### 8. PlayerMovement.cs - 玩家移动系统
+### 11. PlayerMovement.cs - 玩家移动系统
 - **功能**: 处理玩家移动和减速效果
 
-### 9. GameManager.cs - 游戏管理器
+### 12. GameManager.cs - 游戏管理器
 - **功能**: 管理游戏状态、UI显示和胜负判定
 - **修复内容**:
   - 更新过时的`FindObjectOfType`为`FindFirstObjectByType`
@@ -75,6 +88,15 @@
 4. **反射访问私有字段**
    - 原因：GameManager使用反射访问BossController的私有字段
    - 解决：为BossController添加公共属性，直接访问
+
+5. **Boss死亡时卡住问题**
+   - 原因：死亡时Update方法直接返回，协程未停止，动画状态未正确设置
+   - 解决：添加死亡动画更新方法，停止所有协程，禁用攻击触发器
+
+6. **Boss血条UI系统**
+   - 功能：实时显示Boss血量、阶段和状态
+   - 特性：跟随Boss移动、阶段变化动画、淡入淡出效果
+   - 提供两个版本：完整版（需要LeanTween）和简化版（无依赖）
 
 ## 设置步骤
 

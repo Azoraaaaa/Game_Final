@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     
     [Header("UI显示")]
     [SerializeField] private Slider healthBar;
-    [SerializeField] private TextMeshProUGUI  healthText;
+    [SerializeField] private Text healthText;
     
     [Header("受击效果")]
     [SerializeField] private float invincibilityTime = 1f;

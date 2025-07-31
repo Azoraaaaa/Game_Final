@@ -13,6 +13,7 @@ TagManager:
   - ShopScreen
   - StoryScreen
   - useUI
+  - Environment
   layers:
   - Default
   - TransparentFX

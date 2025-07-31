@@ -97,7 +97,7 @@ public class Projectile : MonoBehaviour
             hasHit = true;
             Destroy(gameObject);
         }
-        else if (other.CompareTag("Environment") || other.CompareTag("Obstacle"))
+        else if (other.CompareTag("Environment"))
         {
             // 击中环境物体
             switch (projectileType)
