@@ -9,6 +9,7 @@ public class BowManager : MonoBehaviour, PlayerController.IWeaponHandler
 
     public float shootForce;
     public float minChargeTime;
+    public float arrowNum = 0;
 
     private bool isAiming = false;
     private float holdStartTime;
@@ -36,20 +37,28 @@ public class BowManager : MonoBehaviour, PlayerController.IWeaponHandler
 
     void StartAiming()
     {
-        originalSpeed = PlayerController.instance.movementSpeed;
-        PlayerController.instance.movementSpeed = PlayerController.instance.movementSpeed * 0.3f;
-
-        currentArrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
-        currentArrow.transform.SetParent(firePoint);
-        Rigidbody rb = currentArrow.GetComponent<Rigidbody>();
-        if (rb != null)
+        if(arrowNum > 0)
         {
-            rb.isKinematic = true; // ��������Ӱ�죬��ֹ��ǰ����
-        }
+            originalSpeed = PlayerController.instance.movementSpeed;
+            PlayerController.instance.movementSpeed = PlayerController.instance.movementSpeed * 0.3f;
 
-        isAiming = true;
-        holdStartTime = Time.time;
-        anim.SetBool("IsAiming", true);
+            currentArrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
+            currentArrow.transform.SetParent(firePoint);
+            Rigidbody rb = currentArrow.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.isKinematic = true; // ��������Ӱ�죬��ֹ��ǰ����
+            }
+
+            isAiming = true;
+            holdStartTime = Time.time;
+            anim.SetBool("IsAiming", true);
+        }
+        else
+        {
+            //no enough arrow!
+        }
+        
     }
 
     void ReleaseArrow()

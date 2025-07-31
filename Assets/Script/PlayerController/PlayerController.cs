@@ -219,6 +219,16 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Key3");
             SwitchWeaponTo(2);
         }
+        else if (Input.GetKeyDown(KeyCode.Keypad4))
+        {
+            Debug.Log("Key4");
+            SwitchWeaponTo(3);
+        }
+        else if (Input.GetKeyDown(KeyCode.Keypad5))
+        {
+            Debug.Log("Key5");
+            SwitchWeaponTo(4);
+        }
     }
     public interface IWeaponHandler
     {
