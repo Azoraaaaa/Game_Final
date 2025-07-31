@@ -1844,6 +1844,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8670198926023727091}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5711511831547967072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5329722215249593448}
+  m_Layer: 3
+  m_Name: magicArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5329722215249593448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5711511831547967072}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.252, y: 1.186, z: 0.419}
+  m_LocalScale: {x: 0.97425, y: 0.063277565, z: 0.3052}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7970469900635434692}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5845835419333602023
 GameObject:
   m_ObjectHideFlags: 0
@@ -2369,6 +2400,7 @@ Transform:
   - {fileID: 568524387101382159}
   - {fileID: 3595136258494037350}
   - {fileID: 1711322424153644837}
+  - {fileID: 5329722215249593448}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &6865484898986650789
@@ -2449,6 +2481,11 @@ MonoBehaviour:
   - {fileID: 0}
   currentWeapon: 0
   isSwitching: 0
+  jumpForce: 5
+  dashSpeed: 15
+  dashDuration: 0.5
+  rollSpeed: 7
+  rollDuration: 0.5
 --- !u!114 &8281392949615302194
 MonoBehaviour:
   m_ObjectHideFlags: 0

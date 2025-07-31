@@ -552,7 +552,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c5632919c7eedf34ea3fce4ddb103880, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f814176a732d8a44ea9b9ee5d765c102, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -647,7 +647,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1330388390240026368}
   m_Layer: 5
-  m_Name: Select_Gun
+  m_Name: Select_Throw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1453,7 +1453,7 @@ RectTransform:
   m_GameObject: {fileID: 5184332733879889603}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.288128, y: 1.2452073, z: 1.288128}
+  m_LocalScale: {x: 1.2337142, y: 1.1926066, z: 1.2337142}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6374818136843160039}
@@ -1491,7 +1491,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c5632919c7eedf34ea3fce4ddb103880, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d6eebf509a4b56544b0e56d2b488957d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2220,7 +2220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5593215762619399847}
   m_Layer: 5
-  m_Name: Select_Throw
+  m_Name: Select_Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2445,7 +2445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1099670207832995085}
   m_Layer: 5
-  m_Name: Throw
+  m_Name: Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2537,7 +2537,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c5632919c7eedf34ea3fce4ddb103880, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f814176a732d8a44ea9b9ee5d765c102, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2707,7 +2707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6374818136843160039}
   m_Layer: 5
-  m_Name: Gun
+  m_Name: Throw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2948,7 +2948,7 @@ RectTransform:
   m_GameObject: {fileID: 8920598586812779936}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.288128, y: 1.2452072, z: 1.288128}
+  m_LocalScale: {x: 1.3487988, y: 1.3038564, z: 1.3487988}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1330388390240026368}
@@ -2986,7 +2986,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c5632919c7eedf34ea3fce4ddb103880, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d6eebf509a4b56544b0e56d2b488957d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
