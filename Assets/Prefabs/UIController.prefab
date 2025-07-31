@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4281213200264325694}
   - component: {fileID: 5171271088902457470}
+  - component: {fileID: 8438964834557261125}
   m_Layer: 0
   m_Name: UIController
   m_TagString: Untagged
@@ -45,5 +46,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BagScreen: {fileID: 0}
-  ShopScreen: {fileID: 0}
   StoryScreen: {fileID: 0}
+--- !u!114 &8438964834557261125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5715126911949323394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 649d942129c6a314891e7c54c644e014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 7
