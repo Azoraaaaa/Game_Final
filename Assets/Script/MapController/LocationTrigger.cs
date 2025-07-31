@@ -3,8 +3,15 @@ using UnityEngine;
 
 public class LocationTrigger : MonoBehaviour
 {
+    public static LocationTrigger instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+
     public string locationID; // 与MapLocation中的ID对应
     private bool playerIsInZone = false;
+    public bool isTriggered = false;
 
     void OnTriggerEnter(Collider other)
     {
@@ -28,6 +35,8 @@ public class LocationTrigger : MonoBehaviour
             playerIsInZone = false;
             GameManager.Instance.isNearTeleporter = false;
             UIManager.instance.HideNotification();
+
+            isTriggered = true;
         }
     }
 
