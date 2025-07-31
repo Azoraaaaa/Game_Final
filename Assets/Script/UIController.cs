@@ -1,6 +1,8 @@
 using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class UIController : MonoBehaviour
 {
@@ -25,7 +27,6 @@ public class UIController : MonoBehaviour
     */
 
     public GameObject BagScreen;
-    public GameObject ShopScreen;
     public GameObject StoryScreen;
 
     //public Text HealthTextInBag;
@@ -36,13 +37,16 @@ public class UIController : MonoBehaviour
     public void Awake()
     {
         instance = this;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     void Start()
     {
+        Find();
+
         //SetHUDVisibility(true);
         BagScreen.SetActive(false);
-        ShopScreen.SetActive(false);
+        StoryScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -64,5 +68,31 @@ public class UIController : MonoBehaviour
         questCanvas.gameObject.SetActive(isVisible);
         missionPointCanvas.gameObject.SetActive(isVisible);
         */
+    }
+    public void Find()
+    {
+        GameObject newBag = GameObject.FindWithTag("BagScreen");
+        if (newBag != null)
+        {
+            BagScreen = newBag;
+            BagScreen.SetActive(false);
+        }
+
+        GameObject newStory = GameObject.FindWithTag("StoryScreen");
+        if (newStory != null)
+        {
+            StoryScreen = newStory;
+            StoryScreen.SetActive(false);
+        }
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        StartCoroutine(DelayedFind());
+    }
+
+    IEnumerator DelayedFind()
+    {
+        yield return null; // 等待一帧，确保新场景加载完成
+        Find();
     }
 }

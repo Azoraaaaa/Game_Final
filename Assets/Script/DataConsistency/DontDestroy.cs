@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DontDestroy : MonoBehaviour
 {
-    private static GameObject[] persistentObjects = new GameObject[1];
+    private static GameObject[] persistentObjects = new GameObject[8];
     public int objectIndex;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
