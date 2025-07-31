@@ -49,6 +49,7 @@ public class ShopController : MonoBehaviour
     {
         
     }
+    /*
     public void ToggleShopScreen()
     {
         if (UIController.instance.ShopScreen.activeInHierarchy)
@@ -73,6 +74,7 @@ public class ShopController : MonoBehaviour
             Time.timeScale = 0f; //freeze the screen
         }
     }
+    */
     public void Buy()
     {
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;

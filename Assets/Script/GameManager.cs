@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
-            ShopController.instance.ToggleShopScreen();
+            //ShopController.instance.ToggleShopScreen();
 
             //PlaySound(openSound);
         }
@@ -44,6 +44,20 @@ public class GameManager : MonoBehaviour
             StoryManager.instance.ToggleStoryScreen();
 
             //PlaySound(openSound);
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            LoadScene1();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            LoadScene2();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            LoadScene3();
         }
     }
 

@@ -9,6 +9,10 @@ TagManager:
   - MiniMapIconsContainer
   - NPC
   - Event
+  - BagScreen
+  - ShopScreen
+  - StoryScreen
+  - useUI
   layers:
   - Default
   - TransparentFX
