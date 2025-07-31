@@ -78,7 +78,6 @@ public class NotificationCanvas : MonoBehaviour
             if (promptAnimator != null && HasAnimatorParameter(promptAnimator, hideTrigger))
             {
                 promptAnimator.SetTrigger(hideTrigger);
-                Debug.Log($"动画触发器 {hideTrigger} 已激活");
             }
             else
             {

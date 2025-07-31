@@ -42,17 +42,8 @@ public class TimelineTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            Debug.Log("玩家进入触发器范围");
-            // 显示交互提示UI - 添加空值检查
-            if (NotificationCanvas.instance != null)
-            {
-                NotificationCanvas.instance.ShowInteractPrompt("Press E to Interact");
-                Debug.Log("尝试显示交互提示");
-            }
-            else
-            {
-                Debug.LogWarning("NotificationCanvas.instance 为空！");
-            }
+            // 显示交互提示UI
+            NotificationCanvas.instance?.ShowInteractPrompt("按 E 交互");
         }
     }
 
@@ -61,17 +52,8 @@ public class TimelineTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-            Debug.Log("玩家离开触发器范围");
-            // 隐藏交互提示UI - 添加空值检查
-            if (NotificationCanvas.instance != null)
-            {
-                NotificationCanvas.instance.HideInteractPrompt();
-                Debug.Log("尝试隐藏交互提示");
-            }
-            else
-            {
-                Debug.LogWarning("NotificationCanvas.instance 为空！");
-            }
+            // 隐藏交互提示UI
+            NotificationCanvas.instance?.HideInteractPrompt();
         }
     }
 }
