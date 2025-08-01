@@ -9,9 +9,8 @@ public class ChaseTrigger : MonoBehaviour
     }
 
     public GameObject triggerArea;
-    public GameObject bgmAS;
 
-    public bool isTriggered = true;//!!!
+    public bool isTriggered = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,7 +25,6 @@ public class ChaseTrigger : MonoBehaviour
         if(isTriggered)
         {
             triggerArea.SetActive(true);
-            bgmAS.SetActive(false);
         }
     }
 }

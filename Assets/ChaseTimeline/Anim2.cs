@@ -16,12 +16,9 @@ public class Anim2 : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other)
+    public void timelineEnd()
     {
-        if (other.CompareTag("Player"))
-        {
-            originalMonster.SetActive(false);
-            monster.SetActive(true);
-        }
+        originalMonster.SetActive(false);
+        monster.SetActive(true);
     }
 }
