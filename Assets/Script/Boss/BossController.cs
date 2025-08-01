@@ -71,7 +71,8 @@ public class BossController : MonoBehaviour
     private const string IS_DEAD = "IsDead";
     private const string GET_HIT = "GetHit";
     private const string DO_SPECIAL_ATTACK = "DoSpecialAttack";
-    
+    private const string StingerHit = "StingerHit";
+
     // Boss状态枚举
     private enum BossState
     {
@@ -300,7 +301,7 @@ public class BossController : MonoBehaviour
                 if (distanceToPlayer <= attackRange * 1.5f)
                 {
                     animator.SetInteger(ATTACK_INDEX, 2);
-                    animator.SetTrigger(IS_ATTACKING);
+                    animator.SetTrigger(StingerHit);
                     StartCoroutine(PerformStingerAttack());
                 }
                 break;
@@ -452,7 +453,7 @@ public class BossController : MonoBehaviour
         // 生成海浪特效
         if (tidalRushPrefab != null)
         {
-            Instantiate(tidalRushPrefab, transform.position, transform.rotation);
+            Instantiate(tidalRushPrefab, transform.position + Vector3.right * -15f, transform.rotation);
         }
         
         yield return new WaitForSeconds(1f);

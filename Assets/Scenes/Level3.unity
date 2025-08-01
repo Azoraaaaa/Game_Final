@@ -48366,7 +48366,7 @@ MonoBehaviour:
   iceOrbPrefab: {fileID: 1609107109629186, guid: 7ba572f2cb0b2a74b82790dea008888d, type: 3}
   projectileSpawnPoint: {fileID: 602519393}
   projectileSpeed: 8
-  waterOrbDamage: 30
+  waterOrbDamage: 40
   iceOrbDamage: 40
   leftClaw: {fileID: 92727982}
   rightClaw: {fileID: 663587858}
@@ -48374,7 +48374,7 @@ MonoBehaviour:
   meleeHitboxSize: {x: 1, y: 1, z: 1}
   waterSplashPrefab: {fileID: 1609107109629186, guid: 7ba572f2cb0b2a74b82790dea008888d, type: 3}
   iceExplosionPrefab: {fileID: 175220, guid: e27a28c372e16bd41a29d6d02a48260b, type: 3}
-  tidalRushPrefab: {fileID: 108178, guid: e053c479a3add9649af9d847a748547d, type: 3}
+  tidalRushPrefab: {fileID: 1008756975689012576, guid: 9e068b519e04d9b4d8c4ddb01fcb0230, type: 3}
   deathEffectPrefab: {fileID: 153568, guid: cca79b260878071418290367024a6716, type: 3}
 --- !u!114 &1377200736
 MonoBehaviour:
@@ -48394,7 +48394,7 @@ MonoBehaviour:
   tidalRushTrigger: {fileID: 878060700}
   waterOrbSpawnEffect: {fileID: 175220, guid: e27a28c372e16bd41a29d6d02a48260b, type: 3}
   iceOrbSpawnEffect: {fileID: 1609107109629186, guid: 7ba572f2cb0b2a74b82790dea008888d, type: 3}
-  tidalRushEffect: {fileID: 110446, guid: f6322404d6e3b914aa01ac044fb9415e, type: 3}
+  tidalRushEffect: {fileID: 1008756975689012576, guid: 9e068b519e04d9b4d8c4ddb01fcb0230, type: 3}
 --- !u!1 &1378583259
 GameObject:
   m_ObjectHideFlags: 0

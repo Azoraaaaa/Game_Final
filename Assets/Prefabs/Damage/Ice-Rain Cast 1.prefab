@@ -14895,7 +14895,7 @@ MonoBehaviour:
   projectileType: 1
   waterSplashPrefab: {fileID: 1142193931700624, guid: 9d1846a1c8bff7142ab3959923c7d9c2, type: 3}
   iceExplosionPrefab: {fileID: 1817797803601600, guid: 46e56f62e4ff899488d1b27766d1eb6d, type: 3}
-  slowEffectPrefab: {fileID: 108178, guid: e053c479a3add9649af9d847a748547d, type: 3}
+  slowEffectPrefab: {fileID: 1658525510040468, guid: e3e4de69343c17c49b77c92ff3ed4b6b, type: 3}
   slowDuration: 3
   slowAmount: 0.5
   explosionRadius: 3
