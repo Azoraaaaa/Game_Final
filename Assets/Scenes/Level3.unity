@@ -6314,7 +6314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationID: Spot1
-  isTriggered: 0
 --- !u!65 &230099292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15233,7 +15232,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationID: Bone
-  isTriggered: 0
 --- !u!65 &527622900
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20630,7 +20628,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationID: Hill
-  isTriggered: 0
 --- !u!65 &762497681
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24830,7 +24827,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationID: Ship
-  isTriggered: 0
 --- !u!65 &922814061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29388,7 +29384,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationID: Cave
-  isTriggered: 1
 --- !u!65 &1098267442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30328,7 +30323,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationID: Ruin
-  isTriggered: 0
 --- !u!65 &1135445044
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47541,15 +47535,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6432850072873897597, guid: b76b29e1aa3528a4e8244a20aea11efe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 67.4932
+      value: 68.14348
       objectReference: {fileID: 0}
     - target: {fileID: 6432850072873897597, guid: b76b29e1aa3528a4e8244a20aea11efe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.864411
+      value: 5.100272
       objectReference: {fileID: 0}
     - target: {fileID: 6432850072873897597, guid: b76b29e1aa3528a4e8244a20aea11efe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 87.85363
+      value: 87.49933
       objectReference: {fileID: 0}
     - target: {fileID: 6432850072873897597, guid: b76b29e1aa3528a4e8244a20aea11efe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -49106,6 +49100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerArea: {fileID: 1719689786}
+  bgmAS: {fileID: 1750947888}
+  isTriggered: 1
 --- !u!4 &1690970648
 Transform:
   m_ObjectHideFlags: 0
@@ -50062,7 +50058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1719689787
 MonoBehaviour:
   m_ObjectHideFlags: 0
