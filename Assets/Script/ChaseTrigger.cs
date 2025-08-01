@@ -16,6 +16,8 @@ public class ChaseTrigger : MonoBehaviour
         if(LocationTrigger.instance.isTriggered)
         {
             triggerArea.SetActive(true);
+            Debug.Log("Trigger!");
+            //stop bgm
         }
     }
 }
