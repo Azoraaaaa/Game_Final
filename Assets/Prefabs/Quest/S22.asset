@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: S22
   m_EditorClassIdentifier: 
   questID: S22
-  questTitle: 'Bring wine to the archery master '
+  questTitle: "Witch\u2019s Herbs"
   questDescription: 'A Bitter Taste : Bring wine to the archery master so she can
     teach you.'
   questType: 1
