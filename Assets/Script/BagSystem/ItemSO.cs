@@ -16,19 +16,39 @@ public class ItemSO : ScriptableObject
     {
         if (statToChange == StatToChange.Health)
         {
-            /*
-            if (PlayerHealthController.instance.currentHealth == PlayerHealthController.instance.maxHealth)
+            
+            if (PlayerHealthSystem.instance.currentHealth == PlayerHealthSystem.instance.maxHealth)
             {
                 return false;
             }
             else
             {
-                PlayerHealthController.instance.HealPlayer(amountToChangeStat);
+                PlayerHealthSystem.instance.currentHealth = PlayerHealthSystem.instance.currentHealth + amountToChangeStat;
                 return true;
             }
-            */
+            
         }
-        else if (attributeToChange == AttributeToChange.Speed)
+        else if (statToChange == StatToChange.maxHealth1)
+        {
+                PlayerHealthSystem.instance.maxHealth = amountToChangeStat;
+                return true;
+        }
+        else if (statToChange == StatToChange.maxEnergy1)
+        {
+            PlayerHealthSystem.instance.maxSkillPoints = PlayerHealthSystem.instance.maxSkillPoints + amountToChangeStat;
+            return true;
+        }
+        else if (statToChange == StatToChange.maxHealth2)
+        {
+            PlayerHealthSystem.instance.maxHealth = amountToChangeStat;
+            return true;
+        }
+        else if (statToChange == StatToChange.maxEnergy2)
+        {
+            PlayerHealthSystem.instance.maxSkillPoints = PlayerHealthSystem.instance.maxSkillPoints + amountToChangeStat;
+            return true;
+        }
+        else if (attributeToChange == AttributeToChange.BombThrow)
         {
             /*
             PlayerSpeedController.instance.BoostSpeed(amountToChangeAttribute, 5f);
@@ -43,11 +63,15 @@ public class ItemSO : ScriptableObject
     {
         none,
         Health,
+        maxHealth1,
+        maxEnergy1,
+        maxHealth2,
+        maxEnergy2,
         SwordDamage
     };
     public enum AttributeToChange
     {
         none,
-        Speed
+        BombThrow
     };
 }

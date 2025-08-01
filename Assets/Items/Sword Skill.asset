@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sword Skill
   m_EditorClassIdentifier: 
   itemName: Sword Skill
-  statToChange: 2
+  statToChange: 0
   amountToChangeStat: 0
   attributeToChange: 0
   amountToChangeAttribute: 0
