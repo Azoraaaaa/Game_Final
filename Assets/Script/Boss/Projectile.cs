@@ -76,12 +76,7 @@ public class Projectile : MonoBehaviour
         
         if (other.CompareTag("Player"))
         {
-            // 对玩家造成伤害
-            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(currentDamage);
-            }
+            PlayerHealthSystem.instance.TakeDamage(currentDamage);
             
             // 根据弹体类型产生不同效果
             switch (projectileType)

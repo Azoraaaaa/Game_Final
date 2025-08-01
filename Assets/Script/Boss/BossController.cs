@@ -475,7 +475,7 @@ public class BossController : MonoBehaviour
             if (hitCollider.CompareTag("Player"))
             {
                 // 对玩家造成伤害
-                PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
+                PlayerHealthSystem playerHealth = hitCollider.GetComponent<PlayerHealthSystem>();
                 if (playerHealth != null)
                 {
                     playerHealth.TakeDamage(meleeDamage);
@@ -501,7 +501,7 @@ public class BossController : MonoBehaviour
         {
             if (hitCollider.CompareTag("Player"))
             {
-                PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
+                PlayerHealthSystem playerHealth = hitCollider.GetComponent<PlayerHealthSystem>();
                 if (playerHealth != null)
                 {
                     playerHealth.TakeDamage(stingerDamage);
@@ -526,7 +526,7 @@ public class BossController : MonoBehaviour
         {
             if (hitCollider.CompareTag("Player"))
             {
-                PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
+                PlayerHealthSystem playerHealth = hitCollider.GetComponent<PlayerHealthSystem>();
                 if (playerHealth != null)
                 {
                     playerHealth.TakeDamage(meleeDamage * 1.5f);

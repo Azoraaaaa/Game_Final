@@ -2795,7 +2795,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2814,9 +2814,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackType: 0
-  damage: 50
+  damage: 1
   knockbackForce: 5
-  hitEffectPrefab: {fileID: 1642627157328290, guid: 89632666f78a0184aae0a6be7ced23d3, type: 3}
+  hitEffectPrefab: {fileID: 1858798456717250, guid: e6b0c8eedb7b4b148b2d830fdcf06603, type: 3}
+--- !u!54 &92727985
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92727981}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &94563619
 GameObject:
   m_ObjectHideFlags: 0
@@ -10128,6 +10155,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.02539407
       objectReference: {fileID: 0}
+    - target: {fileID: 5060725558560260476, guid: 40d09a57587adf240ad682175985a04c, type: 3}
+      propertyPath: currentHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060725558560260476, guid: 40d09a57587adf240ad682175985a04c, type: 3}
+      propertyPath: currentSkillPoints
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5843798197178797626, guid: 40d09a57587adf240ad682175985a04c, type: 3}
       propertyPath: promptText
       value: 
@@ -10162,15 +10197,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7970469900635434692, guid: 40d09a57587adf240ad682175985a04c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.54902
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 7970469900635434692, guid: 40d09a57587adf240ad682175985a04c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.868
+      value: 6.29
       objectReference: {fileID: 0}
     - target: {fileID: 7970469900635434692, guid: 40d09a57587adf240ad682175985a04c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 105.48035
+      value: -39.49
       objectReference: {fileID: 0}
     - target: {fileID: 7970469900635434692, guid: 40d09a57587adf240ad682175985a04c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13809,7 +13844,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.25340134, y: -0.00000019518448, z: 0.00000005112879, w: 0.9673613}
-  m_LocalPosition: {x: 10.563608, y: 7.7082725, z: 101.45095}
+  m_LocalPosition: {x: 3.4145887, y: 10.130272, z: -43.519394}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22277,6 +22312,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530409087}
   m_CullTransparentMesh: 1
+--- !u!1 &532261904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 532261906}
+  - component: {fileID: 532261905}
+  m_Layer: 0
+  m_Name: PlayerHealthCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &532261905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532261904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15271dcabf6e3da4784a81d439beb8a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkOnStart: 1
+  checkOnUpdate: 0
+--- !u!4 &532261906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532261904}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 1.6565909, y: 6.786336, z: -10.959999}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &532284970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25228,12 +25309,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.7
-  m_Center: {x: -1, y: 0.15, z: 0}
+  m_Center: {x: -1.86, y: 0.15, z: 0}
 --- !u!114 &663587860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25247,9 +25328,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackType: 0
-  damage: 50
+  damage: 1
   knockbackForce: 5
-  hitEffectPrefab: {fileID: 1642627157328290, guid: 89632666f78a0184aae0a6be7ced23d3, type: 3}
+  hitEffectPrefab: {fileID: 1858798456717250, guid: e6b0c8eedb7b4b148b2d830fdcf06603, type: 3}
 --- !u!1 &663985511
 GameObject:
   m_ObjectHideFlags: 0
@@ -31003,7 +31084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 493af7928b6864a429d5329c2b7e6f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
+  attackType: 2
   damage: 50
   knockbackForce: 5
   hitEffectPrefab: {fileID: 1377947171569574, guid: 4ab98120d6bff604b9575d58d0640ea0, type: 3}
@@ -48229,6 +48310,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6735205811123252965, guid: 25d46811d0cd06b4f876253c47563313, type: 3}
       insertIndex: -1
       addedObject: {fileID: 92727984}
+    - targetCorrespondingSourceObject: {fileID: 6735205811123252965, guid: 25d46811d0cd06b4f876253c47563313, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 92727985}
     - targetCorrespondingSourceObject: {fileID: 6735205811123252967, guid: 25d46811d0cd06b4f876253c47563313, type: 3}
       insertIndex: -1
       addedObject: {fileID: 663587859}
@@ -48273,7 +48357,7 @@ MonoBehaviour:
   attackRange: 10
   detectionRange: 30
   player: {fileID: 197751822}
-  attackCooldown: 2
+  attackCooldown: 0
   comboAttackCooldown: 1.5
   specialAttackCooldown: 5
   meleeDamage: 50
@@ -55968,15 +56052,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6432850072873897597, guid: b76b29e1aa3528a4e8244a20aea11efe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.563608
+      value: 3.4145887
       objectReference: {fileID: 0}
     - target: {fileID: 6432850072873897597, guid: b76b29e1aa3528a4e8244a20aea11efe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.7082725
+      value: 10.130272
       objectReference: {fileID: 0}
     - target: {fileID: 6432850072873897597, guid: b76b29e1aa3528a4e8244a20aea11efe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 101.45095
+      value: -43.519394
       objectReference: {fileID: 0}
     - target: {fileID: 6432850072873897597, guid: b76b29e1aa3528a4e8244a20aea11efe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -64989,7 +65073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1950808801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64997,7 +65081,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950808800}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c3131e0596c0d84193bcd1f4c360a4c, type: 3}
   m_Name: 
@@ -88580,6 +88664,7 @@ SceneRoots:
   - {fileID: 276837245}
   - {fileID: 4432656528126455851}
   - {fileID: 8118355958925743566}
+  - {fileID: 532261906}
   - {fileID: 1377200732}
   - {fileID: 1950808802}
   - {fileID: 1012985671}
