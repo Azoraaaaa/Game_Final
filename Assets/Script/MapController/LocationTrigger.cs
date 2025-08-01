@@ -35,7 +35,7 @@ public class LocationTrigger : MonoBehaviour
             GameManager.Instance.isNearTeleporter = false;
             UIManager.instance.HideNotification();
 
-            ChaseTrigger.instance.isTriggered = true;
+            //ChaseTrigger.instance.isTriggered = true;
         }
     }
 
