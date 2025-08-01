@@ -56,6 +56,8 @@ public class PlayerHealthSystem : MonoBehaviour
         // 触发初始事件
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         OnSkillChanged?.Invoke(currentSkillPoints, maxSkillPoints);
+
+        OnPlayerDeath += HandleDeath;
     }
 
     private void Update()
@@ -67,8 +69,16 @@ public class PlayerHealthSystem : MonoBehaviour
         }
     }
 
+    private void HandleDeath()
+    {
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+    }
+
+
     #region 血量管理方法
-    
+
     /// <summary>
     /// 增加血量
     /// </summary>

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdedd314c3c8ccb43833f9f854252f45, type: 3}
+  m_Name: L1_Start5
+  m_EditorClassIdentifier: 
+  sentences:
+  - 'Fifty gold coins.
+
+    No haggling. No favors. No tales of destiny.'
+  speakerNames:
+  - Marro
+  defaultSpeakerName: Marro
+  choices:
+  - choiceText: Accept
+    nextNode: {fileID: 11400000, guid: f5b32bc7c07057547a3eb2e22c147141, type: 2}
+    eventType: 0
+    stringParameter: 
+  - choiceText: Cancel
+    nextNode: {fileID: 11400000, guid: 8308b44a8b978cf40af5b480f8c12954, type: 2}
+    eventType: 0
+    stringParameter: 

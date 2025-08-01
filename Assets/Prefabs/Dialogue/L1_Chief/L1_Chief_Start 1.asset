@@ -16,7 +16,7 @@ MonoBehaviour:
   - I... I want to know what really happened to my parents.
   - Who killed them? I want to make them pay.
   speakerNames:
+  - Ina
   - Sophia
-  - Sophia
-  defaultSpeakerName: Sophia
+  defaultSpeakerName: Ina
   choices: []

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdedd314c3c8ccb43833f9f854252f45, type: 3}
+  m_Name: Accept
+  m_EditorClassIdentifier: 
+  sentences:
+  - Here. Fifty gold. Now take me across.
+  speakerNames:
+  - Ina
+  defaultSpeakerName: Ina
+  choices:
+  - choiceText: Go
+    nextNode: {fileID: 11400000, guid: 5b9f6d6dab7b2ca42b047995b38aa170, type: 2}
+    eventType: 0
+    stringParameter: 

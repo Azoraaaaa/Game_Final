@@ -15,6 +15,6 @@ MonoBehaviour:
   sentences:
   - "Tell me who did it! I\u2019ll hunt them down myself!"
   speakerNames:
-  - Sophia
-  defaultSpeakerName: Sophia
+  - Ina
+  defaultSpeakerName: Ina
   choices: []

@@ -15,8 +15,8 @@ MonoBehaviour:
   sentences:
   - "Then I\u2019ll find them. I\u2019ll become strong\u2014no matter the cost."
   speakerNames:
-  - Sophia
-  defaultSpeakerName: Sophia
+  - Ina
+  defaultSpeakerName: Ina
   choices:
   - choiceText: Back
     nextNode: {fileID: 0}
