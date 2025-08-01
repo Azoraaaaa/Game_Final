@@ -38,9 +38,7 @@ public class BossAttackTrigger : MonoBehaviour
     }
     
     void OnTriggerEnter(Collider other)
-    {
-        //if (!canDealDamage || Time.time - lastDamageTime < damageCooldown) return;
-        
+    {   
         if (other.CompareTag("Player"))
         {
             DealDamage(other);
