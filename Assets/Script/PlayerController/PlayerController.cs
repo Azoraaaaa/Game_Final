@@ -45,6 +45,11 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
     private bool isRolling = false;
 
+    [Header("技能使用")]
+    [SerializeField] private float dashSkillCost = 30f;
+    [SerializeField] private float healSkillCost = 40f;
+    [SerializeField] private float shieldSkillCost = 50f;
+
 
     private void Awake()
     {
@@ -78,7 +83,20 @@ public class PlayerController : MonoBehaviour
         // Dash
         if (Input.GetKeyDown(KeyCode.LeftShift) && onSurface && !isDashing && !isJumping && !isRolling)
         {
-            StartCoroutine(Dash());
+            if (PlayerHealthSystem.instance.HasEnoughSkillPoints(dashSkillCost))
+            {
+                if (PlayerHealthSystem.instance.ConsumeSkillPoints(dashSkillCost))
+                {
+                    StartCoroutine(Dash());
+                }
+            }
+            else
+            { 
+                if (UIManager.instance != null)
+                {
+                    UIManager.instance.ShowNotification("Insufficient skill points!", 2f);
+                }
+            }
         }
 
         // Roll
@@ -270,6 +288,8 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isDashing", false);
         isDashing = false;
     }
+
+
 
     IEnumerator Roll()
     {
