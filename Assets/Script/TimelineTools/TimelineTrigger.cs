@@ -7,6 +7,8 @@ public class TimelineTrigger : MonoBehaviour
     [SerializeField] private TimelineCondition timelineCondition;
     private bool playerInRange = false;
 
+    public bool isChase = false;
+
     private void Start()
     {
         // 确保有触发器组件
@@ -27,6 +29,10 @@ public class TimelineTrigger : MonoBehaviour
         {
             TryPlayTimeline();
         }
+        if(playerInRange && isChase)
+        {
+            TryPlayTimeline();
+        }
     }
 
     private void TryPlayTimeline()
@@ -42,8 +48,12 @@ public class TimelineTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            // 显示交互提示UI
-            UIManager.instance.ShowNotification("Press <b>E</b> to Interact", 2f);
+
+            if(!isChase)
+            {
+                // 显示交互提示UI
+                UIManager.instance.ShowNotification("Press <b>E</b> to Interact", 2f);
+            }
         }
     }
 
