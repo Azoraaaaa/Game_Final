@@ -10,15 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdedd314c3c8ccb43833f9f854252f45, type: 3}
-  m_Name: L1_Chief_Start 5
+  m_Name: L1_Master2_Back3
   m_EditorClassIdentifier: 
   sentences:
-  - "Then I\u2019ll find them. I\u2019ll become strong\u2014no matter the cost."
+  - Good. You are ready.
+  - "\"A sword is not swung with strength. It is guided with intention. Let it move
+    like wind\u2014strike like lightning.\""
+  - Take this knowledge. Let your blade speak for you.
   speakerNames:
-  - Ina
-  defaultSpeakerName: Ina
+  - Master Kaelen
+  - Master Kaelen
+  - Master Kaelen
+  defaultSpeakerName: Master Kaelen
   choices:
   - choiceText: Back
     nextNode: {fileID: 0}
     eventType: 0
-    stringParameter: M01
+    stringParameter: 

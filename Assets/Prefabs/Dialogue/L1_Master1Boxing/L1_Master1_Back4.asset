@@ -10,15 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdedd314c3c8ccb43833f9f854252f45, type: 3}
-  m_Name: L1_Chief_Start 5
+  m_Name: L1_Master1_Back4
   m_EditorClassIdentifier: 
   sentences:
-  - "Then I\u2019ll find them. I\u2019ll become strong\u2014no matter the cost."
+  - "Now\u2026 let me show you what you\u2019ve earned."
+  - 'This is the Fist of the Earth.
+
+    It strikes not with anger, but with control.'
+  - When your mind is clear, your enemies will fall before you.
+  - Use it well. Your journey is only just beginning.
   speakerNames:
-  - Ina
-  defaultSpeakerName: Ina
+  - Master Herran
+  - Master Herran
+  - Master Herran
+  - Master Herran
+  defaultSpeakerName: Master Herran
   choices:
   - choiceText: Back
     nextNode: {fileID: 0}
     eventType: 0
-    stringParameter: M01
+    stringParameter: 

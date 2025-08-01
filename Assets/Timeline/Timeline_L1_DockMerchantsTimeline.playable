@@ -1,19 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5837736308716586658
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9b3fab871fe4b648b00c77ef6129487, type: 3}
-  m_Name: DialogueClip
-  m_EditorClassIdentifier: 
-  startingNode: {fileID: 11400000, guid: 82ee78ef1e7790c42950eea502d2a8d5, type: 2}
---- !u!114 &-5449333196090979913
+--- !u!114 &-6947996259980136253
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35,12 +22,12 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 5
+    m_Start: 6.033333333333333
     m_ClipIn: 0
-    m_Asset: {fileID: 1520628885453081740}
-    m_Duration: 1
+    m_Asset: {fileID: -3613653358192532748}
+    m_Duration: 0.9666666666666668
     m_TimeScale: 1
-    m_ParentTrack: {fileID: -5449333196090979913}
+    m_ParentTrack: {fileID: -6947996259980136253}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
@@ -104,12 +91,12 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: DialogueClip
   - m_Version: 1
-    m_Start: 6
+    m_Start: 7
     m_ClipIn: 0
-    m_Asset: {fileID: -5837736308716586658}
-    m_Duration: 1.0166666666666666
+    m_Asset: {fileID: 8827686810121015467}
+    m_Duration: 0.9666666666666668
     m_TimeScale: 1
-    m_ParentTrack: {fileID: -5449333196090979913}
+    m_ParentTrack: {fileID: -6947996259980136253}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
@@ -140,7 +127,25 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -155,12 +160,150 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: DialogueClip
   - m_Version: 1
-    m_Start: 7.016666666666667
+    m_Start: 7.966666666666667
     m_ClipIn: 0
-    m_Asset: {fileID: -3312000805813055860}
-    m_Duration: 0.9833333333333334
+    m_Asset: {fileID: -2127505322862525948}
+    m_Duration: 1.0500000000000007
     m_TimeScale: 1
-    m_ParentTrack: {fileID: -5449333196090979913}
+    m_ParentTrack: {fileID: -6947996259980136253}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: DialogueClip
+  - m_Version: 1
+    m_Start: 9.016666666666667
+    m_ClipIn: 0
+    m_Asset: {fileID: 5519740753430859118}
+    m_Duration: 0.9666666666666668
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -6947996259980136253}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: DialogueClip
+  - m_Version: 1
+    m_Start: 9.983333333333334
+    m_ClipIn: 0
+    m_Asset: {fileID: -5167360550821462053}
+    m_Duration: 3.033333333333333
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -6947996259980136253}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
@@ -225,36 +368,7 @@ MonoBehaviour:
     m_DisplayName: DialogueClip
   m_Markers:
     m_Objects: []
---- !u!114 &-3482415902067910264
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90fb794a295e73545af71bcdb7375791, type: 3}
-  m_Name: CinemachineShot(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  DisplayName: 
-  VirtualCamera:
-    exposedName: fed69340f98913043a66cc483702822d
-    defaultValue: {fileID: 0}
---- !u!114 &-3312000805813055860
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9b3fab871fe4b648b00c77ef6129487, type: 3}
-  m_Name: DialogueClip
-  m_EditorClassIdentifier: 
-  startingNode: {fileID: 11400000, guid: 703bddaacc1fbb84aa849fb08b3608c9, type: 2}
---- !u!114 &-2274893403313145590
+--- !u!114 &-6183856513060473444
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -278,14 +392,14 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 0
     m_ClipIn: 0
-    m_Asset: {fileID: -493358149867474434}
+    m_Asset: {fileID: 7896002683077784632}
     m_Duration: 5
     m_TimeScale: 1
-    m_ParentTrack: {fileID: -2274893403313145590}
+    m_ParentTrack: {fileID: -6183856513060473444}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 4.466666666666667
+    m_BlendOutDuration: 3.966666666666667
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -345,37 +459,19 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CinemachineCamera
   - m_Version: 1
-    m_Start: 0.5333333333333333
+    m_Start: 1.0333333333333334
     m_ClipIn: 0
-    m_Asset: {fileID: 2955781402320591309}
-    m_Duration: 5.466666666666667
+    m_Asset: {fileID: -5229216711481388265}
+    m_Duration: 5.966666666666667
     m_TimeScale: 1
-    m_ParentTrack: {fileID: -2274893403313145590}
+    m_ParentTrack: {fileID: -6183856513060473444}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 4.466666666666667
+    m_BlendInDuration: 3.966666666666667
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -414,12 +510,12 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CinemachineCamera (1)
   - m_Version: 1
-    m_Start: 6
+    m_Start: 7
     m_ClipIn: 0
-    m_Asset: {fileID: 2940027977890732719}
-    m_Duration: 1.0166666666666666
+    m_Asset: {fileID: 8708907986418054788}
+    m_Duration: 0.9666666666666668
     m_TimeScale: 1
-    m_ParentTrack: {fileID: -2274893403313145590}
+    m_ParentTrack: {fileID: -6183856513060473444}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
@@ -450,25 +546,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -483,12 +561,12 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CinemachineCamera (2)
   - m_Version: 1
-    m_Start: 7.016666666666667
+    m_Start: 7.966666666666667
     m_ClipIn: 0
-    m_Asset: {fileID: -3482415902067910264}
-    m_Duration: 0.9833333333333334
+    m_Asset: {fileID: -3235801946559570044}
+    m_Duration: 1.0500000000000007
     m_TimeScale: 1
-    m_ParentTrack: {fileID: -2274893403313145590}
+    m_ParentTrack: {fileID: -6183856513060473444}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
@@ -533,10 +611,94 @@ MonoBehaviour:
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
     m_DisplayName: CinemachineCamera (1)
+  - m_Version: 1
+    m_Start: 9.016666666666667
+    m_ClipIn: 0
+    m_Asset: {fileID: 2873300360765280541}
+    m_Duration: 0.9666666666666668
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -6183856513060473444}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: CinemachineCamera (2)
+  - m_Version: 1
+    m_Start: 9.983333333333334
+    m_ClipIn: 0
+    m_Asset: {fileID: 8517545012419287288}
+    m_Duration: 3.033333333333333
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -6183856513060473444}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: CinemachineCamera (1)
   m_Markers:
     m_Objects: []
   TrackPriority: 0
---- !u!114 &-493358149867474434
+--- !u!114 &-5229216711481388265
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -550,31 +712,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: 
   VirtualCamera:
-    exposedName: 5f30505509aa51443be3d0fd2d372832
+    exposedName: 64687c5593a3f36479077b1b446007a6
     defaultValue: {fileID: 0}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
-  m_Name: Timeline_Main_L1_3Timeline
-  m_EditorClassIdentifier: 
-  m_Version: 0
-  m_Tracks:
-  - {fileID: -5449333196090979913}
-  - {fileID: -2274893403313145590}
-  m_FixedDuration: 0
-  m_EditorSettings:
-    m_Framerate: 60
-    m_ScenePreview: 1
-  m_DurationMode: 0
-  m_MarkerTrack: {fileID: 0}
---- !u!114 &1520628885453081740
+--- !u!114 &-5167360550821462053
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -586,8 +726,101 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b3fab871fe4b648b00c77ef6129487, type: 3}
   m_Name: DialogueClip
   m_EditorClassIdentifier: 
-  startingNode: {fileID: 11400000, guid: 1a183f6c513f58a47b054957d6a54d21, type: 2}
---- !u!114 &2940027977890732719
+  startingNode: {fileID: 11400000, guid: 88cb8d6d1e879a543ba5e0f36aff8409, type: 2}
+--- !u!114 &-3613653358192532748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b3fab871fe4b648b00c77ef6129487, type: 3}
+  m_Name: DialogueClip
+  m_EditorClassIdentifier: 
+  startingNode: {fileID: 11400000, guid: 88dedb52f08b6214ea9ddcb17a2bf525, type: 2}
+--- !u!114 &-3235801946559570044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fb794a295e73545af71bcdb7375791, type: 3}
+  m_Name: CinemachineShot(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  DisplayName: 
+  VirtualCamera:
+    exposedName: 51c9847c6408be949b90e69264a04f88
+    defaultValue: {fileID: 0}
+--- !u!114 &-2127505322862525948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b3fab871fe4b648b00c77ef6129487, type: 3}
+  m_Name: DialogueClip
+  m_EditorClassIdentifier: 
+  startingNode: {fileID: 11400000, guid: 96b46b691dd0294458ffb82a9c35d98c, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
+  m_Name: Timeline_L1_DockMerchantsTimeline
+  m_EditorClassIdentifier: 
+  m_Version: 0
+  m_Tracks:
+  - {fileID: -6183856513060473444}
+  - {fileID: -6947996259980136253}
+  m_FixedDuration: 0
+  m_EditorSettings:
+    m_Framerate: 60
+    m_ScenePreview: 1
+  m_DurationMode: 0
+  m_MarkerTrack: {fileID: 0}
+--- !u!114 &2873300360765280541
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fb794a295e73545af71bcdb7375791, type: 3}
+  m_Name: CinemachineShot(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  DisplayName: 
+  VirtualCamera:
+    exposedName: 29997d145c2fb534f8b90f8a497b6bde
+    defaultValue: {fileID: 0}
+--- !u!114 &5519740753430859118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b3fab871fe4b648b00c77ef6129487, type: 3}
+  m_Name: DialogueClip
+  m_EditorClassIdentifier: 
+  startingNode: {fileID: 11400000, guid: b5c5423358116a14c88d83818bfd4c0a, type: 2}
+--- !u!114 &7896002683077784632
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -601,9 +834,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: 
   VirtualCamera:
-    exposedName: a1c12616c3a0fad4bac0da372d8bd081
+    exposedName: c6a9ea6518d967748ae93db88c3ab134
     defaultValue: {fileID: 0}
---- !u!114 &2955781402320591309
+--- !u!114 &8517545012419287288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fb794a295e73545af71bcdb7375791, type: 3}
+  m_Name: CinemachineShot(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  DisplayName: 
+  VirtualCamera:
+    exposedName: c7bf831631f43b344a9b87da4a016df2
+    defaultValue: {fileID: 0}
+--- !u!114 &8708907986418054788
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -617,5 +866,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: 
   VirtualCamera:
-    exposedName: 914529342e4b6b544a1ebeebed325498
+    exposedName: 8e25ece832db1c640974cc5add483f93
     defaultValue: {fileID: 0}
+--- !u!114 &8827686810121015467
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b3fab871fe4b648b00c77ef6129487, type: 3}
+  m_Name: DialogueClip
+  m_EditorClassIdentifier: 
+  startingNode: {fileID: 11400000, guid: 59a23a5adcb575a49bcb422859dd4dbb, type: 2}
