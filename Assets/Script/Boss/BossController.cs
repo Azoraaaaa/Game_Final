@@ -71,8 +71,7 @@ public class BossController : MonoBehaviour
     private const string IS_DEAD = "IsDead";
     private const string GET_HIT = "GetHit";
     private const string DO_SPECIAL_ATTACK = "DoSpecialAttack";
-    private const string StingerHit = "StingerHit";
-
+    
     // Boss状态枚举
     private enum BossState
     {
@@ -301,7 +300,7 @@ public class BossController : MonoBehaviour
                 if (distanceToPlayer <= attackRange * 1.5f)
                 {
                     animator.SetInteger(ATTACK_INDEX, 2);
-                    animator.SetTrigger(StingerHit);
+                    animator.SetTrigger(IS_ATTACKING);
                     StartCoroutine(PerformStingerAttack());
                 }
                 break;
@@ -453,7 +452,7 @@ public class BossController : MonoBehaviour
         // 生成海浪特效
         if (tidalRushPrefab != null)
         {
-            Instantiate(tidalRushPrefab, transform.position + Vector3.right * -15f, transform.rotation);
+            Instantiate(tidalRushPrefab, transform.position, transform.rotation);
         }
         
         yield return new WaitForSeconds(1f);
@@ -476,11 +475,7 @@ public class BossController : MonoBehaviour
             if (hitCollider.CompareTag("Player"))
             {
                 // 对玩家造成伤害
-                PlayerHealthSystem playerHealth = hitCollider.GetComponent<PlayerHealthSystem>();
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(meleeDamage);
-                }
+                PlayerHealthSystem.instance.TakeDamage(meleeDamage);
                 
                 // 播放命中特效
                 PlayHitEffect(hitCollider.transform.position);
@@ -502,11 +497,7 @@ public class BossController : MonoBehaviour
         {
             if (hitCollider.CompareTag("Player"))
             {
-                PlayerHealthSystem playerHealth = hitCollider.GetComponent<PlayerHealthSystem>();
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(stingerDamage);
-                }
+                PlayerHealthSystem.instance.TakeDamage(stingerDamage);
                 
                 PlayHitEffect(hitCollider.transform.position);
                 break;
@@ -527,11 +518,7 @@ public class BossController : MonoBehaviour
         {
             if (hitCollider.CompareTag("Player"))
             {
-                PlayerHealthSystem playerHealth = hitCollider.GetComponent<PlayerHealthSystem>();
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(meleeDamage * 1.5f);
-                }
+                PlayerHealthSystem.instance.TakeDamage(meleeDamage * 1.5f);
                 
                 // 击飞效果
                 Rigidbody playerRb = hitCollider.GetComponent<Rigidbody>();
@@ -557,7 +544,7 @@ public class BossController : MonoBehaviour
     
     public void TakeDamage(float damage)
     {
-        //if (isDead) return;
+        if (isDead) return;
         
         currentHP -= damage;
         
@@ -578,16 +565,17 @@ public class BossController : MonoBehaviour
     
     private void Die()
     {
-        //isDead = true;
-        //currentState = BossState.Dead;
+        isDead = true;
+        currentState = BossState.Dead;
         
         // 播放死亡动画
-        animator.SetTrigger(IS_DEAD);
+        animator.SetBool(IS_DEAD, true);
+        animator.SetTrigger(GET_HIT);
         
         // 生成死亡特效
         if (deathEffectPrefab != null)
         {
-            Instantiate(deathEffectPrefab, transform.position+Vector3.up * 5f, Quaternion.identity);
+            Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
         }
         
         // TODO: 播放死亡音效
@@ -612,9 +600,9 @@ public class BossController : MonoBehaviour
         DisableAllAttackTriggers();
         
         // 立即销毁Boss
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 2f);
         
-        Debug.Log("Boss已死亡，将在5秒后销毁");
+        Debug.Log("Boss已死亡，将在2秒后销毁");
     }
     
     private IEnumerator BossStateMachine()
