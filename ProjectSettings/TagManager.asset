@@ -14,6 +14,10 @@ TagManager:
   - StoryScreen
   - useUI
   - Environment
+  - gem01
+  - gem02
+  - gem03
+  - gem04
   layers:
   - Default
   - TransparentFX
