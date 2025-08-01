@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdedd314c3c8ccb43833f9f854252f45, type: 3}
   m_Name: Chase2
   m_EditorClassIdentifier: 
-  speakerName: Ina
-  sentence: Run!!!
+  sentences:
+  - Run!!!
+  speakerNames:
+  - Ina
+  defaultSpeakerName: 
   choices: []
