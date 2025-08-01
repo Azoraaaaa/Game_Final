@@ -25,7 +25,6 @@ public class ChaseTrigger : MonoBehaviour
     {
         if(isTriggered)
         {
-            Debug.Log("Trigger!");
             triggerArea.SetActive(true);
             bgmAS.SetActive(false);
         }
