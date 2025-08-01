@@ -85,7 +85,7 @@ public enum DialogueChoiceEventType
     OpenBag,
     CloseShop,
     CloseBag,
-    StartQuest // 添加一个新的事件类型
+    StartQuest 
 }
 
 [System.Serializable]
