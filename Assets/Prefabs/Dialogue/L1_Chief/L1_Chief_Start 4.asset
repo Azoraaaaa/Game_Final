@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdedd314c3c8ccb43833f9f854252f45, type: 3}
+  m_Name: L1_Chief_Start 4
+  m_EditorClassIdentifier: 
+  sentences:
+  - "No, child. Not yet. You\u2019re still too young\u2026 too untrained. Hatred
+    may burn in your heart, but strength must guide your hand."
+  - "If you truly wish to walk this path, you must first seek out two masters\u2014
+    Herran, the warrior, and Elena, the mage."
+  - They will teach you what I cannot.
+  speakerNames:
+  - Chief
+  - Chief
+  - Chief
+  defaultSpeakerName: Chief
+  choices: []

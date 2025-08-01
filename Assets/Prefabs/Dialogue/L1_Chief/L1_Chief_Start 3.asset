@@ -10,20 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdedd314c3c8ccb43833f9f854252f45, type: 3}
-  m_Name: Quest1
+  m_Name: L1_Chief_Start 3
   m_EditorClassIdentifier: 
-  speakerName: Master
-  sentence: I want a candy!
-  choices:
-  - choiceText: ok
-    nextNode: {fileID: 0}
-    eventType: 5
-    stringParameter: M01
-  - choiceText: oh
-    nextNode: {fileID: 0}
-    eventType: 5
-    stringParameter: S01
-  - choiceText: no
-    nextNode: {fileID: 0}
-    eventType: 5
-    stringParameter: S02
+  sentences:
+  - "Tell me who did it! I\u2019ll hunt them down myself!"
+  speakerNames:
+  - Sophia
+  defaultSpeakerName: Sophia
+  choices: []

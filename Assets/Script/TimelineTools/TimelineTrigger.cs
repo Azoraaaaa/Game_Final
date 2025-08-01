@@ -43,7 +43,7 @@ public class TimelineTrigger : MonoBehaviour
         {
             playerInRange = true;
             // 显示交互提示UI
-            NotificationCanvas.instance?.ShowInteractPrompt("Press <b>E</b> to Interact");
+            UIManager.instance.ShowNotification("Press <b>E</b> to Interact", 2f);
         }
     }
 
@@ -53,7 +53,7 @@ public class TimelineTrigger : MonoBehaviour
         {
             playerInRange = false;
             // 隐藏交互提示UI
-            NotificationCanvas.instance?.HideInteractPrompt();
+            //NotificationCanvas.instance?.HideInteractPrompt();
         }
     }
 }

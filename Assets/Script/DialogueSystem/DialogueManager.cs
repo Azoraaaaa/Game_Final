@@ -18,6 +18,10 @@ public class DialogueManager : MonoBehaviour
 
     private DialogueNode currentNode;
     private List<GameObject> activeChoiceButtons = new List<GameObject>();
+    
+    // 新增：多段台词播放相关变量
+    private int currentSentenceIndex = 0;
+    private bool isTyping = false;
 
     void Awake()
     {
@@ -47,6 +51,7 @@ public class DialogueManager : MonoBehaviour
     private void ShowNode(DialogueNode node)
     {
         currentNode = node;
+        currentSentenceIndex = 0; // 重置句子索引
 
         // 清理旧按钮
         foreach (GameObject button in activeChoiceButtons)
@@ -55,27 +60,90 @@ public class DialogueManager : MonoBehaviour
         choiceButtonsContainer.gameObject.SetActive(false);
         if (continueButton != null) continueButton.gameObject.SetActive(false);
 
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(node.sentence));
-        speakerNameText.text = node.speakerName;
+        // 开始播放第一句台词
+        StartCoroutine(PlayNextSentence());
+    }
+    
+    private IEnumerator PlayNextSentence()
+    {
+        if (currentNode.sentences == null || currentSentenceIndex >= currentNode.sentences.Length)
+        {
+            // 所有台词播放完毕，显示选择或结束
+            DisplayChoicesOrContinue();
+            yield break;
+        }
+        
+        string currentSentence = currentNode.sentences[currentSentenceIndex];
+        if (string.IsNullOrEmpty(currentSentence))
+        {
+            // 跳过空句子
+            currentSentenceIndex++;
+            yield return StartCoroutine(PlayNextSentence());
+            yield break;
+        }
+        
+        // 更新当前句子的发言人姓名
+        UpdateSpeakerName();
+        
+        // 播放当前句子
+        yield return StartCoroutine(TypeSentence(currentSentence));
+        
+        // 检查是否还有更多句子
+        if (currentSentenceIndex + 1 < currentNode.sentences.Length)
+        {
+            // 还有更多句子，显示继续按钮
+            if (continueButton != null)
+            {
+                continueButton.gameObject.SetActive(true);
+                continueButton.onClick.RemoveAllListeners();
+                continueButton.onClick.AddListener(OnContinueClicked);
+            }
+        }
+        else
+        {
+            // 所有句子播放完毕，显示选择或结束
+            DisplayChoicesOrContinue();
+        }
+    }
+    
+    /// <summary>
+    /// 更新当前句子的发言人姓名显示
+    /// </summary>
+    private void UpdateSpeakerName()
+    {
+        if (currentNode != null && speakerNameText != null)
+        {
+            string speakerName = currentNode.GetSpeakerName(currentSentenceIndex);
+            speakerNameText.text = speakerName;
+        }
+    }
+    
+    private void OnContinueClicked()
+    {
+        if (isTyping) return; // 如果正在打字，忽略点击
+        
+        currentSentenceIndex++;
+        if (continueButton != null) continueButton.gameObject.SetActive(false);
+        StartCoroutine(PlayNextSentence());
     }
 
     private IEnumerator TypeSentence(string sentence)
     {
+        isTyping = true;
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
             yield return null;
         }
-        DisplayChoicesOrContinue();
+        isTyping = false;
     }
 
     private void DisplayChoicesOrContinue()
     {
         if (currentNode.choices == null || currentNode.choices.Count == 0)
         {
-            // 没有分支，显示“继续”按钮
+            // 没有分支，显示"继续"按钮（结束对话）
             if (continueButton != null)
             {
                 continueButton.gameObject.SetActive(true);

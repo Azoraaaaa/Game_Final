@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdedd314c3c8ccb43833f9f854252f45, type: 3}
-  m_Name: QuestOver
+  m_Name: L1_Chief_Start
   m_EditorClassIdentifier: 
-  speakerName: Master
-  sentence: You did it!
+  sentences:
+  - Hello, Sophia. What brings you here?
+  speakerNames:
+  - Chief
+  defaultSpeakerName: Chief
   choices: []
