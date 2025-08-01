@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdedd314c3c8ccb43833f9f854252f45, type: 3}
+  m_Name: L2_Chief_Over2
+  m_EditorClassIdentifier: 
+  sentences:
+  - "The sea floor\u2026? That\u2019s beyond my knowing."
+  - But perhaps the island across the water holds the answer.
+  - "There\u2019s an <b>old guardian</b> who watches over it. If anyone knows a way
+    beneath the waves\u2026 it\u2019s him."
+  speakerNames:
+  - Chief
+  - Chief
+  - Chief
+  defaultSpeakerName: Chief
+  choices: []

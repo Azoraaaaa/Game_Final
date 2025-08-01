@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdedd314c3c8ccb43833f9f854252f45, type: 3}
+  m_Name: L2_Chief_During
+  m_EditorClassIdentifier: 
+  sentences:
+  - "Please, we beg you\u2014our people suffer every day."
+  - If the monsters are too strong, you mustn't throw your life away.
+  - "There are <b><color=red>two hermits</color></b> on the mountain\u2014masters
+    of bomb and magic."
+  - 'Seek them out. They may teach you what you need to overcome this threat.
+
+'
+  speakerNames:
+  - Chief
+  - Chief
+  - Chief
+  - Chief
+  defaultSpeakerName: Chief
+  choices: []

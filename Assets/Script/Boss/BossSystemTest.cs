@@ -4,7 +4,6 @@ public class BossSystemTest : MonoBehaviour
 {
     [Header("测试设置")]
     [SerializeField] private BossController bossController;
-    [SerializeField] private PlayerHealthSystem playerHealth;
     [SerializeField] private bool enableDebugLogs = true;
     
     void Start()
@@ -13,11 +12,6 @@ public class BossSystemTest : MonoBehaviour
         if (bossController == null)
         {
             bossController = FindFirstObjectByType<BossController>();
-        }
-        
-        if (playerHealth == null)
-        {
-            playerHealth = FindFirstObjectByType<PlayerHealthSystem>();
         }
         
         // 验证组件
@@ -57,15 +51,6 @@ public class BossSystemTest : MonoBehaviour
                 Debug.LogError("❌ BossController 未找到");
             }
             
-            if (playerHealth != null)
-            {
-                Debug.Log("✅ PlayerHealthSystem 找到并正常工作");
-                Debug.Log($"Player HP: {playerHealth.HealthPercentage * 100:F0}%");
-            }
-            else
-            {
-                Debug.LogError("❌ PlayerHealthSystem 未找到");
-            }
             
             if (GameManager.Instance != null)
             {
@@ -89,11 +74,8 @@ public class BossSystemTest : MonoBehaviour
     
     private void TestPlayerDamage()
     {
-        if (playerHealth != null)
-        {
-            playerHealth.TakeDamage(20f);
-            Debug.Log($"对玩家造成20点伤害，当前HP百分比: {playerHealth.HealthPercentage * 100:F0}%");
-        }
+        PlayerHealthSystem.instance.TakeDamage(20f);
+        Debug.Log($"对玩家造成20点伤害，当前HP百分比: {PlayerHealthSystem.instance.CurrentHealth * 100:F0}%");
     }
     
     private void TestBossPhase()
@@ -126,11 +108,6 @@ public class BossSystemTest : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(bossController.transform.position, 1f);
         }
-        
-        if (playerHealth != null)
-        {
-            Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(playerHealth.transform.position, 1f);
-        }
+       
     }
 } 

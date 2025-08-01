@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdedd314c3c8ccb43833f9f854252f45, type: 3}
+  m_Name: L2_Chief_Start 4
+  m_EditorClassIdentifier: 
+  sentences:
+  - 'This village has been troubled for moons.
+
+    A monster tribe has taken root
+    on the mountain above.'
+  - Thank you, brave one. Follow the trail that winds up the cliffs. The monster
+    camp is near the summit.
+  - "Be careful\u2014they are not ordinary beasts."
+  speakerNames:
+  - Chief
+  - Chief
+  - Chief
+  defaultSpeakerName: Chief
+  choices:
+  - choiceText: OK
+    nextNode: {fileID: 0}
+    eventType: 5
+    stringParameter: M02
