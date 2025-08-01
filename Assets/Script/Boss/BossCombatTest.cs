@@ -7,7 +7,7 @@ public class BossCombatTest : MonoBehaviour
 {
     [Header("测试设置")]
     [SerializeField] private BossController bossController;
-    [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private PlayerHealthSystem playerHealth;
     [SerializeField] private bool enableDebugLogs = true;
     
     void Start()
@@ -20,7 +20,7 @@ public class BossCombatTest : MonoBehaviour
         
         if (playerHealth == null)
         {
-            playerHealth = FindFirstObjectByType<PlayerHealth>();
+            playerHealth = FindFirstObjectByType<PlayerHealthSystem>();
         }
         
         if (enableDebugLogs)
@@ -98,27 +98,27 @@ public class BossCombatTest : MonoBehaviour
     
     private void TestPlayerDamage(float damage)
     {
-        if (playerHealth != null && !playerHealth.IsDead())
+        if (playerHealth != null && !playerHealth.IsDead)
         {
             playerHealth.TakeDamage(damage);
             Debug.Log($"对玩家造成{damage}点伤害");
         }
         else
         {
-            Debug.Log("玩家已死亡或未找到PlayerHealth组件");
+            Debug.Log("玩家已死亡或未找到PlayerHealthSystem组件");
         }
     }
     
     private void TestPlayerHeal()
     {
-        if (playerHealth != null && !playerHealth.IsDead())
+        if (playerHealth != null && !playerHealth.IsDead)
         {
-            playerHealth.Heal(50f);
+            playerHealth.AddHealth(50f);
             Debug.Log("治疗玩家50点血量");
         }
         else
         {
-            Debug.Log("玩家已死亡或未找到PlayerHealth组件");
+            Debug.Log("玩家已死亡或未找到PlayerHealthSystem组件");
         }
     }
     
@@ -139,11 +139,11 @@ public class BossCombatTest : MonoBehaviour
         // 检查玩家状态
         if (playerHealth != null)
         {
-            Debug.Log($"玩家状态: 存活={!playerHealth.IsDead()}, HP百分比={playerHealth.GetHealthPercentage():P1}");
+            Debug.Log($"玩家状态: 存活={!playerHealth.IsDead}, HP百分比={playerHealth.HealthPercentage:P1}");
         }
         else
         {
-            Debug.Log("❌ 未找到PlayerHealth");
+            Debug.Log("❌ 未找到PlayerHealthSystem");
         }
         
         // 检查攻击触发器
@@ -168,7 +168,7 @@ public class BossCombatTest : MonoBehaviour
         // 绘制玩家位置
         if (playerHealth != null)
         {
-            Gizmos.color = playerHealth.IsDead() ? Color.red : Color.blue;
+            Gizmos.color = playerHealth.IsDead ? Color.red : Color.blue;
             Gizmos.DrawWireSphere(playerHealth.transform.position, 0.5f);
         }
     }

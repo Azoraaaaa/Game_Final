@@ -4,7 +4,7 @@ public class BossSystemTest : MonoBehaviour
 {
     [Header("测试设置")]
     [SerializeField] private BossController bossController;
-    [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private PlayerHealthSystem playerHealth;
     [SerializeField] private bool enableDebugLogs = true;
     
     void Start()
@@ -17,7 +17,7 @@ public class BossSystemTest : MonoBehaviour
         
         if (playerHealth == null)
         {
-            playerHealth = FindFirstObjectByType<PlayerHealth>();
+            playerHealth = FindFirstObjectByType<PlayerHealthSystem>();
         }
         
         // 验证组件
@@ -59,12 +59,12 @@ public class BossSystemTest : MonoBehaviour
             
             if (playerHealth != null)
             {
-                Debug.Log("✅ PlayerHealth 找到并正常工作");
-                Debug.Log($"Player HP: {playerHealth.GetHealthPercentage() * 100:F0}%");
+                Debug.Log("✅ PlayerHealthSystem 找到并正常工作");
+                Debug.Log($"Player HP: {playerHealth.HealthPercentage * 100:F0}%");
             }
             else
             {
-                Debug.LogError("❌ PlayerHealth 未找到");
+                Debug.LogError("❌ PlayerHealthSystem 未找到");
             }
             
             if (GameManager.Instance != null)
@@ -92,7 +92,7 @@ public class BossSystemTest : MonoBehaviour
         if (playerHealth != null)
         {
             playerHealth.TakeDamage(20f);
-            Debug.Log($"对玩家造成20点伤害，当前HP百分比: {playerHealth.GetHealthPercentage() * 100:F0}%");
+            Debug.Log($"对玩家造成20点伤害，当前HP百分比: {playerHealth.HealthPercentage * 100:F0}%");
         }
     }
     

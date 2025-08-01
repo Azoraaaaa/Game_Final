@@ -475,7 +475,7 @@ public class BossController : MonoBehaviour
             if (hitCollider.CompareTag("Player"))
             {
                 // 对玩家造成伤害
-                PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
+                PlayerHealthSystem playerHealth = hitCollider.GetComponent<PlayerHealthSystem>();
                 if (playerHealth != null)
                 {
                     playerHealth.TakeDamage(meleeDamage);
@@ -501,7 +501,7 @@ public class BossController : MonoBehaviour
         {
             if (hitCollider.CompareTag("Player"))
             {
-                PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
+                PlayerHealthSystem playerHealth = hitCollider.GetComponent<PlayerHealthSystem>();
                 if (playerHealth != null)
                 {
                     playerHealth.TakeDamage(stingerDamage);
@@ -526,7 +526,7 @@ public class BossController : MonoBehaviour
         {
             if (hitCollider.CompareTag("Player"))
             {
-                PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
+                PlayerHealthSystem playerHealth = hitCollider.GetComponent<PlayerHealthSystem>();
                 if (playerHealth != null)
                 {
                     playerHealth.TakeDamage(meleeDamage * 1.5f);
@@ -556,7 +556,7 @@ public class BossController : MonoBehaviour
     
     public void TakeDamage(float damage)
     {
-        if (isDead) return;
+        //if (isDead) return;
         
         currentHP -= damage;
         
@@ -577,17 +577,16 @@ public class BossController : MonoBehaviour
     
     private void Die()
     {
-        isDead = true;
-        currentState = BossState.Dead;
+        //isDead = true;
+        //currentState = BossState.Dead;
         
         // 播放死亡动画
-        animator.SetBool(IS_DEAD, true);
-        animator.SetTrigger(GET_HIT);
+        animator.SetTrigger(IS_DEAD);
         
         // 生成死亡特效
         if (deathEffectPrefab != null)
         {
-            Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
+            Instantiate(deathEffectPrefab, transform.position+Vector3.up * 5f, Quaternion.identity);
         }
         
         // TODO: 播放死亡音效
@@ -612,9 +611,9 @@ public class BossController : MonoBehaviour
         DisableAllAttackTriggers();
         
         // 立即销毁Boss
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 5f);
         
-        Debug.Log("Boss已死亡，将在2秒后销毁");
+        Debug.Log("Boss已死亡，将在5秒后销毁");
     }
     
     private IEnumerator BossStateMachine()

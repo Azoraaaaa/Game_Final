@@ -11,13 +11,8 @@ public class EnemyAttack : MonoBehaviour
         // 检查碰撞对象是否是玩家
         if (other.CompareTag(playerTag))
         {
-            // 获取玩家的生命值系统并造成伤害
-            PlayerHealthSystem playerHealth = other.GetComponent<PlayerHealthSystem>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(attackDamage);
-                Debug.Log($"对玩家造成 {attackDamage} 点伤害！");
-            }
+            PlayerHealthSystem.instance.TakeDamage(attackDamage);
+            Debug.Log($"对玩家造成 {attackDamage} 点伤害！");
         }
     }
 }

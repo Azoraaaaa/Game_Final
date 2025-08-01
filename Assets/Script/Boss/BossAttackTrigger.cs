@@ -38,12 +38,11 @@ public class BossAttackTrigger : MonoBehaviour
     }
     
     void OnTriggerEnter(Collider other)
-    {
-        if (!canDealDamage || Time.time - lastDamageTime < damageCooldown) return;
-        
+    {   
         if (other.CompareTag("Player"))
         {
             DealDamage(other);
+            Debug.Log($"Boss {bossController.name} 对玩家造成 {damage} 点伤害！");
         }
     }
     
@@ -59,12 +58,7 @@ public class BossAttackTrigger : MonoBehaviour
     
     private void DealDamage(Collider playerCollider)
     {
-        // 对玩家造成伤害
-        PlayerHealth playerHealth = playerCollider.GetComponent<PlayerHealth>();
-        if (playerHealth != null)
-        {
-            playerHealth.TakeDamage(damage);
-        }
+        PlayerHealthSystem.instance.TakeDamage(damage);
         
         // 击退效果
         Rigidbody playerRb = playerCollider.GetComponent<Rigidbody>();

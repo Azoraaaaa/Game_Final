@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     
     [Header("游戏设置")]
     [SerializeField] private BossController bossController;
-    [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private PlayerHealthSystem playerHealth;
     
     // 单例模式
     public static GameManager Instance { get; private set; }
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
         
         if (playerHealth == null)
         {
-            playerHealth = FindFirstObjectByType<PlayerHealth>();
+            playerHealth = FindFirstObjectByType<PlayerHealthSystem>();
         }
         
         // 初始化Boss血条
@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
     private void CheckGameState()
     {
         // 检查玩家是否死亡
-        if (playerHealth != null && playerHealth.IsDead() && !isGameOver)
+        if (playerHealth != null && playerHealth.IsDead && !isGameOver)
         {
             GameOver();
         }
