@@ -9,6 +9,8 @@ public class SwordManager : MonoBehaviour, PlayerController.IWeaponHandler
     public PlayerController playerCon;
     public GameObject sword;
 
+    public int damage;
+
     private void OnEnable()
     {
         sword.SetActive(true);
@@ -64,6 +66,9 @@ public class SwordManager : MonoBehaviour, PlayerController.IWeaponHandler
 
         anim.SetBool(attackType, false);
         playerCon.movementSpeed = 5f;
+
+        //Do damage to enemy
+
     }
     public void QuitWeapon()
     {

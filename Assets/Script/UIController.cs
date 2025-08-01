@@ -3,37 +3,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using System.Diagnostics;
 
 public class UIController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public static UIController instance;
-    /*
-    public Slider healthSlider;
-    public Text healthText;
-    public Image healthImage;
 
-    public Text AmmoText;
-    public Image AmmoImage;
-
-    public Slider energySlider;
-    public Image energyImage;
-
-    public Text hint;
-    public Canvas questCanvas;
-    public Canvas missionPointCanvas;
-
-    public GameObject pauseScreen;
-    */
-
+    public float coins;
     public GameObject BagScreen;
     public GameObject StoryScreen;
+    public GameObject ShopScreen;
 
-    //public Text HealthTextInBag;
-
-    //public Text speedBoostText;
-
-    //public Text bossHint;
     public void Awake()
     {
         instance = this;
@@ -52,22 +33,19 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            InventoryController.instance.ToggleBagScreen();
+        }
+           
     }
-    public void SetHUDVisibility(bool isVisible)
+    public void SaveCoins()
     {
-        /*
-        healthSlider.gameObject.SetActive(isVisible);
-        healthText.gameObject.SetActive(isVisible);
-        healthImage.gameObject.SetActive(isVisible);
-        AmmoText.gameObject.SetActive(isVisible);
-        AmmoImage.gameObject.SetActive(isVisible);
-        energySlider.gameObject.SetActive(isVisible);
-        energyImage.gameObject.SetActive(isVisible);
-        hint.gameObject.SetActive(isVisible);
-        questCanvas.gameObject.SetActive(isVisible);
-        missionPointCanvas.gameObject.SetActive(isVisible);
-        */
+        PlayerPrefs.SetFloat("coinNum", coins);
+    }
+    public void CloseShop()
+    {
+        ShopScreen.SetActive(false);
     }
     public void Find()
     {

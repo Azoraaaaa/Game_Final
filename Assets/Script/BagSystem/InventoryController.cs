@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ public class InventoryController : MonoBehaviour
     public Text Drop;
     public Image LeftClick;
     public Image RightClick;
+    public TextMeshProUGUI CoinsText;
 
     public void Awake()
     {
@@ -23,10 +25,7 @@ public class InventoryController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        /*
-        UIController.instance.BagScreen.SetActive(false);
-        UIController.instance.HealthTextInBag.gameObject.SetActive(false);
-        */
+        
     }
 
     // Update is called once per frame
@@ -39,8 +38,6 @@ public class InventoryController : MonoBehaviour
         if (UIController.instance.BagScreen.activeInHierarchy)
         {
             UIController.instance.BagScreen.SetActive(false); // Hide the bag screen
-            UIController.instance.SetHUDVisibility(true);
-            //UIController.instance.HealthTextInBag.gameObject.SetActive(false);
             Use.gameObject.SetActive(false);
             Drop.gameObject.SetActive(false);
             LeftClick.gameObject.SetActive(false);
@@ -53,13 +50,11 @@ public class InventoryController : MonoBehaviour
         else
         {
             UIController.instance.BagScreen.SetActive(true); // Show the bag screen
-            UIController.instance.SetHUDVisibility(false);
-            //UIController.instance.HealthTextInBag.gameObject.SetActive(true);
-            //UIController.instance.HealthTextInBag.text = "HEALTH: " + PlayerHealthController.instance.currentHealth + "/" + PlayerHealthController.instance.maxHealth;
             Use.gameObject.SetActive(true);
             Drop.gameObject.SetActive(true);
             LeftClick.gameObject.SetActive(true);
             RightClick.gameObject.SetActive(true);
+            CoinsText.text = UIController.instance.coins.ToString();
 
             DeselectAllSlots();
 

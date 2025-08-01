@@ -6,6 +6,7 @@ public class MagicAttack : MonoBehaviour
     public float throwForce = 10f;
     public Transform magicArea;
     public GameObject magicPrefab;
+    public GameObject book;
     public Animator anim;
     bool nextThrow = true;
 
@@ -14,6 +15,7 @@ public class MagicAttack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && nextThrow)
         {
+            book.SetActive(true);
             StartCoroutine(MagicAnimation());
         }
     }

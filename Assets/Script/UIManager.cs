@@ -36,11 +36,17 @@ public class UIManager : MonoBehaviour
     public void OpenShopPanel()
     {
         if(shopPanel != null) shopPanel.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
     }
 
     public void CloseShopPanel()
     {
         if(shopPanel != null) shopPanel.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1f;
     }
 
     public void CloseShopPanelAndEndDialogue()
@@ -52,11 +58,17 @@ public class UIManager : MonoBehaviour
     public void OpenBagPanel()
     {
         if(bagPanel != null) bagPanel.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
     }
 
     public void CloseBagPanel()
     {
         if(bagPanel != null) bagPanel.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1f;
     }
 
     public void CloseBagPanelAndEndDialogue()

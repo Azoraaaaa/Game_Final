@@ -57,7 +57,6 @@ public class StoryManager : MonoBehaviour
         if (UIController.instance.StoryScreen.activeInHierarchy)
         {
             UIController.instance.StoryScreen.SetActive(false);
-            UIController.instance.SetHUDVisibility(true);
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -66,7 +65,6 @@ public class StoryManager : MonoBehaviour
         else
         {
             UIController.instance.StoryScreen.SetActive(true);
-            UIController.instance.SetHUDVisibility(false);
 
             CheckCollect();
 
