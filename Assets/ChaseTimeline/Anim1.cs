@@ -29,7 +29,7 @@ public class Anim1 : MonoBehaviour
     }
     IEnumerator DelayedSFX()
     {
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(0.85f);
         audioSource.PlayOneShot(fallClip);
     }
 }
