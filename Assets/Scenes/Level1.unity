@@ -59830,6 +59830,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1297944043619028656, guid: 3089064136f88dd4bad1c63af8a6b1b2, type: 3}
+      propertyPath: m_Size.x
+      value: 25.556765
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297944043619028656, guid: 3089064136f88dd4bad1c63af8a6b1b2, type: 3}
+      propertyPath: m_Size.z
+      value: 12.958559
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297944043619028656, guid: 3089064136f88dd4bad1c63af8a6b1b2, type: 3}
+      propertyPath: m_Center.x
+      value: -4.6520033
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297944043619028656, guid: 3089064136f88dd4bad1c63af8a6b1b2, type: 3}
+      propertyPath: m_Center.z
+      value: -1.4792793
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297944043619028656, guid: 3089064136f88dd4bad1c63af8a6b1b2, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: e72726b288a0e0d42876c22cebd417b8, type: 2}
     - target: {fileID: 7076611467448570314, guid: 3089064136f88dd4bad1c63af8a6b1b2, type: 3}
       propertyPath: m_Name
       value: NavMeshArea_1
