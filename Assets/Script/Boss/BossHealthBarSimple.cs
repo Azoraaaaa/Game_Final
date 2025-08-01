@@ -84,7 +84,7 @@ public class BossHealthBarSimple : MonoBehaviour
         CheckPhaseChange();
         
         // 检查Boss是否死亡
-        if (bossController.IsDead)
+        if (healthPercentage==0)
         {
             OnBossDeath();
         }
@@ -134,15 +134,15 @@ public class BossHealthBarSimple : MonoBehaviour
         switch (phase)
         {
             case 1:
-                phaseText.text = "第一阶段";
+                phaseText.text = "Phase1";
                 phaseText.color = phase1Color;
                 break;
             case 2:
-                phaseText.text = "第二阶段";
+                phaseText.text = "Phase2";
                 phaseText.color = phase2Color;
                 break;
             case 3:
-                phaseText.text = "第三阶段";
+                phaseText.text = "Phase3";
                 phaseText.color = phase3Color;
                 break;
         }
@@ -153,7 +153,7 @@ public class BossHealthBarSimple : MonoBehaviour
         // Boss死亡时的处理
         if (phaseText != null)
         {
-            phaseText.text = "已击败";
+            phaseText.text = "Feated";
             phaseText.color = Color.gray;
         }
         
