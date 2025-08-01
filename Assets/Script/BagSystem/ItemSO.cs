@@ -43,7 +43,7 @@ public class ItemSO : ScriptableObject
     {
         none,
         Health,
-        Energy
+        SwordDamage
     };
     public enum AttributeToChange
     {
