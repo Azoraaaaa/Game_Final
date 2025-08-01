@@ -48372,8 +48372,8 @@ MonoBehaviour:
   rightClaw: {fileID: 663587858}
   stinger: {fileID: 1510995726}
   meleeHitboxSize: {x: 1, y: 1, z: 1}
-  waterSplashPrefab: {fileID: 1609107109629186, guid: 7ba572f2cb0b2a74b82790dea008888d, type: 3}
-  iceExplosionPrefab: {fileID: 175220, guid: e27a28c372e16bd41a29d6d02a48260b, type: 3}
+  waterSplashPrefab: {fileID: 1008756975689012576, guid: 9e068b519e04d9b4d8c4ddb01fcb0230, type: 3}
+  iceExplosionPrefab: {fileID: 1609107109629186, guid: 7ba572f2cb0b2a74b82790dea008888d, type: 3}
   tidalRushPrefab: {fileID: 1008756975689012576, guid: 9e068b519e04d9b4d8c4ddb01fcb0230, type: 3}
   deathEffectPrefab: {fileID: 153568, guid: cca79b260878071418290367024a6716, type: 3}
 --- !u!114 &1377200736
