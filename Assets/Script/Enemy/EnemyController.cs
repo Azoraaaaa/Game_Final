@@ -19,6 +19,14 @@ public class EnemyController : MonoBehaviour
     private bool isDead = false;
     private bool isAttacking = false;
 
+    [Header("Optional Patrol Settings")]
+    public bool enablePatrol = false;
+    public Transform patrolPointA;
+    public Transform patrolPointB;
+    private Transform currentPatrolTarget;
+    public float patrolPauseTime = 2f;
+    private float patrolPauseCounter;
+
     private void Awake()
     {
         //theRB = GetComponent<Rigidbody>();
@@ -28,7 +36,12 @@ public class EnemyController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        startPoint = transform.position; //store enemy initial position as the game started
+        //startPoint = transform.position; //store enemy initial position as the game started
+        if (enablePatrol && patrolPointA != null && patrolPointB != null)
+        {
+            currentPatrolTarget = patrolPointA;
+            GoToPatrolPoint(currentPatrolTarget);
+        }
     }
 
     // Update is called once per frame
@@ -41,7 +54,7 @@ public class EnemyController : MonoBehaviour
 
         if (!chasing) //he is not chasing player
         {
-            anim.SetBool("isRunning", false);
+            //anim.SetBool("isRunning", false);
 
             if (Vector3.Distance(transform.position, targetPoint) < distanceToChase)
             {
@@ -58,6 +71,28 @@ public class EnemyController : MonoBehaviour
                     agent.destination = startPoint;
                 }
             }
+
+
+            if (enablePatrol && patrolPointA != null && patrolPointB != null && chaseCounter <= 0)
+            {
+                anim.SetBool("isRunning", true);
+
+                if (!agent.pathPending && agent.remainingDistance < 0.5f)
+                {
+                    patrolPauseCounter += Time.deltaTime;
+                    if (patrolPauseCounter >= patrolPauseTime)
+                    {
+                        currentPatrolTarget = (currentPatrolTarget == patrolPointA) ? patrolPointB : patrolPointA;
+                        GoToPatrolPoint(currentPatrolTarget);
+                        patrolPauseCounter = 0f;
+                    }
+                }
+            }
+            else
+            {
+                anim.SetBool("isRunning", false);
+            }
+
 
         }
         else //he is chasing player
@@ -100,6 +135,11 @@ public class EnemyController : MonoBehaviour
         }
 
 
+    }
+
+    void GoToPatrolPoint(Transform point)
+    {
+        agent.SetDestination(point.position);
     }
 
     IEnumerator AttackCooldown()
