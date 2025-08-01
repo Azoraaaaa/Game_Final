@@ -377,25 +377,7 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -493,11 +475,11 @@ MonoBehaviour:
   m_Name: AnimationPlayableAsset
   m_EditorClassIdentifier: 
   m_Clip: {fileID: 7400000, guid: 735480712f2d1884e8abdde8b0175ae2, type: 2}
-  m_Position: {x: -25.068748, y: 5.1550164, z: 68.33547}
-  m_EulerAngles: {x: -182.951, y: 643.84204, z: 570.979}
+  m_Position: {x: 12.034785, y: -27.738905, z: 122.8478}
+  m_EulerAngles: {x: -45.662, y: 564.39197, z: 486.37}
   m_UseTrackMatchFields: 1
-  m_MatchTargetFields: 63
-  m_RemoveStartOffset: 1
+  m_MatchTargetFields: 0
+  m_RemoveStartOffset: 0
   m_ApplyFootIK: 1
   m_Loop: 0
   m_Version: 1
@@ -1069,8 +1051,8 @@ MonoBehaviour:
     m_Start: 6.65
     m_ClipIn: 0
     m_Asset: {fileID: -4853266476815133338}
-    m_Duration: 1.5166666666666666
-    m_TimeScale: 1
+    m_Duration: 0.7583333333333329
+    m_TimeScale: 2.000000000000001
     m_ParentTrack: {fileID: 2965361982359397019}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
@@ -1362,25 +1344,7 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
