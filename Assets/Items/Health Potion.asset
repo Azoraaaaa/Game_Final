@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Health Potion
   m_EditorClassIdentifier: 
   itemName: Health Potion
-  statToChange: 0
-  amountToChangeStat: 0
+  statToChange: 2
+  amountToChangeStat: 500
   attributeToChange: 0
   amountToChangeAttribute: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Energy Potion
   m_EditorClassIdentifier: 
   itemName: Energy Potion
-  statToChange: 0
-  amountToChangeStat: 0
+  statToChange: 3
+  amountToChangeStat: 100
   attributeToChange: 0
   amountToChangeAttribute: 0

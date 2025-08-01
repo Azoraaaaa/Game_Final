@@ -6,12 +6,12 @@ public class PlayerHealthSystem : MonoBehaviour
     public static PlayerHealthSystem instance;
     
     [Header("健康设置")]
-    [SerializeField] private float maxHealth = 100f;
-    [SerializeField] private float currentHealth;
+    [SerializeField] public float maxHealth = 100f;
+    [SerializeField] public float currentHealth;
     
     [Header("技能设置")]
-    [SerializeField] private float maxSkillPoints = 100f;
-    [SerializeField] private float currentSkillPoints;
+    [SerializeField] public float maxSkillPoints = 100f;
+    [SerializeField] public float currentSkillPoints;
     
     [Header("技能值恢复设置")]
     [SerializeField] private float skillRegenRate = 5f; // 每秒恢复的技能值

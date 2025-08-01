@@ -17535,12 +17535,19 @@ MonoBehaviour:
   - {fileID: 2288505630335100728}
   - {fileID: 7389641901113322427}
   itemSOs:
-  - {fileID: 11400000, guid: 10bf325e4745c3a41b0cd3790f19b8f7, type: 2}
-  - {fileID: 11400000, guid: 7bc39416c9ddc764382a965539e1c876, type: 2}
+  - {fileID: 11400000, guid: 6b0aec9b3ff4e294cb927838627e0361, type: 2}
+  - {fileID: 11400000, guid: d9c4a746f8f0e6846b9cfa5cb799616e, type: 2}
+  - {fileID: 11400000, guid: 2e42192b0181b664290fcbc4b07a0450, type: 2}
+  - {fileID: 11400000, guid: 1aa25a9a886f1c84b9994d7c6e2fba36, type: 2}
+  - {fileID: 11400000, guid: 5ec8b2e6e772ea94b9b0d198c4615fc4, type: 2}
+  - {fileID: 11400000, guid: 11fad02dfe309e94c8b2dbdbf5da75be, type: 2}
+  - {fileID: 11400000, guid: 2764b709a80a7a24390b48419cca9d41, type: 2}
+  - {fileID: 11400000, guid: 776ced8a00d2b5d4289610b217b20713, type: 2}
   Use: {fileID: 7648679805650110451}
   Drop: {fileID: 3420283619706516268}
   LeftClick: {fileID: 6879093227086838892}
   RightClick: {fileID: 2216266490197559163}
+  CoinsText: {fileID: 0}
 --- !u!114 &579865371159730744
 MonoBehaviour:
   m_ObjectHideFlags: 0

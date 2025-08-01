@@ -30,6 +30,10 @@ public class StoryManager : MonoBehaviour
     public bool isCollected4 = false;
     public bool isCollected5 = false;
 
+    [Header("Ending")]
+    public GameObject goodEnding;
+    public GameObject badEnding;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -135,5 +139,18 @@ public class StoryManager : MonoBehaviour
     public void ClosePaper5()
     {
         Paper5.SetActive(false);
+    }
+    public void CheckEnd()
+    {
+        if(isCollected1 && isCollected2 && isCollected3 && isCollected4 && isCollected5)
+        { 
+            goodEnding.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            badEnding.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 }
