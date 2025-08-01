@@ -556,7 +556,7 @@ public class BossController : MonoBehaviour
     
     public void TakeDamage(float damage)
     {
-        if (isDead) return;
+        //if (isDead) return;
         
         currentHP -= damage;
         
