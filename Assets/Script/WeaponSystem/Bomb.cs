@@ -7,10 +7,10 @@ public class Bomb : MonoBehaviour
 
     bool hasExploded = false;
 
-    //public float giveDamage = 120f;
-    //public float radius = 10f;
+    public float giveDamage;
+    public float radius = 10f;
 
-    //public GameObject explosionEffect;
+    public GameObject explosionEffect;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,23 +32,24 @@ public class Bomb : MonoBehaviour
     void Explode()
     {
         //showEffect
-        //Instantiate(explosionEffect, transform.position, transform.rotation);
+        Instantiate(explosionEffect, transform.position, transform.rotation);
 
         //get nearby objects
-        //Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
 
-        /*
+
         foreach (Collider nearbyObject in colliders)
         {
-            //damage
-            Object obj = nearbyObject.GetComponent<Object>();//find the nearby object that has Object scripts
-
-            if (obj != null)
+            if (nearbyObject.CompareTag("Enemy"))
             {
-                obj.objectHitDamage(giveDamage);
+                EnemyHealthController enemy = nearbyObject.GetComponent<EnemyHealthController>();
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(giveDamage);
+                }
             }
         }
-        */
+
         Debug.Log("Explore!");
 
         Destroy(gameObject);

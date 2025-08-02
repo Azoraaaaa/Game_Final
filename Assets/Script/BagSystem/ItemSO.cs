@@ -52,7 +52,11 @@ public class ItemSO : ScriptableObject
         {
             BombTrigger.instance.val += 1; 
             return true;
-            
+        }
+        else if (statToChange == StatToChange.SwordDamage)
+        {
+            SwordDamage.instance.damage = SwordDamage.instance.damage + amountToChangeStat;
+            return true;
         }
 
         return false;
