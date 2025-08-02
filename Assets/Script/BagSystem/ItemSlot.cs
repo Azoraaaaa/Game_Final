@@ -152,5 +152,9 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         {
             EmptySLot();
         }
+
+        UIController.instance.coins = UIController.instance.coins + 6;
+        UIController.instance.SaveCoins();
+        InventoryController.instance.updateCoins();
     }
 }
