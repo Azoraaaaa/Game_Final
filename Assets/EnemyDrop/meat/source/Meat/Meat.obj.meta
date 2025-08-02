@@ -3,7 +3,107 @@ guid: d9f12000e87d8a24c867e32a1c6bda9a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.020_Cube.029_kostiMat
+    second: {fileID: 2100000, guid: a847e4dda5d0d5041b2e37d7f985e4a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.020_Cube.029_meetMat
+    second: {fileID: 2100000, guid: 8841d133c04447f44a6cee80586314cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.021_Cube.030_kostiMat
+    second: {fileID: 2100000, guid: b84f90967bcc6974eb9901ed58cb3af8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.021_Cube.030_meetMat
+    second: {fileID: 2100000, guid: 437ea041267e7e14ca3dcaa085030d47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.022_Cube.031_kostiMat
+    second: {fileID: 2100000, guid: 9e92d8cdc3debb34ba3938bd41e06331, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.022_Cube.031_meetMat
+    second: {fileID: 2100000, guid: ca2037df7e44abe4b9c5c08748dd1aaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.023_Cube.032_kostiMat
+    second: {fileID: 2100000, guid: a0f784e3b1213254bb4e80add5331077, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.023_Cube.032_meetMat
+    second: {fileID: 2100000, guid: 94d7f7319abc58241914c449edce3248, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.024_Cube.033_kostiMat
+    second: {fileID: 2100000, guid: 5777c5f312c4c04438866549703af62a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.024_Cube.033_meetMat
+    second: {fileID: 2100000, guid: 86bb6325c6f0dee479bb75effa286e28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.025_Cube.034_kostiMat
+    second: {fileID: 2100000, guid: 516ad4b85ed2e0642ac9637215f401b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.025_Cube.034_meetMat
+    second: {fileID: 2100000, guid: c6d675265a01f024abebfe152a0fc56f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.026_Cube.035_kostiMat
+    second: {fileID: 2100000, guid: a2d47a8ebaa6a374a9395a3b58181ee8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.026_Cube.035_meetMat
+    second: {fileID: 2100000, guid: 1efdb66c5d77779479bb5d8b880ca783, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.027_Cube.036_kostiMat
+    second: {fileID: 2100000, guid: 2640fc1f99f8fd14f9e40507ed2313b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.027_Cube.036_meetMat
+    second: {fileID: 2100000, guid: 987b2f5e47a74d942bbcdb85953980d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.028_Cube.037_kostiMat
+    second: {fileID: 2100000, guid: 098c5e918066f6d4faee8115d510a9b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.028_Cube.037_meetMat
+    second: {fileID: 2100000, guid: 45d3d415a2d04744a90fd294d22d465e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.029_Cube.038_kostiMat
+    second: {fileID: 2100000, guid: adf8c7d59e95e05498b3e28572b3d349, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.029_Cube.038_meetMat
+    second: {fileID: 2100000, guid: e0bc8127eca421e419fff5f0090b8e75, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -600,7 +600,7 @@ public class BossController : MonoBehaviour
         DisableAllAttackTriggers();
         
         // 立即销毁Boss
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 5f);
         
         Debug.Log("Boss已死亡，将在2秒后销毁");
     }
@@ -610,6 +610,7 @@ public class BossController : MonoBehaviour
         while (!isDead)
         {
             yield return new WaitForSeconds(0.1f);
+            StoryManager.instance.CheckEnd();
         }
     }
     
