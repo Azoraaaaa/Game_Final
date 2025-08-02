@@ -459,11 +459,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3241975800579615756, guid: d84fef165871de449b201d71418260b4, type: 3}
   m_PrefabInstance: {fileID: 577793162}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &10442826 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-  m_PrefabInstance: {fileID: 1776114398}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &19227641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -730,18 +725,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
       propertyPath: m_Name
-      value: Dreamshroom2
+      value: SM_MagicMushroom (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1181067431}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1181067430}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
 --- !u!4 &24991517 stripped
 Transform:
@@ -1047,18 +1036,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: bd536a6a3fef68146b56d50c56870d7d, type: 2}
     - target: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
       propertyPath: m_Name
-      value: Luminseed2
+      value: Coolegg (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2037574755}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2037574754}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
 --- !u!4 &41104719 stripped
 Transform:
@@ -2006,18 +1989,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: bd536a6a3fef68146b56d50c56870d7d, type: 2}
     - target: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
       propertyPath: m_Name
-      value: Luminseed5
+      value: Coolegg (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1323892674}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1323892673}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
 --- !u!4 &87328618 stripped
 Transform:
@@ -10298,11 +10275,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!1 &388096272 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-  m_PrefabInstance: {fileID: 501429719}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &390416499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11329,18 +11301,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: bd536a6a3fef68146b56d50c56870d7d, type: 2}
     - target: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
       propertyPath: m_Name
-      value: Luminseed
+      value: Coolegg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1886319097}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1886319096}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
 --- !u!4 &411899656 stripped
 Transform:
@@ -13291,62 +13257,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
       propertyPath: m_Name
-      value: Dreamshroom5
+      value: SM_MagicMushroom (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 501429723}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 501429722}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
 --- !u!4 &501429720 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
   m_PrefabInstance: {fileID: 501429719}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &501429722
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 388096272}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.07142272, y: 0.08315268, z: 0.09373356}
-  m_Center: {x: 0.00071204937, y: 0.04152549, z: -0.0054751555}
---- !u!114 &501429723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 388096272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7e646f2da4d8842b7275833aa7901a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Dreamshroom
-  quantity: 1
-  sprite: {fileID: 21300000, guid: 1099ce4fc5332b347b06008dd6fb5358, type: 3}
-  itemDescription: A mystical mushroom that grows only in enchanted soil
-  pickupDelay: 1
 --- !u!1001 &503300342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15750,7 +15672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 593356199}
   m_Layer: 0
-  m_Name: Dreamshrooms
+  m_Name: MagicMushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19715,7 +19637,7 @@ Transform:
   m_GameObject: {fileID: 736155311}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 169.91, y: 35.069, z: 215.6}
+  m_LocalPosition: {x: 169.91, y: 35.021, z: 215.6}
   m_LocalScale: {x: 1, y: 1, z: 1.4056}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20364,18 +20286,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
       propertyPath: m_Name
-      value: Dreamshroom1
+      value: SM_MagicMushroom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1591011356}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1591011355}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
 --- !u!4 &771578336 stripped
 Transform:
@@ -29387,7 +29303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1023832333018147404, guid: c8860462bd60d1d4f868af7b3b6241a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0048076133
+      value: -0.004807613
       objectReference: {fileID: 0}
     - target: {fileID: 1023832333018147404, guid: c8860462bd60d1d4f868af7b3b6241a9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29395,7 +29311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1023832333018147404, guid: c8860462bd60d1d4f868af7b3b6241a9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5780246
+      value: 0.57802457
       objectReference: {fileID: 0}
     - target: {fileID: 1023832333018147404, guid: c8860462bd60d1d4f868af7b3b6241a9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31780,18 +31696,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
       propertyPath: m_Name
-      value: Dreamshroom3
+      value: SM_MagicMushroom (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1988784751}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1988784750}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
 --- !u!4 &1115291658 stripped
 Transform:
@@ -31971,11 +31881,6 @@ Transform:
   - {fileID: 95109083499524440}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1118453980 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-  m_PrefabInstance: {fileID: 1220986681}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1118845918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32354,7 +32259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1127684947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33288,49 +33193,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3241975800579615756, guid: 6fcf7f27da01aba499a0be03812f9f67, type: 3}
   m_PrefabInstance: {fileID: 1867447316}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1181067428 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-  m_PrefabInstance: {fileID: 24991516}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1181067430
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181067428}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.0714227, y: 0.08315269, z: 0.093733534}
-  m_Center: {x: 0.0007139556, y: 0.041525688, z: -0.005475154}
---- !u!114 &1181067431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181067428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7e646f2da4d8842b7275833aa7901a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Dreamshroom
-  quantity: 1
-  sprite: {fileID: 21300000, guid: 1099ce4fc5332b347b06008dd6fb5358, type: 3}
-  itemDescription: A mystical mushroom that grows only in enchanted soil
-  pickupDelay: 1
 --- !u!1001 &1181285546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34210,62 +34072,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
       propertyPath: m_Name
-      value: Dreamshroom4
+      value: SM_MagicMushroom (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1220986685}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1220986684}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
 --- !u!4 &1220986682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
   m_PrefabInstance: {fileID: 1220986681}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1220986684
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1118453980}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.0714227, y: 0.08315269, z: 0.093733534}
-  m_Center: {x: 0.00071300194, y: 0.04152545, z: -0.005478969}
---- !u!114 &1220986685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1118453980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7e646f2da4d8842b7275833aa7901a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Dreamshroom
-  quantity: 1
-  sprite: {fileID: 21300000, guid: 1099ce4fc5332b347b06008dd6fb5358, type: 3}
-  itemDescription: A mystical mushroom that grows only in enchanted soil
-  pickupDelay: 1
 --- !u!1001 &1221801561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37100,49 +36918,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44c8796b102382a458de0c51da50a1cf, type: 3}
---- !u!1 &1323892671 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-  m_PrefabInstance: {fileID: 87328617}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1323892673
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323892671}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.02002258, y: 0.015681328, z: 0.043316085}
-  m_Center: {x: 0.0023037728, y: 0.00027366212, z: 0.020570485}
---- !u!114 &1323892674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323892671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7e646f2da4d8842b7275833aa7901a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Luminseed
-  quantity: 1
-  sprite: {fileID: 21300000, guid: d2d2ed4565dd2b64e81ad562ab5d1bfc, type: 3}
-  itemDescription: A bioluminescent seed that glows with ancient energy.
-  pickupDelay: 1
 --- !u!1001 &1329276105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41701,16 +41476,12 @@ PrefabInstance:
       objectReference: {fileID: 2126724422}
     - target: {fileID: 4360723793812592875, guid: c1757ef696efeac468295f2d6a056e28, type: 3}
       propertyPath: itemSOs.Array.size
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4360723793812592875, guid: c1757ef696efeac468295f2d6a056e28, type: 3}
       propertyPath: 'itemSOs.Array.data[8]'
       value: 
-      objectReference: {fileID: 11400000, guid: 02f4fb1fa39ea5e4183bdb6fab508ac0, type: 2}
-    - target: {fileID: 4360723793812592875, guid: c1757ef696efeac468295f2d6a056e28, type: 3}
-      propertyPath: 'itemSOs.Array.data[9]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 9bbfc5b36a74a2644974836adf47c3b5, type: 2}
+      objectReference: {fileID: 11400000, guid: 10bf325e4745c3a41b0cd3790f19b8f7, type: 2}
     - target: {fileID: 5027250716287018438, guid: c1757ef696efeac468295f2d6a056e28, type: 3}
       propertyPath: m_Name
       value: InventoryCanvas
@@ -43065,15 +42836,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1023832333018147404, guid: 720cd7dbd2804d14b8e81be990309374, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00014212023
+      value: -0.00014212022
       objectReference: {fileID: 0}
     - target: {fileID: 1023832333018147404, guid: 720cd7dbd2804d14b8e81be990309374, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.020577855
+      value: -0.020577857
       objectReference: {fileID: 0}
     - target: {fileID: 1023832333018147404, guid: 720cd7dbd2804d14b8e81be990309374, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.57402074
+      value: 0.5740207
       objectReference: {fileID: 0}
     - target: {fileID: 1023832333018147404, guid: 720cd7dbd2804d14b8e81be990309374, type: 3}
       propertyPath: m_LocalRotation.w
@@ -46769,49 +46540,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d278e5a775df80147a4b3fdc06308dfb, type: 3}
   m_PrefabInstance: {fileID: 1218408874}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1591011353 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-  m_PrefabInstance: {fileID: 771286076}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1591011355
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591011353}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.07142271, y: 0.08315269, z: 0.093733534}
-  m_Center: {x: 0.00071300304, y: 0.04152545, z: -0.0054742}
---- !u!114 &1591011356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591011353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7e646f2da4d8842b7275833aa7901a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Dreamshroom
-  quantity: 1
-  sprite: {fileID: 21300000, guid: 1099ce4fc5332b347b06008dd6fb5358, type: 3}
-  itemDescription: A mystical mushroom that grows only in enchanted soil
-  pickupDelay: 1
 --- !u!1001 &1591676623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51706,62 +51434,18 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: bd536a6a3fef68146b56d50c56870d7d, type: 2}
     - target: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
       propertyPath: m_Name
-      value: Luminseed3
+      value: Coolegg (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1776114402}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1776114401}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
 --- !u!4 &1776114399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
   m_PrefabInstance: {fileID: 1776114398}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1776114401
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 10442826}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.02002258, y: 0.015681328, z: 0.043316085}
-  m_Center: {x: 0.0023035344, y: 0.0002746158, z: 0.020570485}
---- !u!114 &1776114402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 10442826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7e646f2da4d8842b7275833aa7901a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Luminseed
-  quantity: 1
-  sprite: {fileID: 21300000, guid: d2d2ed4565dd2b64e81ad562ab5d1bfc, type: 3}
-  itemDescription: A bioluminescent seed that glows with ancient energy.
-  pickupDelay: 1
 --- !u!1 &1776247288
 GameObject:
   m_ObjectHideFlags: 0
@@ -52633,11 +52317,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b36f9936c94fa42a52b47dc600068f, type: 3}
---- !u!1 &1809120540 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-  m_PrefabInstance: {fileID: 2067097593}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1812077742
 GameObject:
   m_ObjectHideFlags: 0
@@ -55156,49 +54835,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5633245ba7195b34eab63f8d2d38518b, type: 3}
   m_PrefabInstance: {fileID: 1885352842}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1886319094 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-  m_PrefabInstance: {fileID: 411360764}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1886319096
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886319094}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.02002258, y: 0.015681328, z: 0.043316085}
-  m_Center: {x: 0.002303296, y: 0.00027366212, z: 0.020570545}
---- !u!114 &1886319097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886319094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7e646f2da4d8842b7275833aa7901a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Luminseed
-  quantity: 1
-  sprite: {fileID: 21300000, guid: d2d2ed4565dd2b64e81ad562ab5d1bfc, type: 3}
-  itemDescription: A bioluminescent seed that glows with ancient energy.
-  pickupDelay: 1
 --- !u!4 &1888568801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: fa13717c0193c224fbbf656c81f0252d, type: 3}
@@ -56578,7 +56214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1938248860}
   m_Layer: 0
-  m_Name: Luminseeds
+  m_Name: MagicalPlants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58935,49 +58571,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42b65c30a64bfc9438498b2acee449a8, type: 3}
---- !u!1 &1988784748 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca122bb02ceaa8547b5a18602ae4260c, type: 3}
-  m_PrefabInstance: {fileID: 1115291657}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1988784750
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988784748}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.07142274, y: 0.0831527, z: 0.09373356}
-  m_Center: {x: 0.0007130032, y: 0.041525453, z: -0.0054753935}
---- !u!114 &1988784751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988784748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7e646f2da4d8842b7275833aa7901a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Dreamshroom
-  quantity: 1
-  sprite: {fileID: 21300000, guid: 1099ce4fc5332b347b06008dd6fb5358, type: 3}
-  itemDescription: A mystical mushroom that grows only in enchanted soil
-  pickupDelay: 1
 --- !u!1001 &1990256722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59858,49 +59451,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 308f055afb4aa1a418277f5c3d4a8073, type: 3}
   m_PrefabInstance: {fileID: 1363097442}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2037574752 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-  m_PrefabInstance: {fileID: 41104718}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &2037574754
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037574752}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.02002258, y: 0.015681328, z: 0.043316085}
-  m_Center: {x: 0.002303296, y: 0.00027354292, z: 0.020570485}
---- !u!114 &2037574755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037574752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7e646f2da4d8842b7275833aa7901a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Luminseed
-  quantity: 1
-  sprite: {fileID: 21300000, guid: d2d2ed4565dd2b64e81ad562ab5d1bfc, type: 3}
-  itemDescription: A bioluminescent seed that glows with ancient energy.
-  pickupDelay: 1
 --- !u!4 &2038794457 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9b7a6353d6ff1be4687751819034ea6c, type: 3}
@@ -60559,62 +60109,18 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: bd536a6a3fef68146b56d50c56870d7d, type: 2}
     - target: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
       propertyPath: m_Name
-      value: Luminseed4
+      value: Coolegg (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2067097597}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2067097596}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
 --- !u!4 &2067097594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 368d312bbfd68054fb73996b2ea56f7a, type: 3}
   m_PrefabInstance: {fileID: 2067097593}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &2067097596
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809120540}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.02002258, y: 0.015681328, z: 0.043316085}
-  m_Center: {x: 0.0023028192, y: 0.00027366212, z: 0.020570485}
---- !u!114 &2067097597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809120540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7e646f2da4d8842b7275833aa7901a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Luminseed
-  quantity: 1
-  sprite: {fileID: 21300000, guid: d2d2ed4565dd2b64e81ad562ab5d1bfc, type: 3}
-  itemDescription: A bioluminescent seed that glows with ancient energy.
-  pickupDelay: 1
 --- !u!1001 &2068187779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65713,7 +65219,6 @@ GameObject:
   - component: {fileID: 543450653174456493}
   - component: {fileID: 3469287836956880648}
   - component: {fileID: 1711813856184310722}
-  - component: {fileID: 3469287836956880649}
   m_Layer: 0
   m_Name: Viking_Sword
   m_TagString: Untagged
@@ -73552,15 +73057,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3502796364413245207, guid: f25ae9f3e65ea524096b58d43668b405, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0031018057
+      value: 0.0031018055
       objectReference: {fileID: 0}
     - target: {fileID: 3502796364413245207, guid: f25ae9f3e65ea524096b58d43668b405, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.004803918
+      value: -0.0048039174
       objectReference: {fileID: 0}
     - target: {fileID: 3502796364413245207, guid: f25ae9f3e65ea524096b58d43668b405, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.94121265
+      value: 0.9412126
       objectReference: {fileID: 0}
     - target: {fileID: 3502796364413245207, guid: f25ae9f3e65ea524096b58d43668b405, type: 3}
       propertyPath: m_LocalRotation.w
@@ -74813,23 +74318,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148648819223}
   m_Mesh: {fileID: -4891806943018550689, guid: a729be9ffbc81434c85d225e7cef8879, type: 3}
---- !u!114 &3469287836956880649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148648819223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7e646f2da4d8842b7275833aa7901a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Sword
-  quantity: 1
-  sprite: {fileID: 0}
-  itemDescription: 
-  pickupDelay: 1
 --- !u!224 &3472370789411421604 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1968855330244426880, guid: b67e4a80f5fdd924ea62fa086586769f, type: 3}
@@ -81815,10 +81303,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(castle_guard)
       objectReference: {fileID: 0}
-    - target: {fileID: 3905234348653371288, guid: 421ea68c40dc2b34d9227ce62a3a8857, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4202573672075545437, guid: 421ea68c40dc2b34d9227ce62a3a8857, type: 3}
       propertyPath: m_LocalPosition.x
       value: 158.48
@@ -83384,11 +82868,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1032402903611163127, guid: 54bcd4e0ce9eaae46ba4e8aa074ccb85, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0048050014
+      value: -0.004805001
       objectReference: {fileID: 0}
     - target: {fileID: 1032402903611163127, guid: 54bcd4e0ce9eaae46ba4e8aa074ccb85, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.94121253
+      value: 0.9412125
       objectReference: {fileID: 0}
     - target: {fileID: 1032402903611163127, guid: 54bcd4e0ce9eaae46ba4e8aa074ccb85, type: 3}
       propertyPath: m_LocalRotation.w
