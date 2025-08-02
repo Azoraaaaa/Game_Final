@@ -1,11 +1,14 @@
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 /// <summary>
 /// Dialogue node migration tool
 /// Used to migrate existing dialogue nodes from single sentence field to sentences array format
 /// Also supports multi-speaker functionality migration
 /// </summary>
+#if UNITY_EDITOR
 public class DialogueNodeMigrationTool : MonoBehaviour
 {
     [Header("Migration Settings")]
@@ -161,6 +164,7 @@ public class DialogueNodeMigrationTool : MonoBehaviour
         Debug.Log($"Successfully set speaker for {count} dialogue nodes: {speakerName}");
     }
 }
+#endif
 
 #if UNITY_EDITOR
 /// <summary>
