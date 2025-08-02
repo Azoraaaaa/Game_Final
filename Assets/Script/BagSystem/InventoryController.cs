@@ -54,7 +54,7 @@ public class InventoryController : MonoBehaviour
             Drop.gameObject.SetActive(true);
             LeftClick.gameObject.SetActive(true);
             RightClick.gameObject.SetActive(true);
-            CoinsText.text = UIController.instance.coins.ToString();
+            updateCoins();
 
             DeselectAllSlots();
 
@@ -122,6 +122,10 @@ public class InventoryController : MonoBehaviour
                 break; // 找到第一个匹配的物品后退出
             }
         }
+    }
+    public void updateCoins()
+    {
+        CoinsText.text = UIController.instance.coins.ToString();
     }
 
 }
