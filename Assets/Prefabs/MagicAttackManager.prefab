@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1717588490563412272
 Transform:
   m_ObjectHideFlags: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwForce: 10
-  magicArea: {fileID: 4607238438177876, guid: 2f4c75fdc6fe0f84182f0304b5783bcf, type: 3}
+  magicArea: {fileID: 0}
   magicPrefab: {fileID: 2704584379878999928, guid: cb3337efe3ea0b64997e08aea0ba5244, type: 3}
   book: {fileID: 0}
   anim: {fileID: 0}
