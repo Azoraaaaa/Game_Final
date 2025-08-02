@@ -81303,17 +81303,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(castle_guard)
       objectReference: {fileID: 0}
+    - target: {fileID: 3905234348653371288, guid: 421ea68c40dc2b34d9227ce62a3a8857, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4202573672075545437, guid: 421ea68c40dc2b34d9227ce62a3a8857, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 158.48
+      value: 112.79
       objectReference: {fileID: 0}
     - target: {fileID: 4202573672075545437, guid: 421ea68c40dc2b34d9227ce62a3a8857, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.097
+      value: 14.16
       objectReference: {fileID: 0}
     - target: {fileID: 4202573672075545437, guid: 421ea68c40dc2b34d9227ce62a3a8857, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 100.74
+      value: 163.5
       objectReference: {fileID: 0}
     - target: {fileID: 4202573672075545437, guid: 421ea68c40dc2b34d9227ce62a3a8857, type: 3}
       propertyPath: m_LocalRotation.w
@@ -81346,8 +81350,41 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3819652079358797811, guid: 421ea68c40dc2b34d9227ce62a3a8857, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6403206606194418881}
   m_SourcePrefab: {fileID: 100100000, guid: 421ea68c40dc2b34d9227ce62a3a8857, type: 3}
+--- !u!95 &6403206606194418879 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8073766858360760599, guid: 421ea68c40dc2b34d9227ce62a3a8857, type: 3}
+  m_PrefabInstance: {fileID: 6403206606194418878}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6403206606194418880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3819652079358797811, guid: 421ea68c40dc2b34d9227ce62a3a8857, type: 3}
+  m_PrefabInstance: {fileID: 6403206606194418878}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6403206606194418881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6403206606194418880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a21241b8fc27c841a333fd3fe5ccee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  anim: {fileID: 6403206606194418879}
+  testDamageAmount: 10
+  testDamageKey: 99
+  deathEffectPrefab: {fileID: 0}
+  destroyDelay: 5
+  dropItemPrefabs: []
+  dropChance: 1
 --- !u!114 &6440932050971020826
 MonoBehaviour:
   m_ObjectHideFlags: 0

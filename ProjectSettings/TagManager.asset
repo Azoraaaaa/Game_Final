@@ -18,6 +18,7 @@ TagManager:
   - gem02
   - gem03
   - gem04
+  - Enemy
   layers:
   - Default
   - TransparentFX
