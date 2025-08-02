@@ -56,6 +56,12 @@ public class BossHealthBarSimple : MonoBehaviour
         
         // 更新阶段文本
         UpdatePhaseText(1);
+        
+        // 如果找不到BossController，显示警告但不隐藏血条
+        if (bossController == null)
+        {
+            Debug.LogWarning("BossHealthBarSimple: 未找到BossController，血条将不会更新。请确保场景中有BossController组件。");
+        }
     }
     
     private void UpdateHealthBar()
@@ -83,8 +89,8 @@ public class BossHealthBarSimple : MonoBehaviour
         // 检查阶段变化
         CheckPhaseChange();
         
-        // 检查Boss是否死亡
-        if (healthPercentage==0)
+        // 检查Boss是否死亡 - 只有当Boss确实死亡时才隐藏血条
+        if (bossController.IsDead)
         {
             OnBossDeath();
         }
@@ -153,11 +159,16 @@ public class BossHealthBarSimple : MonoBehaviour
         // Boss死亡时的处理
         if (phaseText != null)
         {
-            phaseText.text = "Feated";
             phaseText.color = Color.gray;
         }
         
-        // 隐藏整个血条UI
+        // 可选：延迟隐藏血条UI，让玩家看到击败信息
+        StartCoroutine(HideHealthBarAfterDelay(3f));
+    }
+    
+    private System.Collections.IEnumerator HideHealthBarAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         gameObject.SetActive(false);
     }
     

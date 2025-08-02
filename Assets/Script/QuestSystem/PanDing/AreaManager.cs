@@ -9,7 +9,7 @@ public class AreaManager : MonoBehaviour
 
     void Start()
     {
-        bossCanvas.SetActive(false);
+        //bossCanvas.SetActive(false);
     }
     public void CheckAllZones()
     {

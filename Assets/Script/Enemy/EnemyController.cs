@@ -17,7 +17,7 @@ public class EnemyController : MonoBehaviour
     public Animator anim;
 
     private bool isDead = false;
-    private bool isAttacking = false;
+    public bool isAttacking = false;
 
     [Header("Optional Patrol Settings")]
     public bool enablePatrol = false;
@@ -27,8 +27,12 @@ public class EnemyController : MonoBehaviour
     public float patrolPauseTime = 2f;
     private float patrolPauseCounter;
 
+    // 移除静态实例，因为每个Enemy应该有自己的控制器
+    // public static EnemyController instance;
+
     private void Awake()
     {
+        // instance = this; // 移除这行
         //theRB = GetComponent<Rigidbody>();
         startPoint = transform.position;
         agent = GetComponent<NavMeshAgent>();
