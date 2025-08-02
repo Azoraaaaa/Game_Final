@@ -18,6 +18,7 @@ public class Story3 : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             StoryManager.instance.isCollected3 = true;
+            Destroy(gameObject);
         }
     }
 }

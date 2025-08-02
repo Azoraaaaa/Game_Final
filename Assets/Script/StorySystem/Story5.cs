@@ -18,6 +18,7 @@ public class Story5 : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             StoryManager.instance.isCollected5 = true;
+            Destroy(gameObject);
         }
     }
 }

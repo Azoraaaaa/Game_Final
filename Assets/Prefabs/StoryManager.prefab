@@ -60,6 +60,8 @@ MonoBehaviour:
   isCollected3: 0
   isCollected4: 0
   isCollected5: 0
+  goodEnding: {fileID: 8876566022589108871, guid: 3170cb74cea03014eb3ba261a35d110e, type: 3}
+  badEnding: {fileID: 5516330477993029529, guid: 9914e3d853daaf044aa5e40c2263017b, type: 3}
 --- !u!114 &5023756130784262583
 MonoBehaviour:
   m_ObjectHideFlags: 0
