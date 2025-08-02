@@ -48,11 +48,13 @@ public class ItemSO : ScriptableObject
             PlayerHealthSystem.instance.maxSkillPoints = PlayerHealthSystem.instance.maxSkillPoints + amountToChangeStat;
             return true;
         }
-        else if (statToChange == StatToChange.BombThrow)
+        else if (attributeToChange == AttributeToChange.BombThrow)
         {
-            BombTrigger.instance.val += 1; 
+            /*
+            PlayerSpeedController.instance.BoostSpeed(amountToChangeAttribute, 5f);
+            Debug.Log("Speed Boosted");
             return true;
-            
+            */
         }
 
         return false;
@@ -65,8 +67,7 @@ public class ItemSO : ScriptableObject
         maxEnergy1,
         maxHealth2,
         maxEnergy2,
-        SwordDamage,
-        BombThrow
+        SwordDamage
     };
     public enum AttributeToChange
     {
