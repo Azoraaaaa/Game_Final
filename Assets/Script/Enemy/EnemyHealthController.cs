@@ -72,13 +72,13 @@ public class EnemyHealthController : MonoBehaviour
 
     private void TryDropItem()
     {
-        if (dropItemPrefabs.Count == 0) return;
-
-        if (Random.value <= dropChance)
+        float offset = 0f;
+        foreach (GameObject item in dropItemPrefabs)
         {
-            int randomIndex = Random.Range(0, dropItemPrefabs.Count);
-            GameObject drop = dropItemPrefabs[randomIndex];
-            Instantiate(drop, transform.position + Vector3.up * 0.5f, Quaternion.identity);
+            Vector3 dropPosition = transform.position + Vector3.up * 0.5f + Vector3.right * offset;
+            Instantiate(item, dropPosition, Quaternion.identity);
+            offset += 0.5f; // ºáÏò¼ä¾à
         }
     }
+
 }
