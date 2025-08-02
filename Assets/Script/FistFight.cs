@@ -10,7 +10,6 @@ public class FistFight : MonoBehaviour, IWeaponHandler
     public Animator anim;
     private void OnEnable()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
         anim.SetBool("FistFightActive", true);
     }
 
@@ -112,15 +111,5 @@ public class FistFight : MonoBehaviour, IWeaponHandler
         {
             anim = player.GetComponent<Animator>();
         }
-    }
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        StartCoroutine(DelayedFind());
-    }
-
-    IEnumerator DelayedFind()
-    {
-        yield return null; // 等待一帧，确保新场景加载完成
-        Find();
     }
 }
