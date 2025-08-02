@@ -228,7 +228,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 832841664}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: LoadScene1
+        m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1977,8 +1977,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7cd30f50a2cecd41ba41b1480a8d8fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverPanel: {fileID: 0}
+  victoryPanel: {fileID: 0}
+  bossHealthText: {fileID: 0}
+  bossHealthBar: {fileID: 0}
+  bossController: {fileID: 0}
+  playerHealth: {fileID: 0}
+  sceneSequence: []
   player: {fileID: 0}
-  isTalking: 0
   isNearTeleporter: 0
 --- !u!1 &1217382450
 GameObject:
