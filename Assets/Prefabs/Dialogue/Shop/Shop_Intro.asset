@@ -12,15 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdedd314c3c8ccb43833f9f854252f45, type: 3}
   m_Name: Shop_Intro
   m_EditorClassIdentifier: 
-  speakerName: Shoper
-  sentence: Hello, what do you want?
+  sentences:
+  - Weclome! Good morrning~Good afternoon~Good evening~~~
+  speakerNames:
+  - Shoper
+  defaultSpeakerName: Shoper
   choices:
   - choiceText: BUY
     nextNode: {fileID: 11400000, guid: faeee6ef0cbb98b4fb04dee1c1c3969c, type: 2}
     eventType: 1
+    stringParameter: 
   - choiceText: Seeling
     nextNode: {fileID: 11400000, guid: 35a8bf934c461644e8c0e670ce8c0ccc, type: 2}
     eventType: 2
+    stringParameter: 
   - choiceText: Nothing
     nextNode: {fileID: 0}
     eventType: 0
+    stringParameter: 

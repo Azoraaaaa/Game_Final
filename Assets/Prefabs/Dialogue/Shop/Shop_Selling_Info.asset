@@ -12,12 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdedd314c3c8ccb43833f9f854252f45, type: 3}
   m_Name: Shop_Selling_Info
   m_EditorClassIdentifier: 
-  speakerName: Shoper
-  sentence: OK, let me see see what do you have.
+  sentences:
+  - You can give me anything you want!
+  speakerNames:
+  - Shoper
+  defaultSpeakerName: Shoper
   choices:
   - choiceText: Back
     nextNode: {fileID: 11400000, guid: dd1d09473dc61ae49842058ba3cc8260, type: 2}
     eventType: 4
+    stringParameter: 
   - choiceText: Test
     nextNode: {fileID: 11400000, guid: 861388b067cf19b42bc720bc0fa932ab, type: 2}
     eventType: 4
+    stringParameter: 

@@ -17552,6 +17552,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0cac17b38237c9348991f43c0e10cdd4, type: 2}
   - {fileID: 11400000, guid: c6b72b29155b6654bb94ff193dad4407, type: 2}
   - {fileID: 11400000, guid: 1ab953cd4b3c14447bcde01d1828e2ee, type: 2}
+  - {fileID: 11400000, guid: e3fec34b6c6e8bd49b295c6bb1d44e8b, type: 2}
+  - {fileID: 11400000, guid: bb13dbe16a499074d90a844bde0f1d9a, type: 2}
+  - {fileID: 11400000, guid: 8d98d54aef7ea6346be72fe078d1dcb3, type: 2}
+  - {fileID: 11400000, guid: d87b825f588ee1041813b3faf9bef8b6, type: 2}
   Use: {fileID: 7648679805650110451}
   Drop: {fileID: 3420283619706516268}
   LeftClick: {fileID: 6879093227086838892}
