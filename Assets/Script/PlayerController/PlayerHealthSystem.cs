@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthSystem : MonoBehaviour
 {
@@ -72,8 +73,33 @@ public class PlayerHealthSystem : MonoBehaviour
     private void HandleDeath()
     {
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        currentHealth = maxHealth;
+        currentSkillPoints = maxSkillPoints;
+
+
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
+        OnSkillChanged?.Invoke(currentSkillPoints, maxSkillPoints);
+
+
+        string cpKey = SceneManager.GetActiveScene().name + "_cp";
+        string cpName = PlayerPrefs.GetString(cpKey, "");
+
+        CheckPoint[] checkpoints = FindObjectsByType<CheckPoint>(FindObjectsSortMode.None);
+        foreach (var cp in checkpoints)
+        {
+            if (cp.cpName == cpName)
+            {
+                CharacterController controller = GetComponent<CharacterController>();
+                if (controller) controller.enabled = false;
+
+                transform.position = cp.transform.position;
+                transform.rotation = cp.transform.rotation;
+
+                if (controller) controller.enabled = true;
+
+                break;
+            }
+        }
     }
 
 
