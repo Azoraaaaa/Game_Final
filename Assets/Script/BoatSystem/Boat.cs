@@ -6,7 +6,6 @@ public class Boat : MonoBehaviour
     [SerializeField] private float boatSpeed = 5f;
     [SerializeField] private float rotationSpeed = 100f;
     [SerializeField] private Transform playerStandPoint;
-    [SerializeField] private Animator boatAnimator;
     
     [Header("检测设置")]
     [SerializeField] private float dockingDistance = 2f;
@@ -26,19 +25,10 @@ public class Boat : MonoBehaviour
     private CharacterController playerCC;
     private Animator playerAnimator;
     
-    // 保存船只原始状态
-    private bool originalBoatAnimatorEnabled;
-    
     private void Start()
     {
         ValidateSetup();
         mainCamera = Camera.main;
-        
-        // 如果没有手动设置船只Animator，尝试自动获取
-        if (boatAnimator == null)
-        {
-            boatAnimator = GetComponent<Animator>();
-        }
     }
     
     private void LateUpdate()
@@ -115,8 +105,8 @@ public class Boat : MonoBehaviour
                 );
             }
 
-            // 按照计算出的移动方向移动船只
-            transform.Translate(moveDirection * boatSpeed * Time.deltaTime, Space.World);
+            // 向前移动
+            transform.Translate(Vector3.forward * boatSpeed * Time.deltaTime, Space.Self);
 
             if (showDebugLogs)
             {
@@ -144,13 +134,6 @@ public class Boat : MonoBehaviour
             // 保存玩家原始状态
             originalPlayerParent = player.transform.parent;
             originalCanMove = player.canMove;
-            
-            // 保存船只Animator原始状态
-            if (boatAnimator != null)
-            {
-                originalBoatAnimatorEnabled = boatAnimator.enabled;
-                boatAnimator.enabled = false; // 禁用船只Animator
-            }
             
             // 禁用玩家移动
             player.canMove = false;
@@ -220,12 +203,6 @@ public class Boat : MonoBehaviour
                 playerAnimator.SetBool("IsGrounded", true);
             }
             
-            // 重新启用船只Animator
-            if (boatAnimator != null)
-            {
-                boatAnimator.enabled = originalBoatAnimatorEnabled;
-            }
-            
             if (showDebugLogs)
             {
                 Debug.Log($"[{gameObject.name}] 玩家已在码头点下船: {dockPoint.name}", this);
@@ -271,11 +248,6 @@ public class Boat : MonoBehaviour
             if (dockLayer == 0)
             {
                 Debug.LogWarning($"[{gameObject.name}] 未设置码头层级！", this);
-            }
-            
-            if (boatAnimator == null)
-            {
-                Debug.LogWarning($"[{gameObject.name}] 未设置船只Animator！将尝试自动获取。", this);
             }
         }
     }

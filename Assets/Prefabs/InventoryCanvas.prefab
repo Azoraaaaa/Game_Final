@@ -17556,6 +17556,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bb13dbe16a499074d90a844bde0f1d9a, type: 2}
   - {fileID: 11400000, guid: 8d98d54aef7ea6346be72fe078d1dcb3, type: 2}
   - {fileID: 11400000, guid: d87b825f588ee1041813b3faf9bef8b6, type: 2}
+  - {fileID: 11400000, guid: 0d89191c357de304f9feef02a7d42ba6, type: 2}
   Use: {fileID: 7648679805650110451}
   Drop: {fileID: 3420283619706516268}
   LeftClick: {fileID: 6879093227086838892}
