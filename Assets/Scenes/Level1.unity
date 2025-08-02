@@ -10916,14 +10916,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MagicAttackManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1809614411582722345, guid: 029f374e79485f546ad7d962efc69385, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3222508143607586771, guid: 029f374e79485f546ad7d962efc69385, type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4318241794828844485, guid: 029f374e79485f546ad7d962efc69385, type: 3}
       propertyPath: anim
       value: 
@@ -90112,7 +90104,7 @@ GameObject:
   - component: {fileID: 7461491941701881640}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92110,22 +92102,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1995323797542581214, guid: 40d09a57587adf240ad682175985a04c, type: 3}
-      propertyPath: damage
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3595136258494037350, guid: 40d09a57587adf240ad682175985a04c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.04878235
-      objectReference: {fileID: 0}
-    - target: {fileID: 3595136258494037350, guid: 40d09a57587adf240ad682175985a04c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.0313187
-      objectReference: {fileID: 0}
-    - target: {fileID: 4498180050796952850, guid: 40d09a57587adf240ad682175985a04c, type: 3}
-      propertyPath: damage
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 5940431933215896817, guid: 40d09a57587adf240ad682175985a04c, type: 3}
       propertyPath: cam
       value: 
