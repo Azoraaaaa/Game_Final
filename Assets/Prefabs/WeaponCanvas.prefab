@@ -1740,6 +1740,9 @@ GameObject:
   - component: {fileID: 4121421063892751629}
   - component: {fileID: 397600100671230128}
   - component: {fileID: 3256575495221221836}
+  - component: {fileID: 2336260273251043258}
+  - component: {fileID: 7928726861909853050}
+  - component: {fileID: 5519652484785598732}
   m_Layer: 5
   m_Name: WeaponCanvas
   m_TagString: Untagged
@@ -1872,6 +1875,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectIndex: 3
+--- !u!114 &2336260273251043258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050404974441569693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191eb76c03a6e6d499f801bc08e7cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BowUI: {fileID: 7667653469309798736}
+--- !u!114 &7928726861909853050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050404974441569693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbbf19146533ba04cab2dab7e6528c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MagicUI: {fileID: 4709617584744813942}
+--- !u!114 &5519652484785598732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050404974441569693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f669155c4ddf9241a82f7ca2447916a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BombUI: {fileID: 8154125554501977213}
+  val: 0
 --- !u!1 &6276683914547852224
 GameObject:
   m_ObjectHideFlags: 0
