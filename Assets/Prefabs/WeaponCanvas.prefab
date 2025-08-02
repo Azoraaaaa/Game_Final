@@ -1740,6 +1740,11 @@ GameObject:
   - component: {fileID: 4121421063892751629}
   - component: {fileID: 397600100671230128}
   - component: {fileID: 3256575495221221836}
+  - component: {fileID: 5795674794132769125}
+  - component: {fileID: 8961212223718719269}
+  - component: {fileID: 1737793335937432565}
+  - component: {fileID: 5292808711492198133}
+  - component: {fileID: 4018373491963598492}
   m_Layer: 5
   m_Name: WeaponCanvas
   m_TagString: Untagged
@@ -1872,6 +1877,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectIndex: 3
+--- !u!114 &5795674794132769125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050404974441569693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2b4efd0b3b43a440b4beb871062e362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FistUI: {fileID: 8351150939496974148}
+--- !u!114 &8961212223718719269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050404974441569693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29bafcc76fcbf8f49943ba57224f0a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SwordUI: {fileID: 3565079943680368333}
+--- !u!114 &1737793335937432565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050404974441569693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f669155c4ddf9241a82f7ca2447916a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BombUI: {fileID: 8154125554501977213}
+  val: 0
+--- !u!114 &5292808711492198133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050404974441569693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbbf19146533ba04cab2dab7e6528c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MagicUI: {fileID: 4709617584744813942}
+--- !u!114 &4018373491963598492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050404974441569693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191eb76c03a6e6d499f801bc08e7cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BowUI: {fileID: 7667653469309798736}
 --- !u!1 &6276683914547852224
 GameObject:
   m_ObjectHideFlags: 0
